@@ -1,0 +1,42 @@
+import { defineConfig } from "vite";
+import injectHTML from "vite-plugin-html-inject";
+import { resolve } from "path";
+
+export default defineConfig(({ command }) => {
+  return {
+    // 1. 設定專案根目錄，讓 Vite 去這裡找 index.html
+    root: "project-root",
+
+    // 2. 設定開發/發布的路徑基準
+    // 本機開發時使用 '/'，部署到 GitHub 時自動切換為 '/fongai/'
+    base: command === "serve" ? "/" : "/fongai/",
+
+    plugins: [injectHTML()],
+
+    build: {
+      // 3. 設定打包輸出的位置 (相對於 project-root 的上一層)
+      outDir: "../dist",
+      emptyOutDir: true, // 每次打包前清空舊的 dist
+
+      // 4. 多頁面入口設定 (告訴 Vite 哪些 HTML 需要被打包)
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, "project-root/index.html"),
+          about: resolve(__dirname, "project-root/about.html"),
+          contact: resolve(__dirname, "project-root/contact.html"),
+          fongaiapp: resolve(__dirname, "project-root/fongaiapp.html"),
+          partners: resolve(__dirname, "project-root/partners.html"),
+          technology: resolve(__dirname, "project-root/technology.html"),
+          vivifrail: resolve(__dirname, "project-root/vivifrail.html"),
+        },
+        // 如果你希望 JS/CSS 保持原名，可以取消下方註解（但不建議）
+
+        output: {
+          entryFileNames: `assets/[name].js`,
+          chunkFileNames: `assets/[name].js`,
+          assetFileNames: `assets/[name].[ext]`,
+        },
+      },
+    },
+  };
+});

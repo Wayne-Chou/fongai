@@ -1,0 +1,42 @@
+/* --- 文章內頁專屬樣式 --- */
+.page-article-detail .detail-hero {
+  background: var(--jf-hero-bg);
+  padding: 180px 0 60px; /* 配合導覽列高度 */
+  margin-top: -100px;
+}
+
+.page-article-detail .breadcrumb-item a {
+  color: var(--jf-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.page-article-detail .article-content {
+  color: var(--jf-text-main);
+  line-height: 1.8;
+}
+
+.page-article-detail .article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.page-article-detail .custom-quote {
+  background: var(--jf-bg-light);
+  border-left: 5px solid var(--jf-accent);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--jf-primary);
+}
+
+.page-article-detail .badge-category {
+  background: var(--jf-gradient);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+.page-article-detail .main-article-img img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}

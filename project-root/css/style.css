@@ -1,0 +1,21 @@
+/* --- Base --- */
+@import "./base/reset.css";
+@import "./base/variables.css";
+@import "./base/global.css";
+
+/* --- Layout --- */
+@import "./layout/header.css";
+@import "./layout/footer.css";
+
+/* --- Pages --- */
+@import "./pages/index.css";
+@import "./pages/about.css";
+@import "./pages/news.css";
+
+@import "./pages/contact.css";
+
+@import "./pages/partners.css";
+@import "./pages/fongaiapp.css";
+@import "./pages/page-article-detail.css";
+@import "./pages/page-tech.css";
+@import "./pages/Vivifrail.css";
