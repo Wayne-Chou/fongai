@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,11 +21,9 @@
 />
 
 
-
-    <script type="module" crossorigin src="/fongai/assets/animation.js"></script>
     <link rel="stylesheet" crossorigin href="/fongai/assets/style.css">
   </head>
-  <body class="page-contact">
+  <body class="page-archive">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/index.html">
@@ -156,133 +154,46 @@
 
 
     <main>
-      <section class="contact-hero">
+      <section class="archive-hero">
         <div class="container text-center" data-reveal>
-          <div class="eyebrow">CONTACT US</div>
+          <div class="eyebrow">NEWS & CASES</div>
           <h1 class="hero-title fw-bold">
-            與建豐<span class="text-gradient">聯繫</span>
+            資訊與<span class="text-gradient">案例</span>
           </h1>
           <p class="lead text-muted mx-auto" style="max-width: 600px">
-            無論您是醫療場域、照護據點或有志推廣預防醫學的夥伴，我們都歡迎您的諮詢與合作。
+            掌握最新的健康科技動態、專業醫學專欄，以及我們與各大機構合作的實踐成果。
           </p>
         </div>
       </section>
 
-      <section class="contact-main-section">
+      <section class="archive-main-section">
         <div class="container">
-          <div class="row g-5">
-            <div class="col-lg-5" data-reveal>
-              <div class="contact-info-wrapper">
-                <h3 class="fw-bold mb-4">聯繫資訊</h3>
-
-                <div class="info-card">
-                  <div class="info-item">
-                    <div class="info-icon"><i class="bi bi-geo-alt"></i></div>
-                    <div class="info-text">
-                      <h6>辦公地點</h6>
-                      <p>臺灣臺北市內湖區瑞光路168號9F</p>
-                    </div>
-                  </div>
-                  <div class="info-item line-card">
-                    <div class="info-icon line-bg">
-                      <i class="bi bi-line"></i>
-                    </div>
-                    <div class="info-text">
-                      <h6>官方 LINE 諮詢</h6>
-                      <a
-                        href="https://lin.ee/gQGtodu"
-                        target="_blank"
-                        rel="noopener"
-                        class="line-custom-btn"
-                      >
-                        立即加入好友
-                      </a>
-                    </div>
-                  </div>
-                  <div class="info-item">
-                    <div class="info-icon"><i class="bi bi-envelope"></i></div>
-                    <div class="info-text">
-                      <h6>電子郵件</h6>
-                      <p>service@fongai.co</p>
-                    </div>
-                  </div>
-                  <div class="info-item">
-                    <div class="info-icon"><i class="bi bi-telephone"></i></div>
-                    <div class="info-text">
-                      <h6>聯絡電話</h6>
-                      <p>0938-932-306</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="map-container mt-4">
-                  <iframe
-                    width="100%"
-                    height="250"
-                    style="border: 0; border-radius: 20px"
-                    loading="lazy"
-                    allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps?q=%E8%87%BA%E7%81%A3%E8%87%BA%E5%8C%97%E5%B8%82%E5%85%A7%E6%B9%96%E5%8D%80%E7%91%9E%E5%85%89%E8%B7%AF168%E8%99%9F&z=17&output=embed"
-                  >
-                  </iframe>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-7" data-reveal>
-              <div class="contact-form-card">
-                <h3 class="fw-bold mb-4">傳送訊息</h3>
-                <form id="contactForm">
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label class="form-label">您的姓名</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="姓名"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">聯絡電話</label>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        placeholder="電話"
-                        required
-                      />
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label">電子郵件</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="example@mail.com"
-                        required
-                      />
-                    </div>
-
-                    <div class="col-12">
-                      <label class="form-label">訊息內容</label>
-                      <textarea
-                        class="form-control"
-                        rows="5"
-                        placeholder="請輸入您的訊息..."
-                      ></textarea>
-                    </div>
-                    <div class="col-12 mt-4">
-                      <button type="submit" class="btn btn-primary-jf w-100">
-                        立即送出 <i class="bi bi-send ms-2"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
+          <div class="filter-wrapper mb-5">
+            <div class="filter-scroll-container">
+              <div class="filter-tags" id="filter-tags">
+                <button class="filter-tag active" data-filter="all">
+                  全部文章
+                </button>
+                <button class="filter-tag" data-filter="news">媒體報導</button>
+                <button class="filter-tag" data-filter="health">
+                  健康專欄
+                </button>
+                <button class="filter-tag" data-filter="service">
+                  機構/企業案例
+                </button>
+                <button class="filter-tag" data-filter="tech">
+                  AI 技術解析
+                </button>
               </div>
             </div>
           </div>
+
+          <div class="row g-4" id="article-list"></div>
         </div>
       </section>
+      <nav class="mt-5">
+        <ul class="pagination justify-content-center" id="pagination"></ul>
+      </nav>
     </main>
 
     <footer class="footer">
@@ -344,5 +255,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="/js/main.js"></script>
+    <script src="/js/animation.js"></script>
+
+    <script src="/js/articles-data.js"></script>
+
+    <script src="/js/article-engine.js"></script>
   </body>
 </html>
