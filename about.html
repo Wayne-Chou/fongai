@@ -6,9 +6,19 @@
 <title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
 <script>
   if (location.hostname.includes("github.io")) {
-    const base = document.createElement("base");
-    base.href = "/fongai/";
-    document.head.prepend(base);
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("a[href^='/']").forEach((link) => {
+        link.setAttribute("href", "/fongai" + link.getAttribute("href"));
+      });
+
+      document.querySelectorAll("link[href^='/']").forEach((link) => {
+        link.setAttribute("href", "/fongai" + link.getAttribute("href"));
+      });
+
+      document.querySelectorAll("script[src^='/']").forEach((script) => {
+        script.setAttribute("src", "/fongai" + script.getAttribute("src"));
+      });
+    });
   }
 </script>
 <link
@@ -35,15 +45,26 @@
   <body class="page-about">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">
+    <a class="navbar-brand fw-bold" href="/index.html">
       <span class="text-primary">建豐</span>健康科技
       <span class="brand-tag">FongAI</span>
     </a>
 
+    <button
+      class="navbar-toggler border-0 shadow-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+    >
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item">
-          <a class="nav-link" href="about.html">關於我們</a>
+          <a class="nav-link" href="/about.html">關於我們</a>
         </li>
 
         <!-- 最新消息 -->
@@ -57,18 +78,18 @@
           </a>
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
-              <a class="dropdown-item" href="news/news.html?type=news">
+              <a class="dropdown-item" href="/news/news.html?type=news">
                 媒體報導
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="news/news.html?type=health">
+              <a class="dropdown-item" href="/news/news.html?type=health">
                 健康專欄
               </a>
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li>
-              <a class="dropdown-item text-primary" href="news/news.html">
+              <a class="dropdown-item text-primary" href="/news/news.html">
                 查看全部
               </a>
             </li>
@@ -86,24 +107,48 @@
           </a>
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
-              <a class="dropdown-item" href="news/news.html?type=service">
+              <a class="dropdown-item" href="/news/news.html?type=service">
                 機構合作案例
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="news/news.html?type=enterprise">
+              <a class="dropdown-item" href="/news/news.html?type=enterprise">
                 企業健康講座
+              </a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item text-primary" href="/news/news.html">
+                查看全部
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- FongAI APP -->
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/fongaiapp.html"
+            data-bs-toggle="dropdown"
+          >
+            FongAI APP
+          </a>
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a class="dropdown-item" href="/vivifrail.html">
+                長者活力體能訓練方案｜建豐健康科技 FongAI 防跌APP
               </a>
             </li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="fongaiapp.html">FongAI APP</a>
+          <a class="nav-link" href="/contact.html">聯絡我們</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">聯絡我們</a>
+          <a class="nav-link" href="#">夥伴登入</a>
         </li>
 
         <!-- 語系 -->
@@ -117,10 +162,10 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
             <li>
-              <a class="dropdown-item" href="index.html">繁體中文</a>
+              <a class="dropdown-item" href="/index.html">繁體中文</a>
             </li>
             <li>
-              <a class="dropdown-item" href="en/index.html">English</a>
+              <a class="dropdown-item" href="/en/index.html">English</a>
             </li>
           </ul>
         </li>
