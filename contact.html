@@ -8,15 +8,11 @@
   if (location.hostname.includes("github.io")) {
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("a[href^='/']").forEach((link) => {
-        link.setAttribute("href", "/fongai" + link.getAttribute("href"));
-      });
+        const href = link.getAttribute("href");
 
-      document.querySelectorAll("link[href^='/']").forEach((link) => {
-        link.setAttribute("href", "/fongai" + link.getAttribute("href"));
-      });
-
-      document.querySelectorAll("script[src^='/']").forEach((script) => {
-        script.setAttribute("src", "/fongai" + script.getAttribute("src"));
+        if (!href.startsWith("/fongai/")) {
+          link.setAttribute("href", "/fongai" + href);
+        }
       });
     });
   }
