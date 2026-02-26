@@ -324,14 +324,30 @@
       </section>
       <section class="partners-grid-section">
         <div class="container">
+          <!-- Tabs -->
           <ul
             class="nav nav-pills justify-content-center"
             id="partnerTab"
             role="tablist"
           >
+            <!-- 全部 -->
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link active"
+                id="all-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#all-content"
+                type="button"
+                role="tab"
+              >
+                <i class="bi bi-grid me-2"></i>全部
+              </button>
+            </li>
+
+            <!-- 政府 -->
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
                 id="gov-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#gov-content"
@@ -341,6 +357,8 @@
                 <i class="bi bi-bank me-2"></i>政府與公部門
               </button>
             </li>
+
+            <!-- 醫療 -->
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link"
@@ -356,11 +374,67 @@
           </ul>
 
           <div class="tab-content" id="partnerTabContent">
+            <!-- 全部內容 -->
             <div
               class="tab-pane fade show active"
-              id="gov-content"
+              id="all-content"
               role="tabpanel"
             >
+              <div class="row g-4 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                <!-- 政府 -->
+                <div class="col">
+                  <div class="partner-card">
+                    <img
+                      src="/assets/images/partners/gov-01.png"
+                      alt="桃園市政府"
+                      onerror="
+                        this.src = 'https://placehold.co/150x80?text=LOGO'
+                      "
+                    />
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="partner-card">
+                    <img
+                      src="/assets/images/partners/gov-02.png"
+                      alt="勞動部"
+                      onerror="
+                        this.src = 'https://placehold.co/150x80?text=LOGO'
+                      "
+                    />
+                  </div>
+                </div>
+
+                <!-- 醫療 -->
+                <div class="col">
+                  <div class="partner-card">
+                    <img
+                      src="/assets/images/partners/medical-01.png"
+                      alt="醫療院所"
+                      onerror="
+                        this.src = 'https://placehold.co/150x80?text=LOGO'
+                      "
+                    />
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="partner-card">
+                    <img
+                      src="/assets/images/partners/medical-01.png"
+                      alt="醫療院所"
+                      onerror="
+                        this.src = 'https://placehold.co/150x80?text=LOGO'
+                      "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 政府內容 -->
+            <div class="tab-pane fade" id="gov-content" role="tabpanel">
               <div class="row g-4 row-cols-2 row-cols-md-4 row-cols-lg-6">
                 <div class="col">
                   <div class="partner-card">
@@ -388,6 +462,7 @@
               </div>
             </div>
 
+            <!-- 醫療內容 -->
             <div class="tab-pane fade" id="med-content" role="tabpanel">
               <div class="row g-4 row-cols-2 row-cols-md-4 row-cols-lg-6">
                 <div class="col">
@@ -401,83 +476,7 @@
                     />
                   </div>
                 </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
+
                 <div class="col">
                   <div class="partner-card">
                     <img
