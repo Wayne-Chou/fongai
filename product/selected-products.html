@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
+<script>
+  if (location.hostname.includes("github.io")) {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("a[href^='/']").forEach((link) => {
+        const href = link.getAttribute("href");
+
+        if (!href.startsWith("/fongai/")) {
+          link.setAttribute("href", "/fongai" + href);
+        }
+      });
+    });
+  }
+</script>
+<!-- <script src="/js/i18n.js"></script> -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+/>
+
+
+    <script type="module" crossorigin src="/fongai/assets/modulepreload-polyfill.js"></script>
+    <link rel="stylesheet" crossorigin href="/fongai/assets/style.css">
+  </head>
+
+  <body class="page-featured">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/index.html">
+      <span class="text-primary" data-i18n="brand.name1">建豐</span>
+      <span data-i18n="brand.name2">健康科技</span>
+      <span class="brand-tag">FongAI</span>
+    </a>
+
+    <button
+      class="navbar-toggler border-0 shadow-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+    >
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <!-- 關於我們 -->
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html" data-i18n="nav.about">
+            關於我們
+          </a>
+        </li>
+
+        <!-- 最新消息 -->
+        <li class="nav-item">
+          <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
+            最新消息
+          </a>
+        </li>
+
+        <!-- 服務案例 -->
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+            data-i18n="nav.service"
+          >
+            服務案例
+          </a>
+
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=service"
+                data-i18n="nav.institution"
+              >
+                機構合作案例
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=enterprise"
+                data-i18n="nav.enterprise"
+              >
+                企業健康講座
+              </a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a
+                class="dropdown-item text-primary"
+                href="/news/news.html"
+                data-i18n="nav.viewAll"
+              >
+                查看全部
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- FongAI APP -->
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/fongaiapp.html"
+            data-i18n="nav.app"
+          >
+            FongAI APP
+          </a>
+
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/vivifrail.html"
+                data-i18n="nav.vivifrail"
+              >
+                長者活力體能訓練方案｜建豐健康科技 FongAI 防跌APP
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/fongai-exercise.html">
+                FongAI建議運動課程｜高齡防跌
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/product/selected-products.html"
+          >
+            建豐嚴選
+          </a>
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a class="dropdown-item" href="/product/product-01.html">
+                「足適能」調整式醫療矯正鞋墊
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/product/product-02.html">
+                運動地墊遊戲平台
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="/product/product-03.html">
+                HappyGoGo團體運動軟體
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- 聯絡我們 -->
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html" data-i18n="nav.contact">
+            聯絡我們
+          </a>
+        </li>
+
+        <!-- 夥伴登入 -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">
+            夥伴登入
+          </a>
+        </li>
+
+        <!-- 語系 -->
+        <li class="nav-item ms-lg-3 dropdown">
+          <button
+            class="btn btn-lang dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            data-i18n="nav.language"
+          >
+            語系
+          </button>
+
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('zh')"
+                data-i18n="lang.zh"
+              >
+                繁體中文
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('en')"
+                data-i18n="lang.en"
+              >
+                English
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('ja')"
+                data-i18n="lang.ja"
+              >
+                日本語
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main>
+      <!-- Hero -->
+      <section class="featured-hero">
+        <div class="container text-center" data-reveal>
+          <div class="eyebrow">FEATURED PRODUCTS</div>
+          <h1 class="hero-title fw-bold">
+            建豐嚴選
+            <span class="text-gradient">健康生活好物</span>
+          </h1>
+          <p class="lead text-muted mx-auto" style="max-width: 700px">
+            建豐嚴選是專為使用骨架檢測後的用戶提供的優惠商品平台。我們結合健康科技與日常生活需求，精選輔具與相關健康用品，幫助提升您的生活品質。
+          </p>
+        </div>
+      </section>
+
+      <!-- 商品區 -->
+      <section class="featured-products-section">
+        <div class="section-title text-center">
+          <h2>嚴選商品</h2>
+        </div>
+        <div class="container">
+          <div class="product-grid">
+            <!-- 鞋墊 -->
+            <div class="product-card">
+              <img
+                src="https://fongai.co/wp-content/uploads/2024/12/鞋墊4.png"
+                alt="【足適能】調整式醫療矯正鞋墊"
+              />
+              <h4>【足適能】調整式醫療矯正鞋墊</h4>
+              <p>滿足五大生物力學需求，支撐、減壓、平衡調整。</p>
+              <a
+                href="https://www.acon-biomedical.com/products/insole"
+                target="_blank"
+                class="btn-product"
+                >前往購買</a
+              >
+            </div>
+
+            <!-- 染髮 -->
+            <div class="product-card">
+              <img
+                src="https://fongai.co/wp-content/uploads/2024/12/800x.webp"
+                alt="【Aura】白髮補色護髮乳"
+              />
+              <h4>【Aura】白髮補色護髮乳 75G Ⅲ</h4>
+              <p>非滲透染髮，不傷髮不傷皮膚。</p>
+              <a
+                href="https://www.ez66.com.tw/products/p1pc0085blk0000"
+                target="_blank"
+                class="btn-product"
+                >前往購買</a
+              >
+            </div>
+
+            <!-- 阻力帶 -->
+            <div class="product-card">
+              <img
+                src="https://fongai.co/wp-content/uploads/2024/12/阻力帶_健身塑形.jpg"
+                alt="【i-Pure】阻力帶"
+              />
+              <h4>【i-Pure】阻力帶 - 淺藍</h4>
+              <p>幫助肌力訓練與活力老化。</p>
+              <a
+                href="https://www.ez66.com.tw/products/f1be8417lbl0000"
+                target="_blank"
+                class="btn-product"
+                >前往購買</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-products-section">
+        <div class="section-title text-center">
+          <h2>精選商品分類</h2>
+        </div>
+        <div class="container">
+          <!-- Tabs -->
+          <ul
+            class="nav nav-pills justify-content-center mb-5 featured-tabs"
+            id="productTabs"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                data-bs-toggle="pill"
+                data-bs-target="#tab-underwear"
+                type="button"
+              >
+                安心褲系列
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#tab-walking"
+                type="button"
+              >
+                助行工具
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#tab-sport"
+                type="button"
+              >
+                健身訓練
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#tab-support"
+                type="button"
+              >
+                商品護具
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- ================= 安心褲系列 ================= -->
+            <div class="tab-pane fade show active" id="tab-underwear">
+              <div class="product-grid">
+                <div class="product-card">
+                  <img src="//fongai.co/wp-content/uploads/2024/07/01.jpg" />
+                  <h4>【NISHIKI】女用防漏安心褲 - 吸水量50cc</h4>
+                  <p>介護衣著/漏尿失禁對策/吸水消臭免尷尬</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/d1fm7108log"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/800x-1.webp"
+                  />
+                  <h4>【NISHIKI】男用防漏安心褲 - 吸水量80cc</h4>
+                  <p>介護衣著/漏尿失禁對策/吸水消臭免尷尬</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/d1ml7102blk"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/2000x.webp"
+                  />
+                  <h4>【NISHIKI】女用防漏安心褲 - 吸水量100cc</h4>
+                  <p>介護衣著/漏尿失禁對策/吸水消臭免尷尬</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/hc-161"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【NISHIKI】男用平口安心褲-吸水量140cc.webp"
+                  />
+                  <h4>【NISHIKI】男用平口安心褲 - 吸水量140cc</h4>
+                  <p>介護衣著/漏尿失禁對策/吸水消臭免尷尬</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/d1ml7105"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【NISHIKI】女用防漏安心褲-吸水量150cc.webp"
+                  />
+                  <h4>【NISHIKI】女用防漏安心褲 - 吸水量150cc</h4>
+                  <p>介護衣著/漏尿失禁對策/吸水消臭免尷尬</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/d1fm7101kha"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= 助行工具 ================= -->
+            <div class="tab-pane fade" id="tab-walking">
+              <div class="product-grid">
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【SHIMA】多功能購物散步車-雙座位-小碎花.webp"
+                  />
+                  <h4>【SHIMA】多功能購物散步車 雙座位 - 小碎花</h4>
+                  <p>可選擇坐前側或坐後側</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m2ct2009pnk0000"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/可調banner2.jpg"
+                  />
+                  <h4>3段調高式自動手杖傘</h4>
+                  <p>全遮光抗UV，夜間反光</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m1cn1704"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/藏杖型拐杖傘.webp"
+                  />
+                  <h4>藏杖型拐杖傘</h4>
+                  <p>
+                    當天雨路滑時，抽出中間中棒當拐杖，拐杖與雨傘便可同時使用。
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m1cn1702"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/藏杖型拐杖傘短款不挑色.webp"
+                  />
+                  <h4>藏杖型拐杖傘(短款不挑色)</h4>
+                  <p>
+                    過標準檢驗局的檢驗，可安心使用。這把傘為拐杖及傘兩用式的做法。一般市面上的拐杖傘多只能做出拐杖的形態，但若是遇到下雨天，天雨路滑没有拐杖支撑十分危險。因而研發出集兩者為一體的拐杖傘。當天雨路滑時，抽出中間中棒當拐杖，拐杖與雨傘便可同時使用。
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m1cn1702000000s"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【Merry-Sticks-悅杖】夜間時尚反光-二段式手杖.jpg"
+                  />
+                  <h4>【Merry Sticks 悅杖】夜間時尚反光 二段式手杖</h4>
+                  <p>
+                    白天，花色時尚典雅，夜間走在街道上，提供絢麗的安全守護。
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m2cn1601"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【Merry-Sticks-悅杖】天然木紋折疊手杖.jpg"
+                  />
+                  <h4>【Merry Sticks 悅杖】天然木紋折疊手杖</h4>
+                  <p>手杖一定是像金屬般的冰冷製品嗎？</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m2cn1619"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= 健身訓練 ================= -->
+            <div class="tab-pane fade" id="tab-sport">
+              <div class="product-grid">
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【i-Pure】熱身X型彈力繩-淺藍.webp"
+                  />
+                  <h4>【i-Pure】熱身X型彈力繩 - 淺藍</h4>
+                  <p>
+                    你有想過，只要一條彈力繩，就能達到健身、雕塑、伸展的功效嗎？【i-Pure】熱身X型彈力繩，環狀X型設計，比起一般彈力繩更能提供多種變化，幫助加強身體訓練及伸展動作，輔助各式動態阻力訓練，輕巧方便，易於收納，採用專利Tripure材質，穩定釋放負離子遠紅外線，幫助快速熱身、效果提升。
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/f1be8416lbl0000"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【伴佳家】肌力健身訓練環.webp"
+                  />
+                  <h4>【伴佳家】肌力健身訓練環</h4>
+                  <p>
+                    銀髮族上了年紀、上班族辛勞久坐，都需要透過運動來鍛鍊身體，你有想過，只要一個訓練環，就能達到塑身雕塑的功效嗎？【伴佳家】肌力健身訓練環，操作簡單，四側輔助柄提升穩定性，即使多次使用也不易變形，可以針對身體不同部位訓練，是居家&辦公室的訓練好幫手！
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m1cn1704"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/阻力帶_健身塑形.jpg"
+                  />
+                  <h4>【i-Pure】阻力帶 - 淺藍</h4>
+                  <p>
+                    運動就是避免肌少症的不二法門之一，所謂要活就要動，持續運動、維持身體機能，是銀髮朋友們實踐活力老化(Active
+                    Aging)的不二法門。建豐推薦【i-Pure】阻力帶，使用負離子及遠紅外線的專利Tripure高科技材質，能加速身體達到熱深狀態，減緩疲勞壓力，改善腰酸背痛及睡眠品質！
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/f1be8417lbl0000"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【i-Pure】能量矽膠舒壓筋膜球-單顆.webp"
+                  />
+                  <h4>【i-Pure】能量矽膠舒壓筋膜球</h4>
+                  <p>
+                    因為長久固定姿勢或是勞動影響，身體時不時有僵硬或是痠痛感？去按摩館雖然能讓身體得到暫時舒解，過一陣子又開始反複痠痛？無論是筋骨硬梆梆的長輩、或是久坐缺乏運動的上班族，從小地方開始按壓，自己就能舒緩一天下來累積的部分壓力。建豐推薦【i-Pure】能量矽膠舒壓筋膜球，使用負離子及遠紅外線的專利Tripure高科技材質，能輔助身體不同強度按壓的深層放鬆，減緩疲勞壓力，操作簡單、輕巧好收納！
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/m2cn1601"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= 商品護具 ================= -->
+            <div class="tab-pane fade" id="tab-support">
+              <div class="product-grid">
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【HH】南良-石墨烯鈦鍺支撐護腰.jpg"
+                  />
+                  <h4>【H&H】南良石墨烯鈦鍺支撐護腰</h4>
+                  <p>高效透氣　穩固支撐</p>
+                  <a
+                    href="https://www.ez66.com.tw/products/f2ee9919"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【HH】南良-奈米鋅5D彈力型護踝單入.jpg"
+                  />
+                  <h4>【H&H】南良 奈米鋅5D彈力型護踝</h4>
+                  <p>
+                    奈米鋅5D彈力護踝｜TPR5D織法加壓設計｜全方位運動防護｜ZN奈米鋅抗菌除臭
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/f1ee9920blk0000"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【HH-南良】奈米鋅5D彈力型護膝單入.jpg"
+                  />
+                  <h4>【H&H 南良】奈米鋅5D彈力型護膝(單入)</h4>
+                  <p>
+                    奈米鋅5D彈力護膝｜全方位運動防護｜5D織法加壓設計｜ZN奈米鋅抗菌除臭
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/f1ee9919"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【BodyVine】360°-8字加壓護踝-束健-肢體護具.webp"
+                  />
+                  <h4>【BodyVine】360° 8字加壓護踝 - 束健 肢體護具 (未滅菌)</h4>
+                  <p>
+                    Power-Band 肌力繃+8字型穩固綁帶 纏繞包紮，強化腳踝支撐效果
+                  </p>
+                  <a
+                    href="https://www.ez66.com.tw/products/f2ee9928"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【HH】南良-護膝-單入.webp"
+                  />
+                  <h4>【H&H】南良 護膝 (單入)</h4>
+                  <a
+                    href="https://www.ez66.com.tw/products/f2ee9921blk0000"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+
+                <div class="product-card">
+                  <img
+                    src="//fongai.co/wp-content/uploads/2024/12/【HH】南良-護腕-單入-南良-肢體護具-未滅菌.webp"
+                  />
+                  <h4>【H&H】南良 護腕 (單入) - 南良肢體護具(未滅菌)</h4>
+                  <a
+                    href="https://www.ez66.com.tw/products/f2ee9920blk0000"
+                    target="_blank"
+                    class="btn-product"
+                    >前往購買</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 其他精選商品 -->
+      <section class="featured-products-section">
+        <div class="section-title text-center">
+          <h2>其他精選商品</h2>
+        </div>
+
+        <div class="container">
+          <div class="product-grid">
+            <!-- Never Slip -->
+            <div class="product-card">
+              <img
+                src="//fongai.co/wp-content/uploads/2024/12/【Never-Slip】家用浴廁防滑鍍膜-磁磚專用.webp"
+                alt="【Never-Slip】家用浴廁防滑鍍膜-磁磚專用"
+              />
+              <h4>【Never-Slip】家用浴廁防滑鍍膜-磁磚專用</h4>
+              <p>簡單、快速、又有效，打造居家無障礙空間必備！</p>
+              <a
+                href="https://www.ez66.com.tw/products/a1sq33070000000"
+                target="_blank"
+                class="btn-product"
+                >前往購買</a
+              >
+            </div>
+
+            <!-- Aura 海藻洗髮精 -->
+            <div class="product-card">
+              <img
+                src="//fongai.co/wp-content/uploads/2024/12/日本製【Aura】海藻洗髮精.webp"
+                alt="【Aura】海藻洗髮精 475ml"
+              />
+              <h4>【Aura】海藻洗髮精 475ml</h4>
+              <p>
+                蘊含多種植物萃取精華成分，具有高度保濕效果。無添加矽靈和防腐劑，全家大小都能安心使用！
+              </p>
+              <a
+                href="https://www.ez66.com.tw/products/g1ah00900000000"
+                target="_blank"
+                class="btn-product"
+                >前往購買</a
+              >
+            </div>
+
+            <!-- Aura 白髮補色護髮乳 -->
+            <div class="product-card">
+              <img
+                src="//fongai.co/wp-content/uploads/2024/12/800x.webp"
+                alt="【Aura】光彩護汝髮 銀離子感光 白髮補色護髮乳"
+              />
+              <h4>【Aura】光彩護汝髮 銀離子感光 白髮補色護髮乳 75G Ⅲ</h4>
+              <p>
+                非滲透染髮劑、不含PPD與阿摩尼亞，溫和植萃安心，遮白顧色更持久。
+              </p>
+              <a
+                href="https://www.ez66.com.tw/products/p1pc0085blk0000"
+                target="_blank"
+                class="btn-product"
+                >前往購買</a
+              >
+            </div>
+
+            <!-- 保衛拉繩腰帶 -->
+            <div class="product-card">
+              <img
+                src="//fongai.co/wp-content/uploads/2024/12/【保衛】輕便拉繩腰帶.webp"
+                alt="【保衛】輕便拉繩腰帶"
+              />
+              <h4>【保衛】輕便拉繩腰帶</h4>
+              <p>&nbsp;</p>
+              <a
+                href="https://www.ez66.com.tw/products/p2ee9902blk"
+                target="_blank"
+                class="btn-product"
+                >前往購買</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 優惠碼 -->
+      <section class="featured-discount text-center">
+        <div class="container">
+          <h3>使用專屬優惠碼</h3>
+          <div class="discount-code">FongAI</div>
+          <p>即可享有獨家優惠折扣</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4 col-md-6">
+        <h3 class="fw-bold mb-4 text-white">建豐健康科技</h3>
+        <p class="footer-text mb-4">
+          結合 AI 與醫療專業，致力於解決高齡社會的跌倒問題，
+          讓健康老化的願景得以實現。
+        </p>
+
+        <div class="social-links">
+          <a target="_blank" href="https://www.facebook.com/FongAI.co">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://line.me/R/ti/p/@562xehaz?oat_content=url"
+          >
+            <i class="bi bi-line"></i>
+          </a>
+          <a target="_blank" href="https://www.youtube.com/@FONGAIHEALTH">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer-title">公司資訊</h6>
+        <ul class="list-unstyled">
+          <li><a href="/technology.html">核心技術</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h6 class="footer-title">聯絡資訊</h6>
+        <ul class="list-unstyled contact-info">
+          <li>
+            <i class="bi bi-geo-alt text-info"></i>
+            臺灣臺北市內湖區瑞光路168號9F
+          </li>
+          <li>
+            <i class="bi bi-envelope text-info"></i>
+            service@fongai.co
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="footer-bottom border-secondary border-top mt-5 pt-4 text-center"
+    >
+      <p class="footer-text mb-0">
+        © 2026 建豐健康科技｜FongAI. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script type="module" src="/fongai/js/main.js"></script>
+    <script type="module" src="/fongai/js/animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
