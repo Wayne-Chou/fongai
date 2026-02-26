@@ -38,7 +38,7 @@
     <link rel="stylesheet" crossorigin href="/fongai/assets/style.css">
   </head>
 
-  <body class="page-product03">
+  <body class="page-whitepapers">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/index.html">
@@ -236,67 +236,91 @@
 </nav>
 
 
-    <main>
-      <!-- Hero -->
-      <section class="product-hero center">
-        <div class="container">
-          <h1 class="product-title">HappyGoGo團體運動軟體</h1>
-          <p class="product-subtitle">快樂互動競賽，歡樂訓練體能</p>
-          <hr class="section-line" />
-        </div>
-      </section>
+    <!-- Hero -->
+    <section class="whitepaper-hero">
+      <div class="container center">
+        <h1 class="hero-title">FongAI 產業白皮書</h1>
+        <p class="hero-subtitle">從 AI 防跌到行動力經濟，重塑高齡科技未來</p>
+        <div class="section-line"></div>
+      </div>
+    </section>
 
-      <!-- 產品說明 -->
-      <section class="product-section">
-        <div class="container narrow">
-          <p>
-            支持醫療及照護人員提供多元豐富的訓練課程，
-            並以趣味化、充滿台灣味的情境內容增加使用對象的動力，
-            同時團體活動促進社交，提升身心靈健康。
-          </p>
+    <!-- 白皮書列表 -->
+    <section class="whitepaper-section">
+      <div class="container">
+        <div class="whitepaper-grid">
+          <div class="whitepaper-card">
+            <span class="year-badge">2026</span>
+            <h3>AI 高齡防跌產業白皮書</h3>
+            <p>長照 3.0、ICOPE 與全球 Aging Tech 競爭格局解析。</p>
+          </div>
 
-          <p>
-            簡易安裝與操作設計， 讓非專業人員也能快速上手，
-            可攜帶至社區及偏鄉服務更多長輩與患者。
-          </p>
-        </div>
-      </section>
-
-      <section class="product-features">
-        <div class="container narrow">
-          <h2 class="section-title">產品特色</h2>
-
-          <div class="feature-list-modern">
-            <div class="feature-item">
-              適用：亞健康銀髮族、衰弱症、失智症患者等
-            </div>
-
-            <div class="feature-item">體感式設備，免穿戴裝置</div>
-
-            <div class="feature-item">多人訓練，1-6人同時進行</div>
-
-            <div class="feature-item">
-              200款 AR 情境式訓練，台灣特色情境主題
-            </div>
-
-            <div class="feature-item">平衡、肌耐力、認知、上下肢等訓練</div>
-
-            <div class="feature-item">訓練後可獲得個人成果報表</div>
+          <div class="whitepaper-card">
+            <span class="year-badge">2026</span>
+            <h3>高齡行動力與 AI 風險預測白皮書</h3>
+            <p>從防止跌倒到賦能行動，建構行動力健康分模型。</p>
           </div>
         </div>
-      </section>
-      <!-- 影片 -->
-      <section class="product-video">
-        <div class="container video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/ldUk8W5tVC0"
-            title="HappyGoGo團體運動軟體"
-            allowfullscreen
-          >
-          </iframe>
+      </div>
+    </section>
+
+    <!-- 申請區 -->
+    <section class="whitepaper-apply">
+      <div class="container apply-grid">
+        <!-- 左側說明 -->
+        <div class="apply-info">
+          <h2>申請完整策略白皮書</h2>
+
+          <p>
+            本文件為 FongAI 策略研究文件，內容包含市場分析、 AI
+            核心技術架構與產業布局方向。
+          </p>
+
+          <ul>
+            <li>✓ 高齡科技產業趨勢與政策解析</li>
+            <li>✓ AI 行動力預測模型架構</li>
+            <li>✓ 全球 Aging Tech 市場布局策略</li>
+          </ul>
+
+          <div class="review-note">
+            申請資料將由專人審核，通過後將以 Email 寄送完整版本。
+          </div>
         </div>
-      </section>
-    </main>
+
+        <!-- 右側表單 -->
+        <div class="apply-form">
+          <form id="whitepaperForm">
+            <input type="text" placeholder="姓名" required />
+            <input type="text" placeholder="公司名稱" required />
+            <input type="text" placeholder="職稱" required />
+            <input type="email" placeholder="Email" required />
+
+            <select required>
+              <option value="">產業別</option>
+              <option>醫療機構</option>
+              <option>政府單位</option>
+              <option>保險產業</option>
+              <option>投資機構</option>
+              <option>學術單位</option>
+              <option>其他</option>
+            </select>
+
+            <textarea
+              placeholder="申請目的 / 合作需求說明"
+              rows="3"
+              required
+            ></textarea>
+
+            <button type="submit" class="submit-btn">提交申請</button>
+          </form>
+
+          <div class="submit-success" id="submitSuccess">
+            <h4>申請已送出</h4>
+            <p>感謝您的申請，我們將於 1–2 個工作日內由專人回覆。</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
   <div class="container">
@@ -356,8 +380,18 @@
   </div>
 </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/fongai/js/main.js"></script>
     <script type="module" src="/fongai/js/animation.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("whitepaperForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          document.getElementById("whitepaperForm").style.display = "none";
+          document.getElementById("submitSuccess").style.display = "block";
+        });
+    </script>
   </body>
 </html>
