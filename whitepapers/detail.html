@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,15 +34,18 @@
 />
 
 
-
-    <script type="module" crossorigin src="/fongai/assets/modulepreload-polyfill.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" crossorigin href="/fongai/assets/style.css">
   </head>
-  <body class="page-product">
+
+  <body class="page-whitepaper-detail">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/index.html">
-      <img src="../assets/images/logo.png" alt="logo" />
+      <img src="/fongai/assets/logo.png" alt="logo" />
       <span>建豐健康科技FongAI</span>
     </a>
 
@@ -254,129 +257,104 @@
 
 
     <main>
-      <section class="product-hero-minimal">
-        <div class="container text-center" data-reveal>
-          <div class="eyebrow text-primary">AI TECHNOLOGY</div>
-          <h1 class="display-3 fw-bold mb-4 text-gradient">
-            FongAI 快速鑑測 APP
-          </h1>
-          <p class="lead text-muted mx-auto mb-5" style="max-width: 800px">
-            結合動態骨架捕捉技術，只需 2 分鐘即可完成專業防跌鑑測。<br
-              class="d-none d-md-block"
-            />
-            守護高齡健康，我們用新世代 AI 解方做到最精準的防護。
-          </p>
-        </div>
-      </section>
-
-      <section id="feature-section" class="app-features py-5">
+      <section class="detail-hero-section">
         <div class="container">
-          <div class="row g-4 text-center">
-            <div class="col-md-4" data-reveal>
-              <div class="feature-card-simple">
-                <i class="bi bi-lightning-charge-fill text-accent fs-1"></i>
-                <h4 class="fw-bold mt-3">快速高效</h4>
-                <p class="text-muted">
-                  2 分鐘即時分析，不需穿戴裝置，減少長者負擔。
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4" data-reveal>
-              <div class="feature-card-simple">
-                <i class="bi bi-graph-up-arrow text-accent fs-1"></i>
-                <h4 class="fw-bold mt-3">精準數據</h4>
-                <p class="text-muted">
-                  自動化產出跌倒風險評估報告，數據清晰易懂。
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4" data-reveal>
-              <div class="feature-card-simple">
-                <i class="bi bi-shield-check text-accent fs-1"></i>
-                <h4 class="fw-bold mt-3">專業認證</h4>
-                <p class="text-muted">
-                  符合臨床跌倒量表邏輯，與醫療場域無縫接軌。
-                </p>
-              </div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/whitepapers/">白皮書系列</a>
+              </li>
+              <li class="breadcrumb-item" id="breadcrumb-active">載入中...</li>
+            </ol>
+          </nav>
+
+          <div class="hero-flex">
+            <div class="hero-text">
+              <span class="badge-year" id="detail-year">2026</span>
+              <h1 class="detail-title" id="detail-title">載入中...</h1>
+              <p class="detail-subtitle" id="detail-date"></p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="workflow-section py-100">
+      <section class="detail-main-content">
         <div class="container">
-          <div class="section-header text-center mb-5" data-reveal>
-            <div class="eyebrow">WORKFLOW</div>
-            <h2 class="fw-bold h1">從檢測到預防的一站式服務</h2>
-          </div>
+          <div class="row g-5">
+            <div class="col-lg-7">
+              <div class="content-card" data-reveal>
+                <div class="card-tag">REPORT OVERVIEW</div>
+                <div id="detail-content" class="rich-text-area"></div>
 
-          <div class="row g-4 workflow-steps">
-            <div class="col-lg-4" data-reveal>
-              <div class="step-card step-prepare">
-                <div class="step-number">01</div>
-                <h4 class="fw-bold">
-                  <i class="bi bi-person-bounding-box me-2"></i>簡易鑑測
-                </h4>
-                <p class="text-muted">
-                  2 分鐘快速檢測
-                  <span class="badge bg-light text-primary border">SPPB</span
-                  ><br />
-                  AI 跌倒風險機率評估
-                </p>
-                <div class="step-img-box">
-                  <img
-                    src="手機截圖路徑1.png"
-                    alt="簡易鑑測"
-                    class="img-fluid"
-                  />
-                </div>
+                <hr class="my-5 border-secondary opacity-25" />
+
+                <div id="apply-content" class="apply-highlights"></div>
               </div>
             </div>
 
-            <div class="col-lg-4" data-reveal>
-              <div class="step-card step-core active">
-                <div class="step-number">02</div>
-                <h4 class="fw-bold">
-                  <i class="bi bi-shield-check me-2"></i>快速分級
-                </h4>
-                <div class="risk-labels mb-2">
-                  <span class="r-a">A</span><span class="r-b">B</span
-                  ><span class="r-c">C</span><span class="r-d">D</span>
-                </div>
-                <p class="text-muted">
-                  AI 動態骨架防跌報告<br />提供精準風險等級評估
-                </p>
-                <div class="step-img-box">
-                  <img
-                    src="報表截圖路徑2.png"
-                    alt="快速分級"
-                    class="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
+            <div class="col-lg-5">
+              <div class="sticky-form-container">
+                <div class="form-card">
+                  <div class="form-header">
+                    <h3>免費獲取完整報告</h3>
+                    <p>填寫資訊後，系統將寄送電子檔至您的信箱</p>
+                  </div>
 
-            <div class="col-lg-4" data-reveal>
-              <div class="step-card step-service">
-                <div class="step-number">03</div>
-                <h4 class="fw-bold"><i class="bi bi-shop me-2"></i>後端導流</h4>
-                <p class="text-muted">
-                  對接多元健康生態系資源<br />提供全方位長照預防方案
-                </p>
-                <div class="step-img-box grid-icons">
-                  <div class="mini-grid">
-                    <span class="tag-v"
-                      ><i class="bi bi-book me-1"></i>多元課程</span
-                    >
-                    <span class="tag-v"
-                      ><i class="bi bi-heart me-1"></i>長照輔具</span
-                    >
-                    <span class="tag-v"
-                      ><i class="bi bi-hospital me-1"></i>職治物治</span
-                    >
-                    <span class="tag-v"
-                      ><i class="bi bi-droplet me-1"></i>中醫保健</span
-                    >
+                  <form id="whitepaperApplyForm">
+                    <div class="input-group-custom">
+                      <label>您的姓名</label>
+                      <input type="text" placeholder="例如：王小明" required />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>公司名稱</label>
+                      <input
+                        type="text"
+                        placeholder="例如：數位發展部、○○有限公司"
+                        required
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label
+                        >LINE ID
+                        <span class="optional-text">(選填)</span></label
+                      >
+                      <input
+                        type="text"
+                        id="line-id"
+                        placeholder="例如：@fongai_service"
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>職稱</label>
+                      <input
+                        type="text"
+                        placeholder="例如：營運總監"
+                        required
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>公司信箱</label>
+                      <input
+                        type="email"
+                        placeholder="name@company.com"
+                        required
+                      />
+                    </div>
+
+                    <button type="submit" class="apply-btn-submit">
+                      立即申請下載 <i class="bi bi-download ms-2"></i>
+                    </button>
+                  </form>
+
+                  <div class="apply-success" id="applySuccess">
+                    <div class="success-icon">
+                      <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h4>申請已成功送出</h4>
+                    <p>
+                      感謝您的關注。報告將在 1
+                      分鐘內寄送至您的信箱，請查收信件（含垃圾信夾）。
+                    </p>
                   </div>
                 </div>
               </div>
@@ -459,10 +437,36 @@
   </div>
 </footer>
 
+    <script src="/fongai/js/whitepapers-data.js"></script>
+    <script src="/fongai/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slug = new URLSearchParams(window.location.search).get("slug");
+        const paper = whitepapersData.find((item) => item.slug === slug);
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        if (paper) {
+          document.title = `${paper.title} | 產業白皮書`;
+          document.getElementById("breadcrumb-active").innerText = paper.title;
+          document.getElementById("detail-title").innerText = paper.title;
+          document.getElementById("detail-date").innerText =
+            `發佈日期：${paper.date}`;
+          document.getElementById("detail-year").innerText = paper.year;
+          document.getElementById("detail-content").innerHTML = paper.content;
+          document.getElementById("apply-content").innerHTML =
+            paper.applyContent;
+        } else {
+          window.location.href = "/whitepapers/";
+        }
 
-    <script type="module" src="/fongai/js/main.js"></script>
-    <script type="module" src="/fongai/js/animation.js"></script>
+        const form = document.getElementById("whitepaperApplyForm");
+        const success = document.getElementById("applySuccess");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          form.style.display = "none";
+          success.style.display = "block";
+          // 這裡可以串接 API
+        });
+      });
+    </script>
   </body>
 </html>

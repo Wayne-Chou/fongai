@@ -17,7 +17,7 @@
     });
   }
 </script>
-<!-- <script src="/js/i18n.js"></script> -->
+<script src="/fongai/js/i18n.js"></script>
 <link
   href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
   rel="stylesheet"
@@ -40,9 +40,8 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/index.html">
-      <span class="text-primary" data-i18n="brand.name1">建豐</span>
-      <span data-i18n="brand.name2">健康科技</span>
-      <span class="brand-tag">FongAI</span>
+      <img src="/fongai/assets/logo.png" alt="logo" />
+      <span>建豐健康科技FongAI</span>
     </a>
 
     <button
@@ -58,51 +57,71 @@
 
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-center">
-        <!-- 關於我們 -->
-        <li class="nav-item">
-          <a class="nav-link" href="/about.html" data-i18n="nav.about">
-            關於我們
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/whitepapers.html"> 白皮書 </a>
-        </li>
-        <!-- 最新消息 -->
-        <li class="nav-item">
-          <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
-            最新消息
-          </a>
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/about.html"
+            data-i18n="nav.about"
+            >關於我們</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/whitepapers/index.html"
+                data-i18n="nav.whitepaper"
+                >白皮書</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/technology.html"
+                data-i18n="nav.technology"
+                >核心技術</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/partners.html"
+                data-i18n="nav.partners"
+                >經銷商招募</a
+              >
+            </li>
+          </ul>
         </li>
 
-        <!-- 服務案例 -->
+        <li class="nav-item">
+          <a class="nav-link" href="/news/news.html" data-i18n="nav.news"
+            >最新消息</a
+          >
+        </li>
+
         <li class="nav-item dropdown dropdown-hover">
           <a
             class="nav-link dropdown-toggle"
             href="#"
             data-bs-toggle="dropdown"
             data-i18n="nav.service"
+            >服務案例</a
           >
-            服務案例
-          </a>
-
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
               <a
                 class="dropdown-item"
                 href="/news/news.html?type=service"
                 data-i18n="nav.institution"
+                >機構合作案例</a
               >
-                機構合作案例
-              </a>
             </li>
             <li>
               <a
                 class="dropdown-item"
                 href="/news/news.html?type=enterprise"
                 data-i18n="nav.enterprise"
+                >企業健康講座</a
               >
-                企業健康講座
-              </a>
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li>
@@ -110,81 +129,83 @@
                 class="dropdown-item text-primary"
                 href="/news/news.html"
                 data-i18n="nav.viewAll"
+                >查看全部</a
               >
-                查看全部
-              </a>
             </li>
           </ul>
         </li>
 
-        <!-- FongAI APP -->
         <li class="nav-item dropdown dropdown-hover">
           <a
             class="nav-link dropdown-toggle"
             href="/fongaiapp.html"
             data-i18n="nav.app"
+            >FongAI APP</a
           >
-            FongAI APP
-          </a>
-
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
               <a
                 class="dropdown-item"
                 href="/vivifrail.html"
                 data-i18n="nav.vivifrail"
+                >長者活力體能訓練方案</a
               >
-                長者活力體能訓練方案｜建豐健康科技 FongAI 防跌APP
-              </a>
             </li>
             <li>
-              <a class="dropdown-item" href="/fongai-exercise.html">
-                FongAI建議運動課程｜高齡防跌
-              </a>
+              <a
+                class="dropdown-item"
+                href="/fongai-exercise.html"
+                data-i18n="nav.exercise"
+                >FongAI建議運動課程</a
+              >
             </li>
           </ul>
         </li>
-        <li class="nav-item dropdown dropdown-hover">
+
+        <li class="nav-item dropdown dropdown-hover" id="nav-selected-products">
           <a
             class="nav-link dropdown-toggle"
             href="/product/selected-products.html"
+            data-i18n="nav.selected"
+            >建豐嚴選</a
           >
-            建豐嚴選
-          </a>
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
-              <a class="dropdown-item" href="/product/product-01.html">
-                「足適能」調整式醫療矯正鞋墊
-              </a>
+              <a
+                class="dropdown-item"
+                href="/product/product-01.html"
+                data-i18n="nav.prod1"
+                >「足適能」調整式醫療矯正鞋墊</a
+              >
             </li>
             <li>
-              <a class="dropdown-item" href="/product/product-02.html">
-                運動地墊遊戲平台
-              </a>
+              <a
+                class="dropdown-item"
+                href="/product/product-02.html"
+                data-i18n="nav.prod2"
+                >運動地墊遊戲平台</a
+              >
             </li>
-
             <li>
-              <a class="dropdown-item" href="/product/product-03.html">
-                HappyGoGo團體運動軟體
-              </a>
+              <a
+                class="dropdown-item"
+                href="/product/product-03.html"
+                data-i18n="nav.prod3"
+                >HappyGoGo團體運動軟體</a
+              >
             </li>
           </ul>
         </li>
-        <!-- 聯絡我們 -->
+
         <li class="nav-item">
-          <a class="nav-link" href="/contact.html" data-i18n="nav.contact">
-            聯絡我們
-          </a>
+          <a class="nav-link" href="/contact.html" data-i18n="nav.contact"
+            >聯絡我們</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">夥伴登入</a>
         </li>
 
-        <!-- 夥伴登入 -->
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">
-            夥伴登入
-          </a>
-        </li>
-
-        <!-- 語系 -->
         <li class="nav-item ms-lg-3 dropdown">
           <button
             class="btn btn-lang dropdown-toggle"
@@ -194,7 +215,6 @@
           >
             語系
           </button>
-
           <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
             <li>
               <a
@@ -202,9 +222,8 @@
                 href="#"
                 onclick="setLang('zh')"
                 data-i18n="lang.zh"
+                >繁體中文</a
               >
-                繁體中文
-              </a>
             </li>
             <li>
               <a
@@ -212,9 +231,8 @@
                 href="#"
                 onclick="setLang('en')"
                 data-i18n="lang.en"
+                >English</a
               >
-                English
-              </a>
             </li>
             <li>
               <a
@@ -222,9 +240,8 @@
                 href="#"
                 onclick="setLang('ja')"
                 data-i18n="lang.ja"
+                >日本語</a
               >
-                日本語
-              </a>
             </li>
           </ul>
         </li>
@@ -249,7 +266,7 @@
 
       <section class="archive-main-section">
         <div class="container">
-          <div class="filter-wrapper mb-5">
+          <div class="filter-wrapper mb-5 mt-5">
             <div class="filter-scroll-container">
               <div class="filter-tags" id="filter-tags">
                 <button class="filter-tag active" data-filter="all">
@@ -271,10 +288,10 @@
 
           <div class="row g-4" id="article-list"></div>
         </div>
+        <nav class="mt-5">
+          <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
       </section>
-      <nav class="mt-5">
-        <ul class="pagination justify-content-center" id="pagination"></ul>
-      </nav>
     </main>
 
     <footer class="footer">
@@ -282,7 +299,7 @@
     <div class="row gy-5">
       <div class="col-lg-4 col-md-6">
         <h3 class="fw-bold mb-4 text-white">建豐健康科技</h3>
-        <p class="footer-text mb-4">
+        <p class="footer-text mb-4" data-i18n="footer.description">
           結合 AI 與醫療專業，致力於解決高齡社會的跌倒問題，
           讓健康老化的願景得以實現。
         </p>
@@ -304,18 +321,30 @@
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <h6 class="footer-title">公司資訊</h6>
+        <h6 class="footer-title" data-i18n="nav.about">關於我們</h6>
         <ul class="list-unstyled">
-          <li><a href="/technology.html">核心技術</a></li>
+          <li>
+            <a href="/whitepapers/index.html" data-i18n="nav.whitepaper"
+              >白皮書</a
+            >
+          </li>
+          <li>
+            <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
+          </li>
+          <li>
+            <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
+          </li>
         </ul>
       </div>
 
       <div class="col-lg-4 col-md-12">
-        <h6 class="footer-title">聯絡資訊</h6>
+        <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
         <ul class="list-unstyled contact-info">
           <li>
             <i class="bi bi-geo-alt text-info"></i>
-            臺灣臺北市內湖區瑞光路168號9F
+            <span data-i18n="footer.address"
+              >臺灣臺北市內湖區瑞光路168號9F</span
+            >
           </li>
           <li>
             <i class="bi bi-envelope text-info"></i>
@@ -329,7 +358,10 @@
       class="footer-bottom border-secondary border-top mt-5 pt-4 text-center"
     >
       <p class="footer-text mb-0">
-        © 2026 建豐健康科技｜FongAI. All Rights Reserved.
+        © 2026
+        <span data-i18n="footer.copyright"
+          >建豐健康科技｜FongAI. All Rights Reserved.</span
+        >
       </p>
     </div>
   </div>
