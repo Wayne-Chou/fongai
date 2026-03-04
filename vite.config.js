@@ -28,8 +28,28 @@ export default defineConfig(({ command }) => {
           partners: resolve(__dirname, "project-root/partners.html"),
           technology: resolve(__dirname, "project-root/technology.html"),
           vivifrail: resolve(__dirname, "project-root/vivifrail.html"),
+          news: resolve(__dirname, "project-root/news/news.html"),
+          detail: resolve(__dirname, "project-root/news/detail.html"),
+          whitepapers: resolve(
+            __dirname,
+            "project-root/whitepapers/index.html",
+          ),
+          whitepapers_detail: resolve(
+            __dirname,
+            "project-root/whitepapers/detail.html",
+          ),
+          fongaiexercise: resolve(
+            __dirname,
+            "project-root/fongai-exercise.html",
+          ),
+          selectedProducts: resolve(
+            __dirname,
+            "project-root/product/selected-products.html",
+          ),
+          product01: resolve(__dirname, "project-root/product/product-01.html"),
+          product02: resolve(__dirname, "project-root/product/product-02.html"),
+          product03: resolve(__dirname, "project-root/product/product-03.html"),
         },
-        // 如果你希望 JS/CSS 保持原名，可以取消下方註解（但不建議）
 
         output: {
           entryFileNames: `assets/[name].js`,

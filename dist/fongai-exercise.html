@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
+<script>
+  if (location.hostname.includes("github.io")) {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("a[href^='/']").forEach((link) => {
+        const href = link.getAttribute("href");
+
+        if (!href.startsWith("/fongai/")) {
+          link.setAttribute("href", "/fongai" + href);
+        }
+      });
+    });
+  }
+</script>
+<script type="module" src="/fongai/js/i18n.js"></script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+/>
+
+
+    <script type="module" crossorigin src="/fongai/assets/style.js"></script>
+    <link rel="stylesheet" crossorigin href="/fongai/assets/style.css">
+  </head>
+
+  <body class="page-exercise-guide">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/index.html">
+      <img src="/fongai/assets/logo.png" alt="logo" />
+      <span>建豐健康科技FongAI</span>
+    </a>
+
+    <button
+      class="navbar-toggler border-0 shadow-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+    >
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/about.html"
+            data-i18n="nav.about"
+            >關於我們</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/whitepapers/index.html"
+                data-i18n="nav.whitepaper"
+                >白皮書</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/technology.html"
+                data-i18n="nav.technology"
+                >核心技術</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/partners.html"
+                data-i18n="nav.partners"
+                >經銷商招募</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/news/news.html" data-i18n="nav.news"
+            >最新消息</a
+          >
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+            data-i18n="nav.service"
+            >服務案例</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=service"
+                data-i18n="nav.institution"
+                >機構合作案例</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=enterprise"
+                data-i18n="nav.enterprise"
+                >企業健康講座</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a
+                class="dropdown-item text-primary"
+                href="/news/news.html"
+                data-i18n="nav.viewAll"
+                >查看全部</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/fongaiapp.html"
+            data-i18n="nav.app"
+            >FongAI APP</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/vivifrail.html"
+                data-i18n="nav.vivifrail"
+                >長者活力體能訓練方案</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/fongai-exercise.html"
+                data-i18n="nav.exercise"
+                >FongAI建議運動課程</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover" id="nav-selected-products">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/product/selected-products.html"
+            data-i18n="nav.selected"
+            >建豐嚴選</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-01.html"
+                data-i18n="nav.prod1"
+                >「足適能」調整式醫療矯正鞋墊</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-02.html"
+                data-i18n="nav.prod2"
+                >運動地墊遊戲平台</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-03.html"
+                data-i18n="nav.prod3"
+                >HappyGoGo團體運動軟體</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html" data-i18n="nav.contact"
+            >聯絡我們</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">夥伴登入</a>
+        </li>
+
+        <li class="nav-item ms-lg-3 dropdown">
+          <button
+            class="btn btn-lang dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            data-i18n="nav.language"
+          >
+            語系
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('zh')"
+                data-i18n="lang.zh"
+                >繁體中文</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('en')"
+                data-i18n="lang.en"
+                >English</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('ja')"
+                data-i18n="lang.ja"
+                >日本語</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main>
+      <!-- HERO -->
+      <section class="vivi-hero">
+        <div class="container text-center" data-reveal>
+          <div class="eyebrow">EXERCISE PROGRAM</div>
+          <h1 class="hero-title fw-bold">
+            FongAI <span class="text-gradient">建議運動課程</span>
+          </h1>
+          <p class="lead text-muted mx-auto" style="max-width: 700px">
+            依據個人跌倒風險檢測結果，提供四大運動建議：
+            <strong>有氧適能、肌肉適能、平衡協調與柔軟度</strong>，
+            協助高齡族群安全運動、延緩失能、預防跌倒。
+          </p>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT -->
+      <section class="vivi-main-section">
+        <div class="container">
+          <div class="vivi-main-content-card">
+            <!-- 有氧 -->
+            <div class="level-detail-row mb-5 pb-5 border-bottom" data-reveal>
+              <h3 class="fw-bold mb-3 text-primary">
+                有氧適能 Aerobic Fitness
+              </h3>
+              <p class="mb-4">
+                透過健走與律動操等有氧運動， 提升心肺功能與血液循環，
+                是防跌的第一步。
+              </p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/CY09UmgVRPA"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/5AZp2v-dE1g"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- 肌肉 -->
+            <div class="level-detail-row mb-5 pb-5 border-bottom" data-reveal>
+              <h3 class="fw-bold mb-3 text-primary">肌肉適能 Muscle Fitness</h3>
+              <p class="mb-4">強化下肢與核心肌群， 可有效降低跌倒風險。</p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/EDwtRrinwcM"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/xGInuOwhtX8"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- 平衡 -->
+            <div class="level-detail-row mb-5 pb-5 border-bottom" data-reveal>
+              <h3 class="fw-bold mb-3 text-primary">
+                平衡協調 Balance & Coordination
+              </h3>
+              <p class="mb-4">
+                提升核心穩定與本體感覺， 是預防跌倒的關鍵能力。
+              </p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/K0_rpIaKCmw"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/v_PlxQt6KCc"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- 柔軟 -->
+            <div class="level-detail-row mb-5" data-reveal>
+              <h3 class="fw-bold mb-3 text-primary">柔軟度 Flexibility</h3>
+              <p class="mb-4">
+                提升關節活動度與身體靈活度， 降低僵硬與受傷風險。
+              </p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/O2oCOjetPC4"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="rounded-4 shadow-sm w-100"
+                    height="315"
+                    src="https://www.youtube.com/embed/MlUQbtM6pA0"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4 col-md-6">
+        <h3 class="fw-bold mb-4 text-white">建豐健康科技</h3>
+        <p class="footer-text mb-4" data-i18n="footer.description">
+          結合 AI 與醫療專業，致力於解決高齡社會的跌倒問題，
+          讓健康老化的願景得以實現。
+        </p>
+
+        <div class="social-links">
+          <a target="_blank" href="https://www.facebook.com/FongAI.co">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://line.me/R/ti/p/@562xehaz?oat_content=url"
+          >
+            <i class="bi bi-line"></i>
+          </a>
+          <a target="_blank" href="https://www.youtube.com/@FONGAIHEALTH">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer-title" data-i18n="nav.about">關於我們</h6>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/whitepapers/index.html" data-i18n="nav.whitepaper"
+              >白皮書</a
+            >
+          </li>
+          <li>
+            <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
+          </li>
+          <li>
+            <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
+        <ul class="list-unstyled contact-info">
+          <li>
+            <i class="bi bi-geo-alt text-info"></i>
+            <span data-i18n="footer.address"
+              >臺灣臺北市內湖區瑞光路168號9F</span
+            >
+          </li>
+          <li>
+            <i class="bi bi-envelope text-info"></i>
+            service@fongai.co
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="footer-bottom border-secondary border-top mt-5 pt-4 text-center"
+    >
+      <p class="footer-text mb-0">
+        © 2026
+        <span data-i18n="footer.copyright"
+          >建豐健康科技｜FongAI. All Rights Reserved.</span
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/fongai/js/main.js"></script>
+    <script type="module" src="/fongai/js/animation.js"></script>
+  </body>
+</html>

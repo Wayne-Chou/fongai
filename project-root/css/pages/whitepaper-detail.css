@@ -1,0 +1,193 @@
+/* --- Detail 頁面基礎 --- */
+.page-whitepaper-detail {
+  background: #020a13;
+  color: #fff;
+}
+
+/* --- Hero 區塊 --- */
+.detail-hero-section {
+  padding: 140px 0 60px;
+  background: radial-gradient(
+    circle at 10% 10%,
+    rgba(0, 240, 255, 0.08),
+    transparent 50%
+  );
+}
+
+.badge-year {
+  background: #00f0ff;
+  color: #020a13;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.detail-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.detail-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+.breadcrumb-item::before {
+  color: #fff !important;
+}
+.detail-main-content {
+  padding-bottom: 120px;
+}
+
+.content-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.card-tag {
+  color: #00f0ff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.rich-text-area {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.apply-highlights h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.apply-highlights ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.apply-highlights li {
+  background: rgba(0, 240, 255, 0.05);
+  border-left: 3px solid #00f0ff;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.apply-highlights li:hover {
+  background: rgba(0, 240, 255, 0.1);
+  transform: translateX(5px);
+}
+.apply-highlights li {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.apply-highlights li::before {
+  content: "\F26A";
+  font-family: "bootstrap-icons";
+  color: #00f0ff;
+}
+
+.sticky-form-container {
+  position: sticky;
+  top: 120px;
+}
+
+.form-card {
+  background: #041e2f;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.form-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.form-header p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+}
+
+.input-group-custom {
+  margin-bottom: 20px;
+}
+
+.input-group-custom label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group-custom input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.input-group-custom input:focus {
+  outline: none;
+  border-color: #00f0ff;
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.apply-btn-submit {
+  width: 100%;
+  background: linear-gradient(90deg, #00f0ff, #00aaff);
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #020a13;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.apply-btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 240, 255, 0.4);
+}
+
+/* 成功訊息 */
+.apply-success {
+  display: none;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  .sticky-form-container {
+    margin-top: 40px;
+    position: static;
+  }
+}

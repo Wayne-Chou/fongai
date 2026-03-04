@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
+<script>
+  if (location.hostname.includes("github.io")) {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("a[href^='/']").forEach((link) => {
+        const href = link.getAttribute("href");
+
+        if (!href.startsWith("/fongai/")) {
+          link.setAttribute("href", "/fongai" + href);
+        }
+      });
+    });
+  }
+</script>
+<script type="module" src="/fongai/js/i18n.js"></script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+/>
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script type="module" crossorigin src="/fongai/assets/style.js"></script>
+    <link rel="stylesheet" crossorigin href="/fongai/assets/style.css">
+  </head>
+
+  <body class="page-whitepaper-detail">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/index.html">
+      <img src="/fongai/assets/logo.png" alt="logo" />
+      <span>建豐健康科技FongAI</span>
+    </a>
+
+    <button
+      class="navbar-toggler border-0 shadow-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+    >
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/about.html"
+            data-i18n="nav.about"
+            >關於我們</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/whitepapers/index.html"
+                data-i18n="nav.whitepaper"
+                >白皮書</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/technology.html"
+                data-i18n="nav.technology"
+                >核心技術</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/partners.html"
+                data-i18n="nav.partners"
+                >經銷商招募</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/news/news.html" data-i18n="nav.news"
+            >最新消息</a
+          >
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+            data-i18n="nav.service"
+            >服務案例</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=service"
+                data-i18n="nav.institution"
+                >機構合作案例</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=enterprise"
+                data-i18n="nav.enterprise"
+                >企業健康講座</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a
+                class="dropdown-item text-primary"
+                href="/news/news.html"
+                data-i18n="nav.viewAll"
+                >查看全部</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/fongaiapp.html"
+            data-i18n="nav.app"
+            >FongAI APP</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/vivifrail.html"
+                data-i18n="nav.vivifrail"
+                >長者活力體能訓練方案</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/fongai-exercise.html"
+                data-i18n="nav.exercise"
+                >FongAI建議運動課程</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover" id="nav-selected-products">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/product/selected-products.html"
+            data-i18n="nav.selected"
+            >建豐嚴選</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-01.html"
+                data-i18n="nav.prod1"
+                >「足適能」調整式醫療矯正鞋墊</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-02.html"
+                data-i18n="nav.prod2"
+                >運動地墊遊戲平台</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-03.html"
+                data-i18n="nav.prod3"
+                >HappyGoGo團體運動軟體</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html" data-i18n="nav.contact"
+            >聯絡我們</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">夥伴登入</a>
+        </li>
+
+        <li class="nav-item ms-lg-3 dropdown">
+          <button
+            class="btn btn-lang dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            data-i18n="nav.language"
+          >
+            語系
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('zh')"
+                data-i18n="lang.zh"
+                >繁體中文</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('en')"
+                data-i18n="lang.en"
+                >English</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('ja')"
+                data-i18n="lang.ja"
+                >日本語</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main>
+      <section class="detail-hero-section">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/whitepapers/">白皮書系列</a>
+              </li>
+              <li class="breadcrumb-item" id="breadcrumb-active">載入中...</li>
+            </ol>
+          </nav>
+
+          <div class="hero-flex">
+            <div class="hero-text">
+              <span class="badge-year" id="detail-year">2026</span>
+              <h1 class="detail-title" id="detail-title">載入中...</h1>
+              <p class="detail-subtitle" id="detail-date"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-main-content">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-7">
+              <div class="content-card" data-reveal>
+                <div class="card-tag">REPORT OVERVIEW</div>
+                <div id="detail-content" class="rich-text-area"></div>
+
+                <hr class="my-5 border-secondary opacity-25" />
+
+                <div id="apply-content" class="apply-highlights"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="sticky-form-container">
+                <div class="form-card">
+                  <div class="form-header">
+                    <h3>免費獲取完整報告</h3>
+                    <p>填寫資訊後，系統將寄送電子檔至您的信箱</p>
+                  </div>
+
+                  <form id="whitepaperApplyForm">
+                    <div class="input-group-custom">
+                      <label>您的姓名</label>
+                      <input type="text" placeholder="例如：王小明" required />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>公司名稱</label>
+                      <input
+                        type="text"
+                        placeholder="例如：數位發展部、○○有限公司"
+                        required
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label
+                        >LINE ID
+                        <span class="optional-text">(選填)</span></label
+                      >
+                      <input
+                        type="text"
+                        id="line-id"
+                        placeholder="例如：@fongai_service"
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>職稱</label>
+                      <input
+                        type="text"
+                        placeholder="例如：營運總監"
+                        required
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>公司信箱</label>
+                      <input
+                        type="email"
+                        placeholder="name@company.com"
+                        required
+                      />
+                    </div>
+
+                    <button type="submit" class="apply-btn-submit">
+                      立即申請下載 <i class="bi bi-download ms-2"></i>
+                    </button>
+                  </form>
+
+                  <div class="apply-success" id="applySuccess">
+                    <div class="success-icon">
+                      <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h4>申請已成功送出</h4>
+                    <p>
+                      感謝您的關注。報告將在 1
+                      分鐘內寄送至您的信箱，請查收信件（含垃圾信夾）。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4 col-md-6">
+        <h3 class="fw-bold mb-4 text-white">建豐健康科技</h3>
+        <p class="footer-text mb-4" data-i18n="footer.description">
+          結合 AI 與醫療專業，致力於解決高齡社會的跌倒問題，
+          讓健康老化的願景得以實現。
+        </p>
+
+        <div class="social-links">
+          <a target="_blank" href="https://www.facebook.com/FongAI.co">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://line.me/R/ti/p/@562xehaz?oat_content=url"
+          >
+            <i class="bi bi-line"></i>
+          </a>
+          <a target="_blank" href="https://www.youtube.com/@FONGAIHEALTH">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer-title" data-i18n="nav.about">關於我們</h6>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/whitepapers/index.html" data-i18n="nav.whitepaper"
+              >白皮書</a
+            >
+          </li>
+          <li>
+            <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
+          </li>
+          <li>
+            <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
+        <ul class="list-unstyled contact-info">
+          <li>
+            <i class="bi bi-geo-alt text-info"></i>
+            <span data-i18n="footer.address"
+              >臺灣臺北市內湖區瑞光路168號9F</span
+            >
+          </li>
+          <li>
+            <i class="bi bi-envelope text-info"></i>
+            service@fongai.co
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="footer-bottom border-secondary border-top mt-5 pt-4 text-center"
+    >
+      <p class="footer-text mb-0">
+        © 2026
+        <span data-i18n="footer.copyright"
+          >建豐健康科技｜FongAI. All Rights Reserved.</span
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="/fongai/js/whitepapers-data.js"></script>
+    <script src="/fongai/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slug = new URLSearchParams(window.location.search).get("slug");
+        const paper = whitepapersData.find((item) => item.slug === slug);
+
+        if (paper) {
+          document.title = `${paper.title} | 產業白皮書`;
+          document.getElementById("breadcrumb-active").innerText = paper.title;
+          document.getElementById("detail-title").innerText = paper.title;
+          document.getElementById("detail-date").innerText =
+            `發佈日期：${paper.date}`;
+          document.getElementById("detail-year").innerText = paper.year;
+          document.getElementById("detail-content").innerHTML = paper.content;
+          document.getElementById("apply-content").innerHTML =
+            paper.applyContent;
+        } else {
+          window.location.href = "/whitepapers/";
+        }
+
+        const form = document.getElementById("whitepaperApplyForm");
+        const success = document.getElementById("applySuccess");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          form.style.display = "none";
+          success.style.display = "block";
+          // 這裡可以串接 API
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,158 +1,441 @@
+/* =========================================
+   2. HERO SECTION (含 Stats 合併樣式)
+========================================= */
 .page-home .hero-section {
-  background: var(--jf-hero-bg);
+  position: relative;
+  overflow: hidden;
+
+  background: radial-gradient(circle at 70% 30%, #0d2b4a 0%, #020a13 100%);
+  color: #ffffff;
+}
+
+.hero-title-custom {
+  font-weight: 800;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 50px;
+}
+
+/* 視覺容器與雷達動畫 */
+.hero-visual-container {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-circle {
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(
+    circle,
+    rgba(0, 240, 255, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+.radar-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transform-origin: left;
+  animation: radarRotate 4s linear infinite;
+}
+
+.skeleton-point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.p1 {
+  top: 25%;
+  left: 35%;
+}
+.p2 {
+  top: 60%;
+  right: 25%;
+}
+.p3 {
+  bottom: 20%;
+  left: 45%;
+}
+.p4 {
+  top: 40%;
+  right: 40%;
+}
+
+/* 浮動數據盒 - 統一強化版 */
+.data-float-box {
+  position: absolute;
+  background: rgba(10, 37, 64, 0.85);
+  backdrop-filter: blur(15px);
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  min-width: 180px;
+}
+
+.df-1 {
+  top: 10%;
+  right: 5%;
+  animation: float 5s infinite;
+}
+.df-2 {
+  bottom: 20%;
+  left: 0%;
+  animation: float 5s infinite 1s;
+}
+.df-3 {
+  bottom: 5%;
+  right: 15%;
+  animation: float 5s infinite 2s;
+  border-color: var(--accent);
+}
+
+.data-float-box .label {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.data-float-box .value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.data-float-box .value small {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* 底部數據統計覆蓋層 */
+.hero-stats-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
+  z-index: 5;
+}
+
+.stat-modern-item {
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-modern-item:last-child {
+  border-right: none;
+}
+
+.stat-modern-num {
+  font-size: 3.5rem; /* 適配 Hero 底部的大小 */
+  font-weight: 800;
+  display: block;
+  line-height: 1;
+  background: linear-gradient(180deg, #fff 30%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-modern-label {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  display: block;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* =========================================
+   3. 技術流程區
+========================================= */
+.interactive-process {
+  padding: 140px 0;
+  background: #010810;
+  position: relative;
+}
+
+.scan-effect {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background: repeating-radial-gradient(
+    circle,
+    var(--accent) 0,
+    transparent 1px,
+    transparent 40px
+  );
+}
+
+.process-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.process-tab {
+  flex: 1;
+  padding: 35px 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-std);
+  text-align: center;
+}
+
+.process-tab:hover {
+  background: rgba(0, 240, 255, 0.05);
+  border-color: rgba(0, 240, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.bottom-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 3px;
+  background: var(--accent);
+  opacity: 0.1;
+  transition: 0.3s;
+}
+
+.process-tab.active .bottom-indicator {
+  opacity: 1;
+  width: 80%;
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.tab-scanner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 240, 255, 0.15),
+    transparent
+  );
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.process-tab.active .tab-scanner,
+.process-tab:hover .tab-scanner {
+  animation: tabScan 2.5s linear infinite;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.process-content {
+  display: none;
+}
+.process-content.active {
+  display: block;
+  animation: fadeInRight 0.6s ease forwards;
+}
+
+/* =========================================
+   4. 核心特點
+========================================= */
+.core-features {
+  padding: 140px 0;
+  background: var(--bg-dark);
   position: relative;
   overflow: hidden;
 }
 
-.page-home .hero-section::before {
-  content: "";
+.bg-grid-animation {
   position: absolute;
-  top: -10%;
-  right: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(0, 212, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  pointer-events: none;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  transform: perspective(500px) rotateX(60deg) translateY(-50px);
+  z-index: 1;
 }
 
-.page-home .text-gradient {
-  background: var(--jf-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-.page-home .tech-badge {
-  display: inline-block;
-  padding: 6px 16px;
-  background: white;
-  color: var(--jf-accent);
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
-  margin-bottom: 1rem;
-}
-
-.page-home .btn-jf-primary {
-  height: 54px;
-  padding: 0 32px;
-  background-color: var(--jf-primary) !important;
-  color: white !important;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 600;
-  text-decoration: none;
-  transition: var(--transition);
-  border: none;
-}
-
-.page-home .btn-jf-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(10, 37, 64, 0.3);
-  filter: brightness(1.2);
-  color: white !important;
-}
-
-.page-home .rounded-custom {
-  border-radius: 40px;
-  width: 100%;
-  max-width: 550px;
-  height: 500px;
-  object-fit: cover;
-}
-
-.page-home .floating-card {
-  position: absolute;
-  bottom: 40px;
-  right: 0;
-  background: white;
-  padding: 18px 28px;
-  border-radius: 20px;
+.feature-horizontal-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-  animation: homeFloat 4s ease-in-out infinite;
-  z-index: 5;
+  gap: 25px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-std);
+  cursor: default;
+  position: relative;
+  z-index: 3;
 }
 
-@keyframes homeFloat {
+.feature-horizontal-item:hover {
+  background: rgba(0, 240, 255, 0.08);
+  border-left-color: var(--accent);
+  box-shadow: inset 10px 0 20px rgba(0, 240, 255, 0.05);
+}
+
+.feat-icon-big {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+/* =========================================
+   5. 應用場景
+========================================= */
+.scenario-section {
+  padding: 140px 0;
+  background: var(--bg-dark-alt);
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.scenario-panel {
+  position: relative;
+  height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.scenario-panel .panel-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(40%) brightness(0.5);
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.scenario-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(2, 10, 19, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.scenario-panel:hover .panel-bg {
+  filter: grayscale(0%) brightness(0.9);
+  transform: scale(1.08);
+}
+
+.panel-content {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  right: 30px;
+  z-index: 2;
+}
+
+.panel-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px var(--accent);
+}
+
+.scenario-panel h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.scenario-panel p {
+  opacity: 0.8;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* =========================================
+   全域動畫關鍵幀
+========================================= */
+@keyframes radarRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes float {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-12px);
   }
 }
-
-.page-home .glass-video-wrapper {
-  background: var(--jf-primary);
-  background: linear-gradient(135deg, var(--jf-primary) 0%, #062b45 100%);
-  border-radius: 60px;
-  padding: 80px 40px;
-}
-
-.page-home .video-frame {
-  border-radius: 30px;
-  overflow: hidden;
-  border: 8px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
-
-.page-home .divider {
-  width: 80px;
-  height: 4px;
-  background: var(--jf-accent);
-  margin-top: 1.5rem;
-  border-radius: 2px;
-}
-
-.page-home .py-100 {
-  padding: 100px 0;
-}
-
-.page-home .feature-card.highlight {
-  background: #ffffff;
-  border: 1px solid rgba(10, 37, 64, 0.08);
-  border-top: 5px solid var(--jf-accent);
-  padding: 60px 40px;
-  border-radius: 30px;
-  transition: var(--transition);
-  height: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-}
-
-.page-home .feature-card.highlight:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.1);
-}
-
-.page-home .icon-box {
-  width: 75px;
-  height: 75px;
-  background: #effaff;
-  color: var(--jf-primary);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 991.98px) {
-  .page-home .rounded-custom {
-    height: 350px;
+@keyframes tabScan {
+  0% {
+    transform: translateY(-100%);
   }
-  .page-home .glass-video-wrapper {
-    padding: 40px 20px;
-    border-radius: 40px;
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

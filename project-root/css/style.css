@@ -14,8 +14,15 @@
 
 @import "./pages/contact.css";
 
-@import "./pages/partners.css";
 @import "./pages/fongaiapp.css";
 @import "./pages/page-article-detail.css";
 @import "./pages/page-tech.css";
 @import "./pages/Vivifrail.css";
+@import "./pages/fongai-exercise.css";
+@import "./pages/selected-products.css";
+@import "./pages/product-01.css";
+@import "./pages/product-02.css";
+@import "./pages/product-03.css";
+@import "./pages/whitepapers.css";
+@import "./pages/whitepaper-detail.css";
+@import "./pages/partners.css";

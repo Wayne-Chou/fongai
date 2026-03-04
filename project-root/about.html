@@ -1,44 +1,32 @@
 <!doctype html>
 <html lang="zh-TW">
   <head>
-    <load src="./partials/head.html" />
-
-    <link rel="stylesheet" href="./css/style.css" />
+    <load src="/partials/head.html" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body class="page-about">
-    <load src="./partials/header.html" />
+    <load src="/partials/header.html" />
 
     <main>
       <section class="about-hero">
         <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-6" data-reveal>
-              <div class="eyebrow">ABOUT JIANFENG</div>
-              <h1 class="hero-title fw-bold mb-4">
-                用 AI 守護高齡行動力<br />
-                <span class="text-gradient">打造預防跌倒的新標準</span>
-              </h1>
-              <p class="lead text-secondary mb-4">
-                建豐健康科技專注於人工智慧與健康管理，透過 FongAI
-                影像分析技術，將標準化評估帶入日常照護。
-              </p>
-              <div class="pill-group">
-                <span class="pill">AI 動態影像分析</span>
-                <span class="pill">SPPB 臨床標準</span>
-                <span class="pill">跨域轉介服務</span>
-              </div>
-            </div>
-            <div class="col-lg-6" data-reveal>
-              <div class="hero-media-wrapper">
-                <img
-                  src="../assets/images/about-hero.jpg"
-                  class="img-fluid rounded-5 shadow-lg"
-                  style="width: 100%"
-                  alt="AI分析"
-                  onerror="this.parentElement.classList.add('media-fallback')"
-                />
-              </div>
+          <div class="hero-content-center" data-reveal>
+            <div class="tech-bg-glow"></div>
+
+            <div class="eyebrow">ABOUT JIANFENG</div>
+            <h1 class="hero-title fw-bold mb-4">
+              用 AI 守護高齡行動力<br />
+              <span class="text-gradient">打造預防跌倒的新標準</span>
+            </h1>
+            <p class="lead text-secondary mb-5 mx-auto">
+              建豐健康科技專注於人工智慧與健康管理，透過 FongAI
+              影像分析技術，將標準化評估帶入日常照護。
+            </p>
+            <div class="pill-group justify-content-center">
+              <span class="pill">AI 動態影像分析</span>
+              <span class="pill">SPPB 臨床標準</span>
+              <span class="pill">跨域轉介服務</span>
             </div>
           </div>
         </div>
@@ -46,28 +34,26 @@
 
       <section class="about-stats">
         <div class="container">
-          <div class="stat-card-main" data-reveal>
-            <div class="row g-0">
-              <div class="col-md-4 stat-item">
-                <div class="stat-icon"><i class="bi bi-cpu"></i></div>
-                <div class="stat-content">
-                  <h3 class="stat-num">AI</h3>
-                  <p class="stat-label">動態風險模型</p>
-                </div>
+          <div class="stat-dashboard">
+            <div class="stat-card-v2" data-reveal>
+              <div class="glow-ring"></div>
+              <div class="stat-inner">
+                <span class="stat-num">AI</span>
+                <p class="stat-label">動態風險模型</p>
               </div>
-              <div class="col-md-4 stat-item">
-                <div class="stat-icon"><i class="bi bi-journal-check"></i></div>
-                <div class="stat-content">
-                  <h3 class="stat-num">SPPB</h3>
-                  <p class="stat-label">臨床標準整合</p>
-                </div>
+            </div>
+            <div class="stat-card-v2" data-reveal>
+              <div class="glow-ring"></div>
+              <div class="stat-inner">
+                <span class="stat-num">SPPB</span>
+                <p class="stat-label">臨床標準整合</p>
               </div>
-              <div class="col-md-4 stat-item">
-                <div class="stat-icon"><i class="bi bi-share"></i></div>
-                <div class="stat-content">
-                  <h3 class="stat-num">OMNI</h3>
-                  <p class="stat-label">跨域資源串聯</p>
-                </div>
+            </div>
+            <div class="stat-card-v2" data-reveal>
+              <div class="glow-ring"></div>
+              <div class="stat-inner">
+                <span class="stat-num">OMNI</span>
+                <p class="stat-label">跨域資源串聯</p>
               </div>
             </div>
           </div>
@@ -82,7 +68,8 @@
           </div>
           <div class="row g-4 mt-2">
             <div class="col-lg-4" data-reveal>
-              <div class="feature-box h-100">
+              <div class="feature-hover-card">
+                <div class="scan-line"></div>
                 <div class="feature-icon"><i class="bi bi-activity"></i></div>
                 <h4>預防醫學導向</h4>
                 <p>
@@ -91,7 +78,8 @@
               </div>
             </div>
             <div class="col-lg-4" data-reveal>
-              <div class="feature-box h-100">
+              <div class="feature-hover-card">
+                <div class="scan-line"></div>
                 <div class="feature-icon">
                   <i class="bi bi-database-check"></i>
                 </div>
@@ -102,7 +90,8 @@
               </div>
             </div>
             <div class="col-lg-4" data-reveal>
-              <div class="feature-box h-100">
+              <div class="feature-hover-card">
+                <div class="scan-line"></div>
                 <div class="feature-icon"><i class="bi bi-diagram-3"></i></div>
                 <h4>生態系串聯</h4>
                 <p>串聯醫療、照護與社福資源，建構跨域合作的健康服務網絡。</p>
@@ -200,9 +189,8 @@
       </section>
     </main>
 
-    <load src="./partials/footer.html" />
+    <load src="/partials/footer.html" />
 
-    <script type="module" src="/js/layout.js"></script>
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

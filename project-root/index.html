@@ -1,40 +1,195 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
   <head>
-    <load src="./partials/head.html" />
-
-    <link rel="stylesheet" href="./css/style.css" />
+    <load src="/partials/head.html" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
   <body class="page-home">
-    <load src="./partials/header.html" />
+    <load src="/partials/header.html" />
     <main>
       <section class="hero-section">
         <div class="container">
-          <div class="row align-items-center min-vh-100">
-            <div class="col-lg-6 hero-content pt-5">
+          <div class="row align-items-center min-vh-100 pb-5">
+            <div class="col-lg-6 pt-5">
               <div class="tech-badge mb-3">AI Powered Health Technology</div>
-              <h1 class="display-3 fw-bold mb-4">
-                守護高齡尊嚴<br /><span class="text-gradient"
-                  >從預防跌倒開始</span
-                >
+              <h1 class="hero-title-custom mb-4">
+                守護高齡尊嚴<br />
+                從預防跌倒開始
               </h1>
               <p class="lead mb-5 text-secondary">
-                運用 FongAI
-                動態骨架偵測，提供精準步態分析與跌倒預測方案。不需穿戴裝置，保護隱私更專業。
+                運用 FongAI 動態骨架偵測，提供精準步態分析與跌倒風險預測方案。
               </p>
+              <div class="pill-group">
+                <span class="pill">AI 動態影像分析</span>
+                <span class="pill">SPPB 臨床標準</span>
+              </div>
             </div>
-            <div class="col-lg-6 position-relative mt-5 mt-lg-0">
-              <div class="hero-image-wrapper text-center">
-                <img
-                  src="https://images.pexels.com/photos/7551604/pexels-photo-7551604.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="FongAI Smart Motion Tracking"
-                  class="img-fluid rounded-custom shadow-2xl"
-                />
-                <div class="floating-card shadow">
-                  <i class="bi bi-shield-fill-check text-success fs-4"></i>
+
+            <div class="col-lg-6">
+              <div class="hero-visual-container">
+                <div class="radar-circle">
+                  <div class="radar-line"></div>
+                  <div class="skeleton-point p1"></div>
+                  <div class="skeleton-point p2"></div>
+                  <div class="skeleton-point p3"></div>
+                  <div class="skeleton-point p4"></div>
+                </div>
+
+                <div class="data-float-box df-1">
+                  <span class="label">步態速度</span>
+                  <span class="value">1.25 <small>m/s</small></span>
+                </div>
+                <div class="data-float-box df-2">
+                  <span class="label">平衡指數</span>
+                  <span class="value text-accent">穩定良好</span>
+                </div>
+                <div class="data-float-box df-3">
+                  <span class="label">跌倒風險評估</span>
+                  <span class="value">低風險</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats-overlay">
+          <div class="container">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <div class="stat-modern-item">
+                  <span class="stat-modern-num counter" data-target="50000"
+                    >0</span
+                  >
+                  <span class="stat-modern-label">影像樣本累積</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="stat-modern-item">
+                  <span class="stat-modern-num counter" data-target="120"
+                    >0</span
+                  >
+                  <span class="stat-modern-label">合作社區據點</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="stat-modern-item">
+                  <span class="stat-modern-num counter" data-target="95"
+                    >0</span
+                  >
+                  <span class="stat-modern-label">辨識準確率 (%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interactive-process">
+        <div class="scan-effect"></div>
+        <div class="container">
+          <div class="section-title text-center mb-5">
+            <h2 class="glow-text">AI 運算分析流程</h2>
+            <p>點擊下方步驟查看精密演算法流程</p>
+          </div>
+          <div class="process-wrapper">
+            <div class="process-tabs">
+              <div class="process-tab active" data-step="1">
+                <div class="tab-scanner"></div>
+
+                <span class="step-num">01</span>
+                <h5>動態骨架辨識</h5>
+                <div class="bottom-indicator"></div>
+              </div>
+              <div class="process-tab" data-step="2">
+                <div class="tab-scanner"></div>
+
+                <span class="step-num">02</span>
+                <h5>臨床演算法</h5>
+                <div class="bottom-indicator"></div>
+              </div>
+              <div class="process-tab" data-step="3">
+                <div class="tab-scanner"></div>
+
+                <span class="step-num">03</span>
+                <h5>風險矩陣預測</h5>
+                <div class="bottom-indicator"></div>
+              </div>
+            </div>
+            <div class="process-detail glass-panel">
+              <div class="process-content active" data-content="1">
+                <h4>骨架點雲捕捉技術</h4>
+                <p>
+                  透過 MediaPipe 進階深度學習，精準定位人體 33
+                  個關鍵座標。即便在雜亂背景下，也能過濾雜訊，確保 24fps
+                  的流暢動態追蹤。
+                </p>
+              </div>
+              <div class="process-content" data-content="2">
+                <h4>SPPB 臨床指標自動化</h4>
+                <p>
+                  將視覺數據轉化為醫學認可的 SPPB (Short Physical Performance
+                  Battery) 分數。省去人工計時誤差。
+                </p>
+              </div>
+              <div class="process-content" data-content="3">
+                <h4>Transformer 預測模型</h4>
+                <p>
+                  結合歷史大數據與個人步態特徵，運用預訓練模型分析未來跌倒機率。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="core-features">
+        <div class="bg-grid-animation"></div>
+        <div class="container position-relative" style="z-index: 2">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <h2 class="display-5 fw-bold mb-4">核心技術優勢</h2>
+              <p class="text-secondary mb-4">
+                建豐健康科技以預防醫學為核心，提供領先業界的 AI 感測解決方案。
+              </p>
+              <div class="tech-badge">Edge Computing Optimized</div>
+            </div>
+            <div class="col-lg-7">
+              <div class="feature-list-container">
+                <div class="feature-horizontal-item">
+                  <div class="feat-icon-big">
+                    <i class="bi bi-lightning-charge"></i>
+                  </div>
                   <div>
-                    <div class="fw-bold">專業防跌鑑定</div>
-                    <small class="text-muted">準確率達 95% 以上</small>
+                    <h4>邊緣運算優化</h4>
+                    <p class="mb-0 text-secondary small">
+                      獨家輕量化模型，一般平板即可流暢運作，大幅降低硬體成本。
+                    </p>
+                  </div>
+                </div>
+                <div class="feature-horizontal-item highlight">
+                  <div class="feat-icon-big">
+                    <i class="bi bi-eye-slash"></i>
+                  </div>
+                  <div>
+                    <h4>隱私安全架構</h4>
+                    <p class="mb-0 text-secondary small">
+                      遵循 GDPR 標準，不儲存人臉影像，僅回傳匿名座標點。
+                    </p>
+                  </div>
+                </div>
+                <div class="feature-horizontal-item">
+                  <div class="feat-icon-big">
+                    <i class="bi bi-diagram-3"></i>
+                  </div>
+                  <div>
+                    <h4>跨平台整合</h4>
+                    <p class="mb-0 text-secondary small">
+                      提供標準 API 接口，可輕鬆介接現有醫療系統或長照管理 APP。
+                    </p>
                   </div>
                 </div>
               </div>
@@ -43,64 +198,99 @@
         </div>
       </section>
 
-      <section class="py-5">
+      <section class="scenario-section">
         <div class="container">
-          <div class="glass-video-wrapper">
-            <div class="row justify-content-center text-center">
-              <div class="col-lg-8 mb-5">
-                <h2 class="text-white fw-bold h1">直擊 FongAI 核心技術</h2>
-                <div class="divider mx-auto"></div>
-              </div>
-              <div class="col-lg-10">
-                <div class="video-frame shadow-2xl">
-                  <div class="ratio ratio-16x9">
-                    <iframe
-                      src="https://www.youtube.com/watch?v=XZtFbm0AYAQ&feature=youtu.be"
-                      title="FongAI"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="section-title text-center mb-5">
+            <h2>多元應用場景</h2>
           </div>
-        </div>
-      </section>
-
-      <section class="py-100">
-        <div class="container">
-          <div class="row g-4 text-center">
-            <div class="col-md-4">
-              <div class="feature-card highlight">
-                <div class="icon-box mx-auto"><i class="bi bi-cpu"></i></div>
-                <h4 class="fw-bold">步態大數據</h4>
-                <p>結合醫學臨床數據，提供 AI 科學化預警建議。</p>
+          <div class="scenario-grid">
+            <div class="scenario-panel">
+              <div
+                class="panel-bg"
+                style="
+                  background-image: url(&quot;https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&w=800&quot;);
+                "
+              ></div>
+              <div class="panel-content">
+                <div class="panel-icon"><i class="bi bi-hospital"></i></div>
+                <h3>醫療院所</h3>
+                <p>輔助復健科與高齡門診風險篩檢</p>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="feature-card highlight">
-                <div class="icon-box mx-auto"><i class="bi bi-phone"></i></div>
-                <h4 class="fw-bold">即時檢測</h4>
-                <p>無需穿戴式設備，手機鏡頭即是專業步態分析儀。</p>
+            <div class="scenario-panel">
+              <div
+                class="panel-bg"
+                style="
+                  background-image: url(&quot;https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg?auto=compress&w=800&quot;);
+                "
+              ></div>
+              <div class="panel-content">
+                <div class="panel-icon"><i class="bi bi-house-heart"></i></div>
+                <h3>長照機構</h3>
+                <p>自動化定期評估，掌握住民衰弱進度</p>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="feature-card highlight">
-                <div class="icon-box mx-auto">
-                  <i class="bi bi-shield-check"></i>
-                </div>
-                <h4 class="fw-bold">嚴選輔具</h4>
-                <p>根據鑑定結果，推薦最適合的環境安全改善方案。</p>
+            <div class="scenario-panel">
+              <div
+                class="panel-bg"
+                style="
+                  background-image: url(&quot;https://images.pexels.com/photos/4570650/pexels-photo-4570650.jpeg?auto=compress&w=800&quot;);
+                "
+              ></div>
+              <div class="panel-content">
+                <div class="panel-icon"><i class="bi bi-people"></i></div>
+                <h3>社區據點</h3>
+                <p>多人快速篩檢，提早發現高風險對象</p>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <load src="./partials/footer.html" />
-
+    <load src="/partials/footer.html" />
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/animation.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // 保持之前的數字計數與 Tab 切換邏輯
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".counter");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const c = entry.target;
+                const target = +c.dataset.target;
+                let current = 0;
+                const update = () => {
+                  current += target / 50;
+                  if (current < target) {
+                    c.innerText = Math.floor(current).toLocaleString();
+                    requestAnimationFrame(update);
+                  } else {
+                    c.innerText = target.toLocaleString();
+                  }
+                };
+                update();
+                observer.unobserve(c);
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+        counters.forEach((c) => observer.observe(c));
+
+        document.querySelectorAll(".process-tab").forEach((tab) => {
+          tab.addEventListener("click", () => {
+            document
+              .querySelectorAll(".process-tab, .process-content")
+              .forEach((el) => el.classList.remove("active"));
+            tab.classList.add("active");
+            document
+              .querySelector(`[data-content="${tab.dataset.step}"]`)
+              .classList.add("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

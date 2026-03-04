@@ -1,0 +1,170 @@
+/* ===================================== */
+/* PRODUCT 02 - AI TECH VERSION */
+/* ===================================== */
+
+.page-product02 {
+  background: linear-gradient(135deg, #03121d 0%, #041e2f 100%);
+  color: #ffffff;
+  margin-top: 120px;
+}
+
+/* ============================= */
+/* BANNER */
+/* ============================= */
+
+.page-product02 .product-banner img {
+  width: 100%;
+  display: block;
+
+  filter: brightness(0.9);
+}
+
+/* ============================= */
+/* HERO TITLE */
+/* ============================= */
+
+.page-product02 .center {
+  text-align: center;
+}
+
+.page-product02 .product-title {
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00f0ff, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================= */
+/* INTRO */
+/* ============================= */
+
+.page-product02 .product-intro {
+  padding: 100px 0;
+}
+
+.page-product02 .intro-quote {
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 50px rgba(0, 240, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================= */
+/* VIDEO */
+/* ============================= */
+
+.page-product02 .product-video {
+  padding: 80px 0;
+}
+
+.page-product02 .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.2);
+}
+
+.page-product02 .video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* ============================= */
+/* MAIN IMAGE */
+/* ============================= */
+
+.page-product02 .product-image-section {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.page-product02 .product-image-section img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 50px rgba(0, 240, 255, 0.25);
+  transition: 0.4s ease;
+}
+
+.page-product02 .product-image-section img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 70px rgba(0, 240, 255, 0.4);
+}
+
+/* ============================= */
+/* GALLERY */
+/* ============================= */
+
+.page-product02 .product-gallery {
+  padding: 120px 0;
+}
+
+.page-product02 .section-title {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #00f0ff, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-product02 .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.page-product02 .gallery-grid img {
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+.page-product02 .gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0, 240, 255, 0.4);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 992px) {
+  .page-product02 .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-product02 .intro-quote {
+    padding: 30px;
+  }
+
+  .page-product02 .product-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-product02 .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

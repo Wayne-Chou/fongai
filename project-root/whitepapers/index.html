@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <load src="/partials/head.html" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body class="page-whitepapers">
+    <load src="/partials/header.html" />
+
+    <main>
+      <section class="whitepaper-hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container" data-reveal>
+          <div class="eyebrow mx-auto">REPORTS & INSIGHTS</div>
+          <h1 class="hero-title fw-bold">
+            產業<span class="text-gradient">白皮書</span>
+          </h1>
+          <p class="hero-subtitle">從 AI 防跌到行動力經濟，重塑高齡科技未來</p>
+        </div>
+      </section>
+
+      <section class="whitepaper-section py-4 py-md-5 mt-4 mt-md-5">
+        <div class="container">
+          <div class="whitepaper-grid" id="whitepaperGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <load src="/partials/footer.html" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/whitepapers-data.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.getElementById("whitepaperGrid");
+        if (!grid || typeof whitepapersData === "undefined") return;
+
+        whitepapersData.forEach((item) => {
+          const card = document.createElement("a");
+          card.href = `/whitepapers/detail.html?slug=${item.slug}`;
+          card.className = "whitepaper-card";
+          card.setAttribute("data-reveal", "");
+
+          const rawContent = item.content || "";
+          const cleanText = rawContent
+            .replace(/<[^>]*>/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+          const displayExcerpt = cleanText.substring(0, 90) + "...";
+
+          card.innerHTML = `
+        <div class="card-inner">
+          <div class="card-visual" style="background-image: linear-gradient(rgba(3, 18, 29, 0.7), rgba(3, 18, 29, 0.7)), url('${item.image}');">
+            <div class="scan-effect"></div>
+            <span class="year-badge">${item.year}</span>
+            <div class="visual-icon">
+              <i class="bi bi-file-earmark-pdf"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>${item.title}</h3>
+            <p>${displayExcerpt}</p> 
+            <div class="card-footer">
+              <span class="read-more">閱讀報告 <i class="bi bi-arrow-right"></i></span>
+             
+            </div>
+          </div>
+        </div>
+      `;
+
+          grid.appendChild(card);
+        });
+      });
+    </script>
+  </body>
+</html>

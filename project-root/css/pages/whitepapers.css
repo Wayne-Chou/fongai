@@ -1,0 +1,228 @@
+/* ===================================== */
+/*  WHITEPAPER*/
+/* ===================================== */
+
+.page-whitepapers {
+  background: #020a13;
+  color: #ffffff;
+}
+
+/* --- Hero 區塊 --- */
+.whitepaper-hero {
+  padding: 180px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(0, 240, 255, 0.15) 0%,
+    transparent 75%
+  );
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.page-whitepapers .hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.page-whitepapers .text-gradient {
+  background: linear-gradient(90deg, #00f0ff, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-whitepapers .eyebrow {
+  display: table;
+  background: rgba(0, 240, 255, 0.1);
+  color: #00f0ff;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+/* --- 網格佈局 --- */
+.whitepaper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 40px;
+  padding-bottom: 100px;
+}
+
+/* --- 卡片視覺核心 --- */
+.whitepaper-card {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-inner {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  border-radius: 24px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+/* 封面視覺區 */
+.card-visual {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s ease;
+}
+
+.visual-icon {
+  font-size: 3.5rem;
+  color: rgba(0, 240, 255, 0.2);
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+/* 掃描線動畫 */
+.scan-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+  box-shadow: 0 0 15px #00f0ff;
+  opacity: 0;
+  z-index: 2;
+}
+
+@keyframes laserScan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* --- 卡片懸停特效 --- */
+.whitepaper-card:hover .card-inner {
+  transform: translateY(-12px);
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 240, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.whitepaper-card:hover .scan-effect {
+  animation: laserScan 2s infinite linear;
+}
+
+.whitepaper-card:hover .visual-icon {
+  color: rgba(0, 240, 255, 0.6);
+  transform: scale(1.1);
+}
+
+/* --- 文字內容區 --- */
+.card-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+/* --- 卡片底部 --- */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+.read-more {
+  color: #00f0ff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.read-more i {
+  transition: transform 0.3s ease;
+}
+.whitepaper-card:hover .read-more i {
+  transform: translateX(5px);
+}
+
+.file-size {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.year-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #00f0ff;
+  color: #03121d;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+/* 手機版優化 */
+@media (max-width: 768px) {
+  .whitepaper-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .whitepaper-hero {
+    padding: 140px 0 60px;
+  }
+}

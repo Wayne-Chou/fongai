@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/index.html">
-      <span class="text-primary">建豐</span>健康科技
-      <span class="brand-tag">FongAI</span>
+      <img src="/assets/images/logo.png" alt="logo" />
+      <span>建豐健康科技FongAI</span>
     </a>
 
     <button
@@ -18,64 +18,80 @@
 
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="/about.html">關於我們</a>
-        </li>
-
         <li class="nav-item dropdown dropdown-hover">
           <a
             class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
+            href="/about.html"
+            data-i18n="nav.about"
+            >關於我們</a
           >
-            最新消息
-          </a>
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
-              <a class="dropdown-item" href="/news/news.html?type=news"
-                >媒體報導</a
+              <a
+                class="dropdown-item"
+                href="/whitepapers/index.html"
+                data-i18n="nav.whitepaper"
+                >白皮書</a
               >
             </li>
-
             <li>
-              <a class="dropdown-item" href="/vivifrail.html">健康專欄</a>
+              <a
+                class="dropdown-item"
+                href="/technology.html"
+                data-i18n="nav.technology"
+                >核心技術</a
+              >
             </li>
-            <li><hr class="dropdown-divider" /></li>
             <li>
-              <a class="dropdown-item text-primary" href="../news/news.html">
-                查看全部
-              </a>
+              <a
+                class="dropdown-item"
+                href="/partners.html"
+                data-i18n="nav.partners"
+                >經銷商招募</a
+              >
             </li>
           </ul>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="/news/news.html" data-i18n="nav.news"
+            >最新消息</a
+          >
+        </li>
+
         <li class="nav-item dropdown dropdown-hover">
           <a
             class="nav-link dropdown-toggle"
             href="#"
-            role="button"
             data-bs-toggle="dropdown"
+            data-i18n="nav.service"
+            >服務案例</a
           >
-            服務案例
-          </a>
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
-              <a class="dropdown-item" href="/news/news.html?type=service"
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=service"
+                data-i18n="nav.institution"
                 >機構合作案例</a
               >
             </li>
-
             <li>
-              <a class="dropdown-item" href="/news/news.html?type=enterprise"
+              <a
+                class="dropdown-item"
+                href="/news/news.html?type=enterprise"
+                data-i18n="nav.enterprise"
                 >企業健康講座</a
               >
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li>
-              <a class="dropdown-item text-primary" href="/news/news.html">
-                查看全部
-              </a>
+              <a
+                class="dropdown-item text-primary"
+                href="/news/news.html"
+                data-i18n="nav.viewAll"
+                >查看全部</a
+              >
             </li>
           </ul>
         </li>
@@ -84,39 +100,110 @@
           <a
             class="nav-link dropdown-toggle"
             href="/fongaiapp.html"
-            role="button"
-            data-bs-toggle="dropdown"
+            data-i18n="nav.app"
+            >FongAI APP</a
           >
-            FongAI APP
-          </a>
           <ul class="dropdown-menu border-0 shadow-lg">
             <li>
-              <a class="dropdown-item" href="/vivifrail.html">
-                長者活力體能訓練方案｜建豐健康科技 FongAI 防跌APP
-              </a>
+              <a
+                class="dropdown-item"
+                href="/vivifrail.html"
+                data-i18n="nav.vivifrail"
+                >長者活力體能訓練方案</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/fongai-exercise.html"
+                data-i18n="nav.exercise"
+                >FongAI建議運動課程</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown dropdown-hover" id="nav-selected-products">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/product/selected-products.html"
+            data-i18n="nav.selected"
+            >建豐嚴選</a
+          >
+          <ul class="dropdown-menu border-0 shadow-lg">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-01.html"
+                data-i18n="nav.prod1"
+                >「足適能」調整式醫療矯正鞋墊</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-02.html"
+                data-i18n="nav.prod2"
+                >運動地墊遊戲平台</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/product/product-03.html"
+                data-i18n="nav.prod3"
+                >HappyGoGo團體運動軟體</a
+              >
             </li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/contact.html">聯絡我們</a>
+          <a class="nav-link" href="/contact.html" data-i18n="nav.contact"
+            >聯絡我們</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">夥伴登入</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">夥伴登入</a>
-        </li>
-        <!-- 夥伴登入按鈕特別做 -->
         <li class="nav-item ms-lg-3 dropdown">
           <button
             class="btn btn-lang dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
+            data-i18n="nav.language"
           >
-            <i class="bi bi-globe me-1"></i> 語系
+            語系
           </button>
           <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
-            <li><a class="dropdown-item" href="/index.html">繁體中文</a></li>
-            <li><a class="dropdown-item" href="/en/index.html">English</a></li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('zh')"
+                data-i18n="lang.zh"
+                >繁體中文</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('en')"
+                data-i18n="lang.en"
+                >English</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="setLang('ja')"
+                data-i18n="lang.ja"
+                >日本語</a
+              >
+            </li>
           </ul>
         </li>
       </ul>

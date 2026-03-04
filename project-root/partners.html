@@ -1,224 +1,148 @@
 <!doctype html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
   <head>
-    <load src="./partials/head.html" />
-
-    <link rel="stylesheet" href="./css/style.css" />
+    <load src="/partials/head.html" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body class="page-partners">
-    <load src="./partials/header.html" />
+
+  <body class="page-partner-recruitment">
+    <load src="/partials/header.html" />
 
     <main>
-      <section class="partners-hero">
-        <div class="container text-center" data-reveal>
-          <div class="eyebrow">OUR PARTNERS</div>
-          <h1 class="hero-title fw-bold">攜手跨域夥伴</h1>
-          <p class="lead text-muted mx-auto" style="max-width: 700px">
-            建豐健康科技與政府、醫療、學術界緊密合作，共同建構高齡者行動力防護網，將
-            AI 科技落實於社會照護場域。
-          </p>
-        </div>
-      </section>
-
-      <section class="partners-grid-section">
+      <section class="detail-hero-section">
         <div class="container">
-          <div class="section-header text-center mb-5" data-reveal>
-            <h2 class="section-title">合作夥伴分類</h2>
-            <div class="title-divider mx-auto"></div>
-          </div>
-          <ul
-            class="nav nav-pills justify-content-center"
-            id="partnerTab"
-            role="tablist"
-          >
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="gov-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#gov-content"
-                type="button"
-                role="tab"
-              >
-                <i class="bi bi-bank me-2"></i>政府與公部門
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="med-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#med-content"
-                type="button"
-                role="tab"
-              >
-                <i class="bi bi-hospital me-2"></i>醫療與照護
-              </button>
-            </li>
-          </ul>
-
-          <div class="tab-content" id="partnerTabContent">
-            <div
-              class="tab-pane fade show active"
-              id="gov-content"
-              role="tabpanel"
-            >
-              <div class="row g-4 row-cols-2 row-cols-md-4 row-cols-lg-6">
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/gov-01.png"
-                      alt="桃園市政府"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/gov-02.png"
-                      alt="勞動部"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-pane fade" id="med-content" role="tabpanel">
-              <div class="row g-4 row-cols-2 row-cols-md-4 row-cols-lg-6">
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="partner-card">
-                    <img
-                      src="/assets/images/partners/medical-01.png"
-                      alt="醫療院所"
-                      onerror="
-                        this.src = 'https://placehold.co/150x80?text=LOGO'
-                      "
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="hero-text text-center">
+            <span class="badge-year">PARTNERSHIP</span>
+            <h1 class="detail-title">經銷合作夥伴招募</h1>
+            <p class="detail-subtitle">
+              攜手引領 AI 高齡健康數據革命，共創長照 3.0 商業新藍海
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="cta-section" data-reveal>
-        <div class="container text-center">
-          <div class="cta-box">
-            <h2 class="fw-bold mb-3">成為我們的合作夥伴</h2>
-            <p class="mb-4">
-              讓我們一同運用 AI 科技，為長者創造更安全、更健康的未來。
-            </p>
-            <a
-              href="/project-root/contact.html"
-              class="btn btn-primary-jf px-5 py-3"
-              >立即聯繫洽談</a
-            >
+      <section class="detail-main-content">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-7">
+              <div class="content-card" data-reveal>
+                <div class="card-tag">WHY PARTNER WITH US</div>
+                <div class="rich-text-area">
+                  <h2>成為 FongAI 合作夥伴的優勢</h2>
+                  <p>
+                    我們提供全球領先的「動態骨架辨識技術」與「行動力健康分」體系，協助合作夥伴從單純的設備銷售轉型為資產管理與數據服務商。
+                  </p>
+
+                  <div class="apply-highlights mt-4">
+                    <ul>
+                      <li>
+                        <strong>高額利潤分享</strong
+                        >：透明的分潤機制，包含硬體銷售與訂閱制服務分成。
+                      </li>
+                      <li>
+                        <strong>專業技術支援</strong
+                        >：提供完善的教育訓練與場域導入技術顧問。
+                      </li>
+                      <li>
+                        <strong>市場行銷支援</strong
+                        >：共享品牌資源、產業白皮書與聯名開發商機。
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <hr class="my-5 border-secondary opacity-25" />
+
+                <div class="card-tag">COOPERATION MODEL</div>
+                <div class="rich-text-area">
+                  <h3>多樣化合作模式</h3>
+                  <table class="table table-dark-custom mt-3">
+                    <thead>
+                      <tr>
+                        <th>模式</th>
+                        <th>適合對象</th>
+                        <th>核心價值</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>區域經銷商</strong></td>
+                        <td>醫材代理、軟體系統商</td>
+                        <td>獨家區域經營與產品分銷</td>
+                      </tr>
+                      <tr>
+                        <td><strong>系統整合商 (SI)</strong></td>
+                        <td>長照業者、智慧建築</td>
+                        <td>API 接口串接與客製化開發</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="sticky-form-container">
+                <div class="form-card">
+                  <div class="form-header">
+                    <h3>立即申請合作洽談</h3>
+                    <p>填寫基本資訊，我們將由專人與您聯繫</p>
+                  </div>
+
+                  <form id="partnerApplyForm">
+                    <div class="input-group-custom">
+                      <label>負責人姓名</label>
+                      <input type="text" placeholder="例如：李大同" required />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>公司名稱</label>
+                      <input type="text" placeholder="公司完整全銜" required />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>公司信箱</label>
+                      <input
+                        type="email"
+                        placeholder="official@company.com"
+                        required
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label
+                        >LINE ID
+                        <span class="optional-text">(選填)</span></label
+                      >
+                      <input
+                        type="text"
+                        id="partner-line-id"
+                        placeholder="方便快速聯繫"
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>預期合作方式</label>
+                      <textarea
+                        placeholder="請簡述您的現有通路或合作想法"
+                        rows="3"
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" class="apply-btn-submit">
+                      提交經銷申請 <i class="bi bi-send ms-2"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <load src="./partials/footer.html" />
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <load src="/partials/footer.html" />
     <script type="module" src="/js/main.js"></script>
-    <script type="module" src="/js/animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

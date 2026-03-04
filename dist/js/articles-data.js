@@ -116,4 +116,27 @@ const articlesData = [
     image: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg",
     content: `<p>深蹲不只是蹲下去，膝蓋與背部的角度是關鍵...</p>`,
   },
+  {
+    id: "enterprise-2026-001",
+    category: "enterprise",
+    categoryName: "企業健康講座",
+    title: "科技導入職場：AI 健康講座實戰分享",
+    date: "2026-02-05",
+    excerpt:
+      "建豐健康科技受邀至上市科技企業舉辦員工健康講座，透過 AI 動作分析技術現場示範職場久坐風險評估...",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    content: `
+    <p>隨著職場型態改變，久坐與肩頸痠痛已成為現代企業員工的常見健康問題。建豐健康科技受邀至科技產業龍頭企業，舉辦 AI 健康講座與即時檢測體驗活動。</p>
+
+    <h3>AI 現場即時姿勢分析</h3>
+    <p>透過 FongAI 動態骨架辨識系統，員工只需站在鏡頭前完成簡單動作，即可立即獲得姿勢穩定度與肌力風險評估報告。</p>
+
+    <blockquote>「科技不只是效率工具，更是預防醫學的延伸。」</blockquote>
+
+    <h3>數據化健康管理</h3>
+    <p>本次講座共超過 200 名員工參與，活動後企業 HR 將整體數據匯整為健康趨勢報告，作為未來職場健康管理決策參考。</p>
+
+    <p>建豐未來將持續與企業合作，推動智慧健康管理進入更多工作場域。</p>
+  `,
+  },
 ];
