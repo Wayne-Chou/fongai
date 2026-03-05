@@ -4,7 +4,7 @@ window.setLang = async function (lang) {
 };
 
 async function loadLang(lang) {
-  const res = await fetch(`./lang/${lang}.json`);
+  const res = await fetch("/lang/" + lang + ".json");
   const data = await res.json();
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
