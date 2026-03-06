@@ -3,10 +3,6 @@
   <head>
     <load src="/partials/head.html" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
   </head>
   <body class="page-home">
     <load src="/partials/header.html" />
@@ -16,16 +12,23 @@
           <div class="row align-items-center min-vh-100 pb-5">
             <div class="col-lg-6 pt-5">
               <div class="tech-badge mb-3">AI Powered Health Technology</div>
-              <h1 class="hero-title-custom mb-4">
+              <h1 class="hero-title-custom mb-4" data-i18n="home_hero_title">
                 守護高齡尊嚴<br />
                 從預防跌倒開始
               </h1>
-              <p class="lead mb-5 text-secondary">
+              <p
+                class="lead mb-5 text-secondary"
+                data-i18n="home_hero_subtitle"
+              >
                 運用 FongAI 動態骨架偵測，提供精準步態分析與跌倒風險預測方案。
               </p>
               <div class="pill-group">
-                <span class="pill">AI 動態影像分析</span>
-                <span class="pill">SPPB 臨床標準</span>
+                <span class="pill" data-i18n="home_pill_ai"
+                  >AI 動態影像分析</span
+                >
+                <span class="pill" data-i18n="home_pill_sppb"
+                  >SPPB 臨床標準</span
+                >
               </div>
             </div>
 
@@ -40,16 +43,26 @@
                 </div>
 
                 <div class="data-float-box df-1">
-                  <span class="label">步態速度</span>
+                  <span class="label" data-i18n="home_float_speed"
+                    >步態速度</span
+                  >
                   <span class="value">1.25 <small>m/s</small></span>
                 </div>
                 <div class="data-float-box df-2">
-                  <span class="label">平衡指數</span>
-                  <span class="value text-accent">穩定良好</span>
+                  <span class="label" data-i18n="home_float_balance"
+                    >平衡指數</span
+                  >
+                  <span class="value text-accent" data-i18n="home_float_stable"
+                    >穩定良好</span
+                  >
                 </div>
                 <div class="data-float-box df-3">
-                  <span class="label">跌倒風險評估</span>
-                  <span class="value">低風險</span>
+                  <span class="label" data-i18n="home_float_risk"
+                    >跌倒風險評估</span
+                  >
+                  <span class="value" data-i18n="home_float_low_risk"
+                    >低風險</span
+                  >
                 </div>
               </div>
             </div>
@@ -64,7 +77,11 @@
                   <span class="stat-modern-num counter" data-target="50000"
                     >0</span
                   >
-                  <span class="stat-modern-label">影像樣本累積</span>
+                  <span
+                    class="stat-modern-label"
+                    data-i18n="home_stat_cumulative"
+                    >影像樣本累積</span
+                  >
                 </div>
               </div>
               <div class="col-md-4">
@@ -72,7 +89,9 @@
                   <span class="stat-modern-num counter" data-target="120"
                     >0</span
                   >
-                  <span class="stat-modern-label">合作社區據點</span>
+                  <span class="stat-modern-label" data-i18n="home_stat_partners"
+                    >合作社區據點</span
+                  >
                 </div>
               </div>
               <div class="col-md-4">
@@ -80,7 +99,9 @@
                   <span class="stat-modern-num counter" data-target="95"
                     >0</span
                   >
-                  <span class="stat-modern-label">辨識準確率 (%)</span>
+                  <span class="stat-modern-label" data-i18n="home_stat_accuracy"
+                    >辨識準確率 (%)</span
+                  >
                 </div>
               </div>
             </div>
@@ -92,52 +113,53 @@
         <div class="scan-effect"></div>
         <div class="container">
           <div class="section-title text-center mb-5">
-            <h2 class="glow-text">AI 運算分析流程</h2>
-            <p>點擊下方步驟查看精密演算法流程</p>
+            <h2 class="glow-text" data-i18n="home_process_title">
+              AI 運算分析流程
+            </h2>
+            <p data-i18n="home_process_subtitle">
+              點擊下方步驟查看精密演算法流程
+            </p>
           </div>
           <div class="process-wrapper">
             <div class="process-tabs">
               <div class="process-tab active" data-step="1">
                 <div class="tab-scanner"></div>
-
                 <span class="step-num">01</span>
-                <h5>動態骨架辨識</h5>
+                <h5 data-i18n="home_step1_tab">動態骨架辨識</h5>
                 <div class="bottom-indicator"></div>
               </div>
               <div class="process-tab" data-step="2">
                 <div class="tab-scanner"></div>
-
                 <span class="step-num">02</span>
-                <h5>臨床演算法</h5>
+                <h5 data-i18n="home_step2_tab">臨床演算法</h5>
                 <div class="bottom-indicator"></div>
               </div>
               <div class="process-tab" data-step="3">
                 <div class="tab-scanner"></div>
-
                 <span class="step-num">03</span>
-                <h5>風險矩陣預測</h5>
+                <h5 data-i18n="home_step3_tab">風險矩陣預測</h5>
                 <div class="bottom-indicator"></div>
               </div>
             </div>
             <div class="process-detail glass-panel">
               <div class="process-content active" data-content="1">
-                <h4>骨架點雲捕捉技術</h4>
-                <p>
+                <h4 data-i18n="home_step1_title">骨架點雲捕捉技術</h4>
+                <p data-i18n="home_step1_desc">
                   透過 MediaPipe 進階深度學習，精準定位人體 33
                   個關鍵座標。即便在雜亂背景下，也能過濾雜訊，確保 24fps
                   的流暢動態追蹤。
                 </p>
               </div>
               <div class="process-content" data-content="2">
-                <h4>SPPB 臨床指標自動化</h4>
-                <p>
+                <h4 data-i18n="home_step2_title">SPPB 臨床指標自動化</h4>
+                <p data-i18n="home_step2_desc">
                   將視覺數據轉化為醫學認可的 SPPB (Short Physical Performance
                   Battery) 分數。省去人工計時誤差。
                 </p>
               </div>
               <div class="process-content" data-content="3">
-                <h4>Transformer 預測模型</h4>
-                <p>
+                <h4 data-i18n="home_step3_title">Transformer 預測模型</h4>
+                <p data-i18n="home_step3_desc">
                   結合歷史大數據與個人步態特徵，運用預訓練模型分析未來跌倒機率。
                 </p>
               </div>
@@ -151,8 +173,10 @@
         <div class="container position-relative" style="z-index: 2">
           <div class="row align-items-center">
             <div class="col-lg-5 mb-5 mb-lg-0">
-              <h2 class="display-5 fw-bold mb-4">核心技術優勢</h2>
-              <p class="text-secondary mb-4">
+              <h2 class="display-5 fw-bold mb-4" data-i18n="home_feature_title">
+                核心技術優勢
+              </h2>
+              <p class="text-secondary mb-4" data-i18n="home_feature_desc">
                 建豐健康科技以預防醫學為核心，提供領先業界的 AI 感測解決方案。
               </p>
               <div class="tech-badge">Edge Computing Optimized</div>
@@ -164,8 +188,11 @@
                     <i class="bi bi-lightning-charge"></i>
                   </div>
                   <div>
-                    <h4>邊緣運算優化</h4>
-                    <p class="mb-0 text-secondary small">
+                    <h4 data-i18n="home_feat1_title">邊緣運算優化</h4>
+                    <p
+                      class="mb-0 text-secondary small"
+                      data-i18n="home_feat1_desc"
+                    >
                       獨家輕量化模型，一般平板即可流暢運作，大幅降低硬體成本。
                     </p>
                   </div>
@@ -175,9 +202,12 @@
                     <i class="bi bi-eye-slash"></i>
                   </div>
                   <div>
-                    <h4>隱私安全架構</h4>
-                    <p class="mb-0 text-secondary small">
-                      遵循 GDPR 標準，不儲存人臉影像，僅回傳匿名座標點。
+                    <h4 data-i18n="home_feat2_title">視覺化安全架構</h4>
+                    <p
+                      class="mb-0 text-secondary small"
+                      data-i18n="home_feat2_desc"
+                    >
+                      視覺化安全監測：整合人像儲存與骨架辨識技術。
                     </p>
                   </div>
                 </div>
@@ -186,9 +216,12 @@
                     <i class="bi bi-diagram-3"></i>
                   </div>
                   <div>
-                    <h4>跨平台整合</h4>
-                    <p class="mb-0 text-secondary small">
-                      提供標準 API 接口，可輕鬆介接現有醫療系統或長照管理 APP。
+                    <h4 data-i18n="home_feat3_title">跨平台整合</h4>
+                    <p
+                      class="mb-0 text-secondary small"
+                      data-i18n="home_feat3_desc"
+                    >
+                      提供標準 API 接口，可輕鬆介接 App。
                     </p>
                   </div>
                 </div>
@@ -201,7 +234,7 @@
       <section class="scenario-section">
         <div class="container">
           <div class="section-title text-center mb-5">
-            <h2>多元應用場景</h2>
+            <h2 data-i18n="home_scenario_main_title">多元應用場景</h2>
           </div>
           <div class="scenario-grid">
             <div class="scenario-panel">
@@ -213,8 +246,10 @@
               ></div>
               <div class="panel-content">
                 <div class="panel-icon"><i class="bi bi-hospital"></i></div>
-                <h3>醫療院所</h3>
-                <p>輔助復健科與高齡門診風險篩檢</p>
+                <h3 data-i18n="home_scenario1_title">醫療院所</h3>
+                <p data-i18n="home_scenario1_desc">
+                  輔助復健科與高齡門診風險篩檢
+                </p>
               </div>
             </div>
             <div class="scenario-panel">
@@ -226,8 +261,10 @@
               ></div>
               <div class="panel-content">
                 <div class="panel-icon"><i class="bi bi-house-heart"></i></div>
-                <h3>長照機構</h3>
-                <p>自動化定期評估，掌握住民衰弱進度</p>
+                <h3 data-i18n="home_scenario2_title">長照機構</h3>
+                <p data-i18n="home_scenario2_desc">
+                  自動化定期評估，掌握住民衰弱進度
+                </p>
               </div>
             </div>
             <div class="scenario-panel">
@@ -239,8 +276,10 @@
               ></div>
               <div class="panel-content">
                 <div class="panel-icon"><i class="bi bi-people"></i></div>
-                <h3>社區據點</h3>
-                <p>多人快速篩檢，提早發現高風險對象</p>
+                <h3 data-i18n="home_scenario3_title">社區據點</h3>
+                <p data-i18n="home_scenario3_desc">
+                  多人快速篩檢，提早發現高風險對象
+                </p>
               </div>
             </div>
           </div>
@@ -248,10 +287,12 @@
       </section>
     </main>
     <load src="/partials/footer.html" />
+
+    <script type="module" src="/js/i18n.js"></script>
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/animation.js"></script>
+
     <script>
-      // 保持之前的數字計數與 Tab 切換邏輯
       document.addEventListener("DOMContentLoaded", () => {
         const counters = document.querySelectorAll(".counter");
         const observer = new IntersectionObserver(
