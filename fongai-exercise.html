@@ -39,15 +39,19 @@
   </head>
 
   <body class="page-exercise-guide">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
+    <!-- LOGO -->
+
     <a class="navbar-brand fw-bold" href="/index.html">
       <img src="/fongai/assets/logo.png" alt="logo" />
       <span data-i18n="nav.name">建豐健康科技FongAI</span>
     </a>
 
+    <!-- HAMBURGER -->
+
     <button
-      class="navbar-toggler border-0 shadow-none"
+      class="navbar-toggler border-0 shadow-none collapsed"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#mainNav"
@@ -57,156 +61,192 @@
       <span class="toggler-icon"></span>
     </button>
 
+    <!-- NAV -->
+
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item dropdown dropdown-hover">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <!-- ABOUT -->
+
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="/about.html"
             data-i18n="nav.about"
-            >關於我們</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            關於我們
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/whitepapers/index.html"
                 data-i18n="nav.whitepaper"
-                >白皮書</a
               >
+                白皮書
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/technology.html"
                 data-i18n="nav.technology"
-                >核心技術</a
               >
+                核心技術
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
                 data-i18n="nav.partners"
-                >經銷商招募</a
               >
+                經銷商招募
+              </a>
             </li>
           </ul>
         </li>
 
+        <!-- NEWS -->
+
         <li class="nav-item">
-          <a class="nav-link" href="/news/news.html" data-i18n="nav.news"
-            >最新消息</a
-          >
+          <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
+            最新消息
+          </a>
         </li>
 
-        <li class="nav-item dropdown dropdown-hover">
+        <!-- SERVICE -->
+
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
             data-bs-toggle="dropdown"
             data-i18n="nav.service"
-            >服務案例</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            服務案例
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/news/news.html?type=service"
                 data-i18n="nav.institution"
-                >機構合作案例</a
               >
+                機構合作案例
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/news/news.html?type=enterprise"
                 data-i18n="nav.enterprise"
-                >企業健康講座</a
               >
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a
-                class="dropdown-item text-primary"
-                href="/news/news.html"
-                data-i18n="nav.viewAll"
-                >查看全部</a
-              >
+                企業健康講座
+              </a>
             </li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown dropdown-hover">
+        <!-- APP -->
+
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="/fongaiapp.html"
             data-i18n="nav.app"
-            >FongAI APP</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            FongAI APP
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/vivifrail.html"
                 data-i18n="nav.vivifrail"
-                >長者活力體能訓練方案</a
               >
+                長者活力體能訓練方案
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/fongai-exercise.html"
                 data-i18n="nav.exercise"
-                >FongAI建議運動課程</a
               >
+                FongAI建議運動課程
+              </a>
             </li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown dropdown-hover" id="nav-selected-products">
+        <!-- PRODUCTS -->
+
+        <li class="nav-item dropdown" id="nav-selected-products">
           <a
             class="nav-link dropdown-toggle"
             href="/product/selected-products.html"
             data-i18n="nav.selected"
-            >建豐嚴選</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            建豐嚴選
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/product/product-01.html"
                 data-i18n="nav.prod1"
-                >「足適能」調整式醫療矯正鞋墊</a
               >
+                足適能矯正鞋墊
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/product/product-02.html"
                 data-i18n="nav.prod2"
-                >運動地墊遊戲平台</a
               >
+                運動地墊遊戲平台
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/product/product-03.html"
                 data-i18n="nav.prod3"
-                >HappyGoGo團體運動軟體</a
               >
+                HappyGoGo團體運動軟體
+              </a>
             </li>
           </ul>
         </li>
 
+        <!-- CONTACT -->
+
         <li class="nav-item">
-          <a class="nav-link" href="/contact.html" data-i18n="nav.contact"
-            >聯絡我們</a
-          >
+          <a class="nav-link" href="/contact.html" data-i18n="nav.contact">
+            聯絡我們
+          </a>
         </li>
+
+        <!-- LOGIN -->
+
         <li class="nav-item">
-          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">夥伴登入</a>
+          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">
+            夥伴登入
+          </a>
         </li>
+
+        <!-- LANGUAGE -->
 
         <li class="nav-item ms-lg-3 dropdown">
           <button
@@ -217,33 +257,24 @@
           >
             語系
           </button>
-          <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+
+          <ul class="dropdown-menu dropdown-menu-end">
             <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                onclick="setLang('zh')"
-                data-i18n="lang.zh"
-                >繁體中文</a
-              >
+              <a class="dropdown-item" href="#" onclick="setLang('zh')">
+                繁體中文
+              </a>
             </li>
+
             <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                onclick="setLang('en')"
-                data-i18n="lang.en"
-                >English</a
-              >
+              <a class="dropdown-item" href="#" onclick="setLang('en')">
+                English
+              </a>
             </li>
+
             <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                onclick="setLang('ja')"
-                data-i18n="lang.ja"
-                >日本語</a
-              >
+              <a class="dropdown-item" href="#" onclick="setLang('ja')">
+                日本語
+              </a>
             </li>
           </ul>
         </li>
@@ -257,7 +288,7 @@
       <!-- HERO -->
       <section class="vivi-hero">
         <div class="container text-center" data-reveal>
-          <div class="eyebrow">EXERCISE PROGRAM</div>
+          <div class="eyebrow mx-auto">EXERCISE PROGRAM</div>
           <h1 class="hero-title fw-bold">
             FongAI <span class="text-gradient">建議運動課程</span>
           </h1>
@@ -400,9 +431,7 @@
   <div class="container">
     <div class="row gy-5">
       <div class="col-lg-4 col-md-6">
-        <h3 data-i18n="nav.name" class="fw-bold mb-4 text-white">
-          建豐健康科技FongAI
-        </h3>
+        <h3 data-i18n="nav.name" class="fw-bold mb-4">建豐健康科技FongAI</h3>
         <p class="footer-text mb-4" data-i18n="footer.description">
           結合 AI 與醫療專業，致力於解決高齡社會的跌倒問題，
           讓健康老化的願景得以實現。

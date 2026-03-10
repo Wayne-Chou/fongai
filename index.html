@@ -38,15 +38,19 @@
     <link rel="stylesheet" crossorigin href="/fongai/assets/style.css">
   </head>
   <body class="page-home">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
+    <!-- LOGO -->
+
     <a class="navbar-brand fw-bold" href="/index.html">
       <img src="/fongai/assets/logo.png" alt="logo" />
       <span data-i18n="nav.name">建豐健康科技FongAI</span>
     </a>
 
+    <!-- HAMBURGER -->
+
     <button
-      class="navbar-toggler border-0 shadow-none"
+      class="navbar-toggler border-0 shadow-none collapsed"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#mainNav"
@@ -56,156 +60,192 @@
       <span class="toggler-icon"></span>
     </button>
 
+    <!-- NAV -->
+
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item dropdown dropdown-hover">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <!-- ABOUT -->
+
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="/about.html"
             data-i18n="nav.about"
-            >關於我們</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            關於我們
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/whitepapers/index.html"
                 data-i18n="nav.whitepaper"
-                >白皮書</a
               >
+                白皮書
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/technology.html"
                 data-i18n="nav.technology"
-                >核心技術</a
               >
+                核心技術
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
                 data-i18n="nav.partners"
-                >經銷商招募</a
               >
+                經銷商招募
+              </a>
             </li>
           </ul>
         </li>
 
+        <!-- NEWS -->
+
         <li class="nav-item">
-          <a class="nav-link" href="/news/news.html" data-i18n="nav.news"
-            >最新消息</a
-          >
+          <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
+            最新消息
+          </a>
         </li>
 
-        <li class="nav-item dropdown dropdown-hover">
+        <!-- SERVICE -->
+
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
             data-bs-toggle="dropdown"
             data-i18n="nav.service"
-            >服務案例</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            服務案例
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/news/news.html?type=service"
                 data-i18n="nav.institution"
-                >機構合作案例</a
               >
+                機構合作案例
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/news/news.html?type=enterprise"
                 data-i18n="nav.enterprise"
-                >企業健康講座</a
               >
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a
-                class="dropdown-item text-primary"
-                href="/news/news.html"
-                data-i18n="nav.viewAll"
-                >查看全部</a
-              >
+                企業健康講座
+              </a>
             </li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown dropdown-hover">
+        <!-- APP -->
+
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="/fongaiapp.html"
             data-i18n="nav.app"
-            >FongAI APP</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            FongAI APP
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/vivifrail.html"
                 data-i18n="nav.vivifrail"
-                >長者活力體能訓練方案</a
               >
+                長者活力體能訓練方案
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/fongai-exercise.html"
                 data-i18n="nav.exercise"
-                >FongAI建議運動課程</a
               >
+                FongAI建議運動課程
+              </a>
             </li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown dropdown-hover" id="nav-selected-products">
+        <!-- PRODUCTS -->
+
+        <li class="nav-item dropdown" id="nav-selected-products">
           <a
             class="nav-link dropdown-toggle"
             href="/product/selected-products.html"
             data-i18n="nav.selected"
-            >建豐嚴選</a
           >
-          <ul class="dropdown-menu border-0 shadow-lg">
+            建豐嚴選
+          </a>
+
+          <ul class="dropdown-menu">
             <li>
               <a
                 class="dropdown-item"
                 href="/product/product-01.html"
                 data-i18n="nav.prod1"
-                >「足適能」調整式醫療矯正鞋墊</a
               >
+                足適能矯正鞋墊
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/product/product-02.html"
                 data-i18n="nav.prod2"
-                >運動地墊遊戲平台</a
               >
+                運動地墊遊戲平台
+              </a>
             </li>
+
             <li>
               <a
                 class="dropdown-item"
                 href="/product/product-03.html"
                 data-i18n="nav.prod3"
-                >HappyGoGo團體運動軟體</a
               >
+                HappyGoGo團體運動軟體
+              </a>
             </li>
           </ul>
         </li>
 
+        <!-- CONTACT -->
+
         <li class="nav-item">
-          <a class="nav-link" href="/contact.html" data-i18n="nav.contact"
-            >聯絡我們</a
-          >
+          <a class="nav-link" href="/contact.html" data-i18n="nav.contact">
+            聯絡我們
+          </a>
         </li>
+
+        <!-- LOGIN -->
+
         <li class="nav-item">
-          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">夥伴登入</a>
+          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">
+            夥伴登入
+          </a>
         </li>
+
+        <!-- LANGUAGE -->
 
         <li class="nav-item ms-lg-3 dropdown">
           <button
@@ -216,33 +256,24 @@
           >
             語系
           </button>
-          <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+
+          <ul class="dropdown-menu dropdown-menu-end">
             <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                onclick="setLang('zh')"
-                data-i18n="lang.zh"
-                >繁體中文</a
-              >
+              <a class="dropdown-item" href="#" onclick="setLang('zh')">
+                繁體中文
+              </a>
             </li>
+
             <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                onclick="setLang('en')"
-                data-i18n="lang.en"
-                >English</a
-              >
+              <a class="dropdown-item" href="#" onclick="setLang('en')">
+                English
+              </a>
             </li>
+
             <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                onclick="setLang('ja')"
-                data-i18n="lang.ja"
-                >日本語</a
-              >
+              <a class="dropdown-item" href="#" onclick="setLang('ja')">
+                日本語
+              </a>
             </li>
           </ul>
         </li>
@@ -253,108 +284,142 @@
 
     <main>
       <section class="hero-section">
+        <canvas id="ai-network"></canvas>
         <div class="container">
           <div class="row align-items-center min-vh-100 pb-5">
             <div class="col-lg-6 pt-5">
-              <div class="tech-badge mb-3">AI Powered Health Technology</div>
+              <div class="hero-badge mb-3">AI Powered Health Technology</div>
+
               <h1 class="hero-title-custom mb-4" data-i18n="home_hero_title">
                 守護高齡尊嚴<br />
                 從預防跌倒開始
               </h1>
-              <p
-                class="lead mb-5 text-secondary"
-                data-i18n="home_hero_subtitle"
-              >
+
+              <p class="hero-desc mb-4" data-i18n="home_hero_subtitle">
                 運用 FongAI 動態骨架偵測，提供精準步態分析與跌倒風險預測方案。
               </p>
-              <div class="pill-group">
-                <span class="pill" data-i18n="home_pill_ai"
-                  >AI 動態影像分析</span
-                >
-                <span class="pill" data-i18n="home_pill_sppb"
-                  >SPPB 臨床標準</span
-                >
+
+              <div class="hero-tags">
+                <span class="hero-tag" data-i18n="home_pill_ai">
+                  AI 動態影像分析
+                </span>
+
+                <span class="hero-tag" data-i18n="home_pill_sppb">
+                  SPPB 臨床標準
+                </span>
               </div>
             </div>
 
             <div class="col-lg-6">
               <div class="hero-visual-container">
-                <div class="radar-circle">
-                  <div class="radar-line"></div>
-                  <div class="skeleton-point p1"></div>
-                  <div class="skeleton-point p2"></div>
-                  <div class="skeleton-point p3"></div>
-                  <div class="skeleton-point p4"></div>
+                <div class="hero-ai-flow">
+                  <div class="flow-step">
+                    <div class="flow-icon">
+                      <i class="bi bi-camera-video"></i>
+                    </div>
+                    <p data-i18n="home_flow_capture">影像偵測</p>
+                  </div>
+
+                  <div class="flow-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+
+                  <div class="flow-step">
+                    <div class="flow-icon">
+                      <i class="bi bi-cpu"></i>
+                    </div>
+                    <p data-i18n="home_flow_ai">AI 步態分析</p>
+                  </div>
+
+                  <div class="flow-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+
+                  <div class="flow-step">
+                    <div class="flow-icon">
+                      <i class="bi bi-clipboard-data"></i>
+                    </div>
+                    <p data-i18n="home_flow_result">跌倒風險評估</p>
+                  </div>
                 </div>
 
                 <div class="data-float-box df-1">
-                  <span class="label" data-i18n="home_float_speed"
-                    >步態速度</span
-                  >
-                  <span class="value">1.25 <small>m/s</small></span>
-                </div>
-                <div class="data-float-box df-2">
-                  <span class="label" data-i18n="home_float_balance"
-                    >平衡指數</span
-                  >
-                  <span class="value text-accent" data-i18n="home_float_stable"
-                    >穩定良好</span
-                  >
-                </div>
-                <div class="data-float-box df-3">
-                  <span class="label" data-i18n="home_float_risk"
-                    >跌倒風險評估</span
-                  >
-                  <span class="value" data-i18n="home_float_low_risk"
-                    >低風險</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  <span class="label" data-i18n="home_float_speed">
+                    步態速度
+                  </span>
 
-        <div class="hero-stats-overlay">
-          <div class="container">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <div class="stat-modern-item">
-                  <span class="stat-modern-num counter" data-target="50000"
-                    >0</span
-                  >
-                  <span
-                    class="stat-modern-label"
-                    data-i18n="home_stat_cumulative"
-                    >影像樣本累積</span
-                  >
+                  <span class="value"> 1.25 <small>m/s</small> </span>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="stat-modern-item">
-                  <span class="stat-modern-num counter" data-target="120"
-                    >0</span
-                  >
-                  <span class="stat-modern-label" data-i18n="home_stat_partners"
-                    >合作社區據點</span
-                  >
+
+                <div class="data-float-box df-2">
+                  <span class="label" data-i18n="home_float_balance">
+                    平衡指數
+                  </span>
+
+                  <span class="value text-accent" data-i18n="home_float_stable">
+                    穩定良好
+                  </span>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="stat-modern-item">
-                  <span class="stat-modern-num counter" data-target="95"
-                    >0</span
-                  >
-                  <span class="stat-modern-label" data-i18n="home_stat_accuracy"
-                    >辨識準確率 (%)</span
-                  >
+
+                <div class="data-float-box df-3">
+                  <span class="label" data-i18n="home_float_risk">
+                    跌倒風險評估
+                  </span>
+
+                  <span class="value" data-i18n="home_float_low_risk">
+                    低風險
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div class="hero-stats-overlay">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <div class="stat-modern-item">
+                <span class="stat-modern-num counter" data-target="50000">
+                  0
+                </span>
 
-      <section class="interactive-process">
+                <span
+                  class="stat-modern-label"
+                  data-i18n="home_stat_cumulative"
+                >
+                  影像樣本累積
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="stat-modern-item">
+                <span class="stat-modern-num counter" data-target="120">
+                  0
+                </span>
+
+                <span class="stat-modern-label" data-i18n="home_stat_partners">
+                  合作社區據點
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="stat-modern-item">
+                <span class="stat-modern-num counter" data-target="95">
+                  0
+                </span>
+
+                <span class="stat-modern-label" data-i18n="home_stat_accuracy">
+                  辨識準確率 (%)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="interactive-process fade-up">
         <div class="scan-effect"></div>
         <div class="container">
           <div class="section-title text-center mb-5">
@@ -428,7 +493,7 @@
             </div>
             <div class="col-lg-7">
               <div class="feature-list-container">
-                <div class="feature-horizontal-item">
+                <div class="feature-horizontal-item fade-up">
                   <div class="feat-icon-big">
                     <i class="bi bi-lightning-charge"></i>
                   </div>
@@ -442,21 +507,21 @@
                     </p>
                   </div>
                 </div>
-                <div class="feature-horizontal-item highlight">
+                <div class="feature-horizontal-item highlight fade-up">
                   <div class="feat-icon-big">
                     <i class="bi bi-eye-slash"></i>
                   </div>
                   <div>
-                    <h4 data-i18n="home_feat2_title">隱私安全架構</h4>
+                    <h4 data-i18n="home_feat2_title">視覺化安全架構</h4>
                     <p
                       class="mb-0 text-secondary small"
                       data-i18n="home_feat2_desc"
                     >
-                      遵循 GDPR 標準，不儲存人臉影像，僅回傳匿名座標點。
+                      視覺化安全監測：整合人像儲存與骨架辨識技術。
                     </p>
                   </div>
                 </div>
-                <div class="feature-horizontal-item">
+                <div class="feature-horizontal-item fade-up">
                   <div class="feat-icon-big">
                     <i class="bi bi-diagram-3"></i>
                   </div>
@@ -466,7 +531,7 @@
                       class="mb-0 text-secondary small"
                       data-i18n="home_feat3_desc"
                     >
-                      提供標準 API 接口，可輕鬆介接現有醫療系統或長照管理 APP。
+                      提供標準 API 接口，可輕鬆介接 App。
                     </p>
                   </div>
                 </div>
@@ -482,7 +547,7 @@
             <h2 data-i18n="home_scenario_main_title">多元應用場景</h2>
           </div>
           <div class="scenario-grid">
-            <div class="scenario-panel">
+            <div class="scenario-panel fade-up">
               <div
                 class="panel-bg"
                 style="
@@ -497,7 +562,7 @@
                 </p>
               </div>
             </div>
-            <div class="scenario-panel">
+            <div class="scenario-panel fade-up">
               <div
                 class="panel-bg"
                 style="
@@ -512,7 +577,7 @@
                 </p>
               </div>
             </div>
-            <div class="scenario-panel">
+            <div class="scenario-panel fade-up">
               <div
                 class="panel-bg"
                 style="
@@ -535,9 +600,7 @@
   <div class="container">
     <div class="row gy-5">
       <div class="col-lg-4 col-md-6">
-        <h3 data-i18n="nav.name" class="fw-bold mb-4 text-white">
-          建豐健康科技FongAI
-        </h3>
+        <h3 data-i18n="nav.name" class="fw-bold mb-4">建豐健康科技FongAI</h3>
         <p class="footer-text mb-4" data-i18n="footer.description">
           結合 AI 與醫療專業，致力於解決高齡社會的跌倒問題，
           讓健康老化的願景得以實現。
@@ -610,7 +673,7 @@
     <script type="module" src="/fongai/js/i18n.js"></script>
     <script type="module" src="/fongai/js/main.js"></script>
     <script type="module" src="/fongai/js/animation.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const counters = document.querySelectorAll(".counter");
@@ -651,6 +714,107 @@
           });
         });
       });
+      const canvas = document.getElementById("ai-network");
+      const ctx = canvas.getContext("2d");
+
+      let particles = [];
+      let mouse = { x: null, y: null };
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = document.querySelector(".hero-section").offsetHeight;
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+
+      /* mouse interaction */
+
+      window.addEventListener("mousemove", (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+
+      /* create particles */
+
+      for (let i = 0; i < 70; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+          /* node glow */
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+
+          ctx.fillStyle = "#18a999";
+          ctx.fill();
+        });
+
+        /* particle connections */
+
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            let dx = particles[i].x - particles[j].x;
+            let dy = particles[i].y - particles[j].y;
+
+            let dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 140) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+
+              ctx.strokeStyle = "rgba(24,169,153,0.25)";
+              ctx.lineWidth = 1;
+
+              ctx.stroke();
+            }
+          }
+        }
+
+        /* mouse connection */
+
+        if (mouse.x && mouse.y) {
+          particles.forEach((p) => {
+            let dx = p.x - mouse.x;
+            let dy = p.y - mouse.y;
+
+            let dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 150) {
+              ctx.beginPath();
+
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+
+              ctx.strokeStyle = "rgba(24,169,153,0.35)";
+              ctx.lineWidth = 1.2;
+
+              ctx.stroke();
+            }
+          });
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
     </script>
   </body>
 </html>
