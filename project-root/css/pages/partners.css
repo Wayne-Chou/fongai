@@ -1,20 +1,74 @@
+/* ===================================== */
+/* PARTNER RECRUITMENT */
+/* ===================================== */
+
 .page-partner-recruitment {
-  background-color: #0d1117;
-  color: #ffffff;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4f9 100%);
+  color: var(--jf-text-main);
 }
 
+/* HERO */
+
 .page-partner-recruitment .detail-hero-section {
-  padding: 80px 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 240, 255, 0.05) 0%,
-    transparent 100%
-  );
+  padding: 120px 0 80px;
+  text-align: center;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4f9 100%);
 }
+.page-partner-recruitment .rich-text-area h2,
+.page-partner-recruitment .rich-text-area h3 {
+  color: var(--jf-primary);
+  font-weight: 700;
+}
+.page-partner-recruitment .eyebrow {
+  display: table;
+  color: var(--jf-accent);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+  background: rgba(0, 160, 255, 0.08);
+  border-radius: 50px;
+  border: 1px solid rgba(0, 160, 255, 0.2);
+  padding: 6px 16px;
+}
+.page-partner-recruitment .rich-text-area p {
+  color: var(--jf-text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+.page-partner-recruitment .detail-title {
+  font-weight: 800;
+  color: var(--jf-primary);
+}
+
+.page-partner-recruitment .detail-subtitle {
+  color: var(--jf-text-secondary);
+  max-width: 640px;
+  margin: auto;
+}
+
+/* MAIN CARD */
+
+.page-partner-recruitment .content-card {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid var(--jf-border);
+  box-shadow: var(--jf-shadow-md);
+  padding: 50px;
+}
+
+.page-partner-recruitment .card-tag {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--jf-accent);
+  margin-bottom: 20px;
+}
+
+/* HIGHLIGHTS */
 
 .page-partner-recruitment .apply-highlights ul {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 16px;
   padding: 0;
   margin: 25px 0;
@@ -23,137 +77,145 @@
 
 .page-partner-recruitment .apply-highlights li {
   position: relative;
-  padding: 15px 20px 15px 45px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 240, 255, 0.1);
-  border-left: 4px solid #00f0ff;
-  border-radius: 4px 12px 12px 4px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 16px 20px 16px 44px;
+  background: #f8fafc;
+  border: 1px solid var(--jf-border);
+  border-left: 4px solid var(--jf-accent);
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 .page-partner-recruitment .apply-highlights li:hover {
-  background: rgba(0, 240, 255, 0.07);
-  transform: translateX(8px);
-  border-color: rgba(0, 240, 255, 0.3);
+  transform: translateX(6px);
+  box-shadow: var(--jf-shadow-sm);
 }
 
 .page-partner-recruitment .apply-highlights li strong {
-  color: #00f0ff;
-  margin-right: 5px;
+  color: var(--jf-primary);
 }
 
 .page-partner-recruitment .apply-highlights li::before {
   content: "\F633";
   font-family: "bootstrap-icons";
   position: absolute;
-  left: 15px;
+  left: 14px;
   top: 18px;
-  color: #00f0ff;
-  font-size: 1.2rem;
+  color: var(--jf-accent);
+  font-size: 1.1rem;
 }
+
+/* TABLE */
 
 .page-partner-recruitment .table-dark-custom {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   margin-top: 20px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
+  border: 1px solid var(--jf-border);
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
 }
 
 .page-partner-recruitment .table-dark-custom th {
-  background: rgba(0, 240, 255, 0.1);
-  padding: 18px 15px;
-  color: #00f0ff;
+  background: #f1f5f9;
+  padding: 16px;
+  color: var(--jf-primary);
   font-weight: 600;
   font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
   text-align: left;
 }
 
 .page-partner-recruitment .table-dark-custom td {
-  padding: 18px 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(13, 17, 23, 0.6);
+  padding: 16px;
+  border-top: 1px solid var(--jf-border);
+  background: white;
   font-size: 0.95rem;
-  line-height: 1.5;
-  color: #d1d1d1;
-}
-
-.page-partner-recruitment .table-dark-custom tr:last-child td {
-  border-bottom: none;
+  color: var(--jf-text-secondary);
 }
 
 .page-partner-recruitment .table-dark-custom tr:hover td {
-  background: rgba(0, 240, 255, 0.05);
-  color: #ffffff;
+  background: #f8fafc;
 }
 
+/* FORM */
+
+.page-partner-recruitment .sticky-form-container {
+  position: sticky;
+  top: 120px;
+}
+
+.page-partner-recruitment .form-card {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid var(--jf-border);
+  box-shadow: var(--jf-shadow-md);
+  padding: 35px;
+}
+
+.page-partner-recruitment .form-header h3 {
+  font-weight: 700;
+  color: var(--jf-primary);
+}
+
+.page-partner-recruitment .form-header p {
+  color: var(--jf-text-secondary);
+}
+
+/* INPUT */
+
 .page-partner-recruitment .input-group-custom {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .page-partner-recruitment .input-group-custom label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-size: 0.9rem;
-  color: #888;
+  color: var(--jf-text-secondary);
 }
 
-.page-partner-recruitment .form-select-custom,
 .page-partner-recruitment .input-group-custom input,
 .page-partner-recruitment .input-group-custom textarea {
   width: 100%;
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  color: #ffffff;
-  transition: all 0.3s ease;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid var(--jf-border);
+  border-radius: 8px;
+  color: var(--jf-text-main);
+  transition: 0.25s;
 }
 
-.page-partner-recruitment .form-select-custom:focus,
 .page-partner-recruitment .input-group-custom input:focus,
 .page-partner-recruitment .input-group-custom textarea:focus {
   outline: none;
-  border-color: #00f0ff;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.1);
+  border-color: var(--jf-accent);
+  box-shadow: 0 0 0 3px rgba(0, 160, 255, 0.15);
 }
 
-.page-partner-recruitment .optional-text {
-  font-size: 0.8rem;
-  color: #555;
-  font-weight: 400;
-  margin-left: 5px;
-}
+/* BUTTON */
 
 .page-partner-recruitment .apply-btn-submit {
   width: 100%;
-  padding: 16px;
-  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  padding: 14px;
+  background: linear-gradient(90deg, var(--jf-accent), #6bdcff);
   border: none;
-  border-radius: 8px;
-  color: #ffffff;
+  border-radius: 10px;
+  color: white;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: 0.25s;
   margin-top: 10px;
 }
 
 .page-partner-recruitment .apply-btn-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
-  filter: brightness(1.1);
+  box-shadow: 0 10px 20px rgba(0, 160, 255, 0.25);
 }
+
+/* SUCCESS */
 
 .page-partner-recruitment .apply-success {
   display: none;
@@ -163,9 +225,9 @@
 
 .page-partner-recruitment .success-icon {
   font-size: 4rem;
-  color: #00f0ff;
+  color: var(--jf-accent);
   margin-bottom: 20px;
-  animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: scaleIn 0.5s ease;
 }
 
 @keyframes scaleIn {
@@ -177,9 +239,19 @@
   }
 }
 
+/* MOBILE */
+
 @media (max-width: 768px) {
   .page-partner-recruitment .detail-hero-section {
-    padding: 60px 0 40px;
+    padding: 80px 0 40px;
+  }
+
+  .page-partner-recruitment .content-card {
+    padding: 35px;
+  }
+
+  .page-partner-recruitment .sticky-form-container {
+    position: static;
   }
 
   .page-partner-recruitment .table-dark-custom {

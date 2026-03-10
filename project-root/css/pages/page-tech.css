@@ -1,122 +1,125 @@
-.page-tech {
-  --brand-dark-1: #03121d;
-  --brand-dark-2: #041e2f;
-  --brand-accent: #00f0ff;
-  --brand-accent-2: #00aaff;
+/* ===================================== */
+/* TECH PAGE */
+/* ===================================== */
 
-  --brand-gradient: linear-gradient(90deg, #00f0ff, #00aaff);
+.page-tech {
+  --brand-accent: var(--jf-accent);
+  --brand-gradient: linear-gradient(90deg, var(--jf-accent), #6bdcff);
 }
 
+/* HERO */
+
 .page-tech .tech-hero {
-  background:
-    radial-gradient(
-      circle at 20% 30%,
-      rgba(0, 240, 255, 0.15),
-      transparent 40%
-    ),
-    linear-gradient(135deg, #03121d 0%, #041e2f 100%);
-  padding: 220px 0 120px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4f9 100%);
+  padding: 200px 0 120px;
   margin-top: -100px;
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  text-align: center;
 }
 
 .page-tech .eyebrow {
-  color: var(--brand-accent);
-  font-weight: 800;
+  display: table;
+  color: var(--jf-accent);
+  font-weight: 700;
   letter-spacing: 2px;
   font-size: 0.8rem;
+  margin-bottom: 15px;
+  background: rgba(0, 160, 255, 0.08);
+  border-radius: 50px;
+  border: 1px solid rgba(0, 160, 255, 0.2);
+  padding: 6px 16px;
 }
 
 .page-tech .hero-title {
   font-size: 3rem;
   line-height: 1.2;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--jf-primary);
 }
 
-.page-tech .text-gradient {
-  background: var(--brand-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/* MAIN SECTION */
 
 .page-tech .tech-main-section {
-  background: linear-gradient(135deg, #03121d 0%, #041e2f 100%);
-
-  color: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
+  padding-bottom: 120px;
 }
 
+/* MAIN CARD */
+
 .page-tech .main-content-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 30px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 60px rgba(0, 240, 255, 0.15);
+  background: white;
+  border-radius: 28px;
+  border: 1px solid var(--jf-border);
+  box-shadow: var(--jf-shadow-md);
   padding: 70px 60px;
 }
 
+/* IMAGE */
+
 .page-tech .tech-image-wrapper {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 24px;
-  transition: all 0.4s ease;
-  border: 1px solid rgba(0, 240, 255, 0.15);
+  background: #f8fafc;
+  border-radius: 20px;
+  transition: all 0.35s ease;
+  border: 1px solid var(--jf-border);
 }
 
 .page-tech .tech-image-wrapper:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 50px rgba(0, 240, 255, 0.3);
+  transform: translateY(-8px);
+  box-shadow: var(--jf-shadow-md);
 }
 
+/* TEXT */
+
 .page-tech h3 {
-  color: #ffffff;
+  color: var(--jf-primary);
 }
 
 .page-tech .text-secondary {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: var(--jf-text-secondary) !important;
 }
 
 .page-tech .feature-list li {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--jf-text-secondary);
   line-height: 1.7;
 }
 
 .page-tech .feature-list strong {
-  color: #ffffff;
+  color: var(--jf-primary);
 }
 
+/* MINI CARDS */
+
 .page-tech .card {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  backdrop-filter: blur(20px);
+  background: #f8fafc !important;
+  border-radius: 16px;
+  border: 1px solid var(--jf-border);
   transition: all 0.3s ease;
-  color: #ffffff;
 }
 
 .page-tech .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 40px rgba(0, 240, 255, 0.4);
+  box-shadow: var(--jf-shadow-sm);
 }
 
 .page-tech .text-accent {
-  color: var(--brand-accent) !important;
+  color: var(--jf-accent) !important;
 }
+
+/* COMPARISON */
 
 .page-tech .tech-comparison-section {
   margin-top: 80px;
 }
 
 .page-tech .comparison-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 24px;
-  padding: 45px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  backdrop-filter: blur(20px);
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid var(--jf-border);
   transition: all 0.3s ease;
-  color: #ffffff;
+  position: relative;
 }
 
 .page-tech .comparison-card.legacy {
@@ -124,21 +127,26 @@
 }
 
 .page-tech .comparison-card.jf-highlight {
-  box-shadow: 0 0 60px rgba(0, 240, 255, 0.4);
-  border: 1px solid var(--brand-accent);
+  border: 1px solid var(--jf-accent);
+  box-shadow: 0 10px 30px rgba(0, 160, 255, 0.1);
 }
 
 .page-tech .comparison-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: var(--jf-shadow-md);
 }
 
+/* HEADER */
+
 .page-tech .card-header-label {
-  color: var(--brand-accent);
-  font-weight: 800;
+  color: var(--jf-accent);
+  font-weight: 700;
   letter-spacing: 1px;
   font-size: 0.75rem;
   margin-bottom: 25px;
 }
+
+/* ITEMS */
 
 .page-tech .comparison-item {
   display: flex;
@@ -147,30 +155,34 @@
 
 .page-tech .comparison-item .icon-wrap {
   font-size: 1.5rem;
-  color: var(--brand-accent);
+  color: var(--jf-accent);
 }
 
 .page-tech .comparison-item h6 {
-  color: #ffffff;
+  color: var(--jf-primary);
   font-weight: 700;
 }
 
 .page-tech .comparison-item p {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--jf-text-secondary);
   line-height: 1.6;
 }
+
+/* BADGE */
 
 .page-tech .floating-badge {
   position: absolute;
   top: 20px;
   right: 20px;
   background: var(--brand-gradient);
-  color: #041e2f;
+  color: white;
   font-size: 0.7rem;
   padding: 6px 16px;
   border-radius: 50px;
   font-weight: 700;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 992px) {
   .page-tech .hero-title {

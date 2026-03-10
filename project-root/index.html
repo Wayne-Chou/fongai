@@ -8,108 +8,142 @@
     <load src="/partials/header.html" />
     <main>
       <section class="hero-section">
+        <canvas id="ai-network"></canvas>
         <div class="container">
           <div class="row align-items-center min-vh-100 pb-5">
             <div class="col-lg-6 pt-5">
-              <div class="tech-badge mb-3">AI Powered Health Technology</div>
+              <div class="hero-badge mb-3">AI Powered Health Technology</div>
+
               <h1 class="hero-title-custom mb-4" data-i18n="home_hero_title">
                 守護高齡尊嚴<br />
                 從預防跌倒開始
               </h1>
-              <p
-                class="lead mb-5 text-secondary"
-                data-i18n="home_hero_subtitle"
-              >
+
+              <p class="hero-desc mb-4" data-i18n="home_hero_subtitle">
                 運用 FongAI 動態骨架偵測，提供精準步態分析與跌倒風險預測方案。
               </p>
-              <div class="pill-group">
-                <span class="pill" data-i18n="home_pill_ai"
-                  >AI 動態影像分析</span
-                >
-                <span class="pill" data-i18n="home_pill_sppb"
-                  >SPPB 臨床標準</span
-                >
+
+              <div class="hero-tags">
+                <span class="hero-tag" data-i18n="home_pill_ai">
+                  AI 動態影像分析
+                </span>
+
+                <span class="hero-tag" data-i18n="home_pill_sppb">
+                  SPPB 臨床標準
+                </span>
               </div>
             </div>
 
             <div class="col-lg-6">
               <div class="hero-visual-container">
-                <div class="radar-circle">
-                  <div class="radar-line"></div>
-                  <div class="skeleton-point p1"></div>
-                  <div class="skeleton-point p2"></div>
-                  <div class="skeleton-point p3"></div>
-                  <div class="skeleton-point p4"></div>
+                <div class="hero-ai-flow">
+                  <div class="flow-step">
+                    <div class="flow-icon">
+                      <i class="bi bi-camera-video"></i>
+                    </div>
+                    <p data-i18n="home_flow_capture">影像偵測</p>
+                  </div>
+
+                  <div class="flow-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+
+                  <div class="flow-step">
+                    <div class="flow-icon">
+                      <i class="bi bi-cpu"></i>
+                    </div>
+                    <p data-i18n="home_flow_ai">AI 步態分析</p>
+                  </div>
+
+                  <div class="flow-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+
+                  <div class="flow-step">
+                    <div class="flow-icon">
+                      <i class="bi bi-clipboard-data"></i>
+                    </div>
+                    <p data-i18n="home_flow_result">跌倒風險評估</p>
+                  </div>
                 </div>
 
                 <div class="data-float-box df-1">
-                  <span class="label" data-i18n="home_float_speed"
-                    >步態速度</span
-                  >
-                  <span class="value">1.25 <small>m/s</small></span>
-                </div>
-                <div class="data-float-box df-2">
-                  <span class="label" data-i18n="home_float_balance"
-                    >平衡指數</span
-                  >
-                  <span class="value text-accent" data-i18n="home_float_stable"
-                    >穩定良好</span
-                  >
-                </div>
-                <div class="data-float-box df-3">
-                  <span class="label" data-i18n="home_float_risk"
-                    >跌倒風險評估</span
-                  >
-                  <span class="value" data-i18n="home_float_low_risk"
-                    >低風險</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  <span class="label" data-i18n="home_float_speed">
+                    步態速度
+                  </span>
 
-        <div class="hero-stats-overlay">
-          <div class="container">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <div class="stat-modern-item">
-                  <span class="stat-modern-num counter" data-target="50000"
-                    >0</span
-                  >
-                  <span
-                    class="stat-modern-label"
-                    data-i18n="home_stat_cumulative"
-                    >影像樣本累積</span
-                  >
+                  <span class="value"> 1.25 <small>m/s</small> </span>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="stat-modern-item">
-                  <span class="stat-modern-num counter" data-target="120"
-                    >0</span
-                  >
-                  <span class="stat-modern-label" data-i18n="home_stat_partners"
-                    >合作社區據點</span
-                  >
+
+                <div class="data-float-box df-2">
+                  <span class="label" data-i18n="home_float_balance">
+                    平衡指數
+                  </span>
+
+                  <span class="value text-accent" data-i18n="home_float_stable">
+                    穩定良好
+                  </span>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="stat-modern-item">
-                  <span class="stat-modern-num counter" data-target="95"
-                    >0</span
-                  >
-                  <span class="stat-modern-label" data-i18n="home_stat_accuracy"
-                    >辨識準確率 (%)</span
-                  >
+
+                <div class="data-float-box df-3">
+                  <span class="label" data-i18n="home_float_risk">
+                    跌倒風險評估
+                  </span>
+
+                  <span class="value" data-i18n="home_float_low_risk">
+                    低風險
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div class="hero-stats-overlay">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <div class="stat-modern-item">
+                <span class="stat-modern-num counter" data-target="50000">
+                  0
+                </span>
 
-      <section class="interactive-process">
+                <span
+                  class="stat-modern-label"
+                  data-i18n="home_stat_cumulative"
+                >
+                  影像樣本累積
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="stat-modern-item">
+                <span class="stat-modern-num counter" data-target="120">
+                  0
+                </span>
+
+                <span class="stat-modern-label" data-i18n="home_stat_partners">
+                  合作社區據點
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="stat-modern-item">
+                <span class="stat-modern-num counter" data-target="95">
+                  0
+                </span>
+
+                <span class="stat-modern-label" data-i18n="home_stat_accuracy">
+                  辨識準確率 (%)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="interactive-process fade-up">
         <div class="scan-effect"></div>
         <div class="container">
           <div class="section-title text-center mb-5">
@@ -183,7 +217,7 @@
             </div>
             <div class="col-lg-7">
               <div class="feature-list-container">
-                <div class="feature-horizontal-item">
+                <div class="feature-horizontal-item fade-up">
                   <div class="feat-icon-big">
                     <i class="bi bi-lightning-charge"></i>
                   </div>
@@ -197,7 +231,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="feature-horizontal-item highlight">
+                <div class="feature-horizontal-item highlight fade-up">
                   <div class="feat-icon-big">
                     <i class="bi bi-eye-slash"></i>
                   </div>
@@ -211,7 +245,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="feature-horizontal-item">
+                <div class="feature-horizontal-item fade-up">
                   <div class="feat-icon-big">
                     <i class="bi bi-diagram-3"></i>
                   </div>
@@ -237,7 +271,7 @@
             <h2 data-i18n="home_scenario_main_title">多元應用場景</h2>
           </div>
           <div class="scenario-grid">
-            <div class="scenario-panel">
+            <div class="scenario-panel fade-up">
               <div
                 class="panel-bg"
                 style="
@@ -252,7 +286,7 @@
                 </p>
               </div>
             </div>
-            <div class="scenario-panel">
+            <div class="scenario-panel fade-up">
               <div
                 class="panel-bg"
                 style="
@@ -267,7 +301,7 @@
                 </p>
               </div>
             </div>
-            <div class="scenario-panel">
+            <div class="scenario-panel fade-up">
               <div
                 class="panel-bg"
                 style="
@@ -291,7 +325,7 @@
     <script type="module" src="/js/i18n.js"></script>
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/animation.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const counters = document.querySelectorAll(".counter");
@@ -332,6 +366,107 @@
           });
         });
       });
+      const canvas = document.getElementById("ai-network");
+      const ctx = canvas.getContext("2d");
+
+      let particles = [];
+      let mouse = { x: null, y: null };
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = document.querySelector(".hero-section").offsetHeight;
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+
+      /* mouse interaction */
+
+      window.addEventListener("mousemove", (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+
+      /* create particles */
+
+      for (let i = 0; i < 70; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+          /* node glow */
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+
+          ctx.fillStyle = "#18a999";
+          ctx.fill();
+        });
+
+        /* particle connections */
+
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            let dx = particles[i].x - particles[j].x;
+            let dy = particles[i].y - particles[j].y;
+
+            let dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 140) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+
+              ctx.strokeStyle = "rgba(24,169,153,0.25)";
+              ctx.lineWidth = 1;
+
+              ctx.stroke();
+            }
+          }
+        }
+
+        /* mouse connection */
+
+        if (mouse.x && mouse.y) {
+          particles.forEach((p) => {
+            let dx = p.x - mouse.x;
+            let dy = p.y - mouse.y;
+
+            let dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 150) {
+              ctx.beginPath();
+
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+
+              ctx.strokeStyle = "rgba(24,169,153,0.35)";
+              ctx.lineWidth = 1.2;
+
+              ctx.stroke();
+            }
+          });
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
     </script>
   </body>
 </html>

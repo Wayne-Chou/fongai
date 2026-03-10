@@ -14,15 +14,6 @@
   );
 }
 
-.badge-year {
-  background: #00f0ff;
-  color: #020a13;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-weight: 800;
-  font-size: 0.8rem;
-}
-
 .detail-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
