@@ -285,7 +285,7 @@
     <main>
       <section class="hero-section">
         <div class="container hero-container">
-          <div class="row align-items-center hero-main">
+          <div class="row align-items-center hero-main motion motion-fade-up">
             <!-- LEFT CONTENT -->
             <div class="col-lg-6 hero-text">
               <div class="hero-badge">Trust & Compliance</div>
@@ -305,25 +305,31 @@
                 <div
                   class="hero-stat-item motion motion-fade-up motion-delay-1"
                 >
-                  <div class="stat-number counter" data-target="50000">0</div>
-
+                  <div class="stat-number">
+                    <span class="counter" data-target="50000">0</span
+                    ><span class="stat-plus">+</span>
+                  </div>
                   <div class="stat-label">行為影像數據庫</div>
                 </div>
 
                 <div
                   class="hero-stat-item motion motion-fade-up motion-delay-2"
                 >
-                  <div class="stat-number counter" data-target="120">0</div>
-
+                  <div class="stat-number">
+                    <span class="counter" data-target="120">0</span
+                    ><span class="stat-plus">+</span>
+                  </div>
                   <div class="stat-label">合作據點</div>
                 </div>
 
                 <div
                   class="hero-stat-item motion motion-fade-up motion-delay-3"
                 >
-                  <div class="stat-number counter" data-target="95">0</div>
-
-                  <div class="stat-label">辨識準確度 (%)</div>
+                  <div class="stat-number">
+                    <span class="counter" data-target="95">0</span
+                    ><span class="stat-plus">%</span>
+                  </div>
+                  <div class="stat-label">辨識準確度</div>
                 </div>
               </div>
             </div>
@@ -331,31 +337,23 @@
             <!-- RIGHT IMAGE -->
             <div class="col-lg-6 hero-image-wrapper">
               <div class="hero-image-box motion motion-zoom-in motion-delay-1">
-                <img src="/fongai/assets/hero-image.jpg" class="hero-image" />
-
-                <!-- AI skeleton overlay -->
-                <div class="ai-skeleton">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+                <img src="/fongai/assets/hero-image.png" class="hero-image" />
               </div>
             </div>
           </div>
 
           <!-- INFO CARDS -->
-
           <div class="hero-cards">
             <div class="row g-4">
               <div class="col-lg-4">
                 <div class="hero-card motion motion-fade-up motion-delay-1">
                   <div class="card-icon">
-                    <i class="bi bi-shield-check"></i>
+                    <i class="bi bi-cpu"></i>
                   </div>
-                  <h4>國際醫療數據標準</h4>
+                  <h4>AI 行動力分析技術</h4>
                   <p>
-                    符合 HIPAA 與 ISO
-                    資安規範，確保影像資料與健康資訊的隱私與安全。
+                    透過 AI 骨架辨識與動作分析技術，
+                    即時偵測長者步態、平衡與行動能力， 建立跌倒風險預測模型。
                   </p>
                 </div>
               </div>
@@ -365,12 +363,12 @@
                   class="hero-card hero-card-dark motion motion-fade-up motion-delay-2"
                 >
                   <div class="card-icon">
-                    <i class="bi bi-globe-americas"></i>
+                    <i class="bi bi-database"></i>
                   </div>
-                  <h4>政府與研究合作</h4>
+                  <h4>醫療級行為數據庫</h4>
                   <p>
-                    與政府與研究機構合作，建立高齡健康 AI
-                    數據分析與長照研究平台。
+                    建立超過 50,000 筆人體行為影像資料， 支援 AI
+                    訓練與臨床研究， 提供可信賴的健康數據基礎。
                   </p>
                 </div>
               </div>
@@ -378,21 +376,12 @@
               <div class="col-lg-4">
                 <div class="hero-card motion motion-fade-up motion-delay-3">
                   <div class="card-icon">
-                    <i class="bi bi-graph-up-arrow"></i>
+                    <i class="bi bi-shield-check"></i>
                   </div>
-                  <h4>照護效率提升</h4>
 
-                  <div class="metric-group">
-                    <div class="metric-item">
-                      <span class="metric-value">1.7x</span>
-                      <span class="metric-label">最高投資報酬 (ROI)</span>
-                    </div>
-                    <div class="metric-divider"></div>
-                    <div class="metric-item">
-                      <span class="metric-value">+3.8%</span>
-                      <span class="metric-label">照護效益提升</span>
-                    </div>
-                  </div>
+                  <h4>智慧行動風險監測</h4>
+
+                  <p>即時行動監測，提前發現跌倒風險， 協助照護人員及早介入。</p>
                 </div>
               </div>
             </div>
@@ -402,28 +391,57 @@
       <section class="app-showcase-section">
         <div class="container">
           <div class="row align-items-center">
+            <!-- LEFT MOCKUP -->
             <div class="col-lg-5">
               <div class="app-mockup motion motion-slide-right">
                 <div class="app-screen">
                   <div class="detection-overlay">
                     <div class="scanning-line"></div>
-                    <div class="skeleton-tracking">
-                      <div class="status-badge">即時偵測中...</div>
-                    </div>
                   </div>
+
                   <div class="app-content">
-                    <h5 class="app-title">AI 步態分析</h5>
-                    <div class="app-metrics">
+                    <h5 class="app-title">AI 步態與姿態分析</h5>
+
+                    <!-- Tabs -->
+                    <div class="app-tabs">
+                      <button class="tab-btn active" data-tab="gait">
+                        步態
+                      </button>
+                      <button class="tab-btn" data-tab="skeleton">骨架</button>
+                      <button class="tab-btn" data-tab="risk">風險</button>
+                    </div>
+
+                    <!-- 步態 -->
+                    <div class="tab-panel active" id="gait">
                       <div class="app-metric-item">
                         <span class="label">步態速度</span>
                         <span class="value">1.25 m/s</span>
                       </div>
+
                       <div class="app-metric-item">
                         <span class="label">平衡指數</span>
                         <span class="value text-success">穩定良好</span>
                       </div>
+                    </div>
+
+                    <!-- 骨架 -->
+                    <div class="tab-panel" id="skeleton">
+                      <div class="app-metric-item">
+                        <span class="label">身體中心線</span>
+                        <span class="value text-success">正常</span>
+                      </div>
+
+                      <div class="app-metric-item">
+                        <span class="label">骨架偏移</span>
+                        <span class="value text-success">無明顯偏移</span>
+                      </div>
+                    </div>
+
+                    <!-- 風險 -->
+                    <div class="tab-panel" id="risk">
                       <div class="app-metric-item risk-low">
-                        <span class="label">跌倒風險評估</span>
+                        <span class="label">跌倒風險</span>
+
                         <div class="risk-indicator">
                           <span class="dot"></span>
                           <span class="value">低風險</span>
@@ -435,26 +453,40 @@
               </div>
             </div>
 
+            <!-- RIGHT CONTENT -->
             <div class="col-lg-7 ps-lg-5">
               <div class="section-heading motion motion-fade-up">
-                <span class="sub-title">Intelligent Gait Analysis</span>
-                <h2 class="title">精準捕捉每一秒的<br />行動健康數據</h2>
+                <span class="sub-title">
+                  Intelligent Gait & Posture Analysis
+                </span>
+
+                <h2 class="title">
+                  從骨架與步態數據<br />
+                  提前發現潛在健康風險
+                </h2>
+
                 <p class="desc">
-                  透過 FongAI 專利技術，我們將複雜的影像偵測轉化為直觀的 App
-                  指標。醫療人員與家屬能隨時掌握長輩的步態速度與平衡狀態，實現真正的預防醫學。
+                  FongAI 透過 AI 骨架辨識與步態分析技術， 即時追蹤人體 17
+                  個關鍵骨架點， 分析長者的步態速度、身體平衡與姿態變化。
+                  系統能從日常行走數據中辨識潛在的 行動能力退化與姿態偏移，
+                  在跌倒發生之前提供風險評估與預警， 協助照護人員及早介入，
+                  建立更安全的智慧照護環境。
                 </p>
+
                 <ul class="feature-list motion motion-fade-up motion-delay-1">
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    非接觸式影像偵測，保護使用者隱私
+                    AI 即時提取 17 個人體關鍵骨架點進行姿態與步態分析
                   </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i> AI 自動提取 33
-                    個關鍵骨架點
-                  </li>
+
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    臨床級跌倒風險評估標準
+                    即時監測身體中心線與骨架偏移，評估平衡狀態
+                  </li>
+
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    從步態與姿態變化中提前預測跌倒與健康風險
                   </li>
                 </ul>
               </div>
@@ -462,6 +494,7 @@
           </div>
         </div>
       </section>
+
       <section class="ai-tech-section">
         <div class="container">
           <div class="section-heading text-center mb-5">
@@ -498,7 +531,7 @@
                 </div>
                 <h4>骨架偵測</h4>
                 <p>
-                  AI 模型即時提取人體 <strong>33 個關鍵骨架點</strong>，
+                  AI 模型即時提取人體 <strong>17 個關鍵骨架點</strong>，
                   建立完整的行動姿態資料。
                 </p>
               </div>
@@ -568,36 +601,212 @@
                 class="dashboard-visual-wrapper motion motion-zoom-in motion-delay-1"
               >
                 <div class="web-system-mockup">
-                  <div class="system-sidebar">
-                    <div class="sidebar-item active">
-                      <span>場域 A 據點</span>
+                  <div class="mock-sidebar">
+                    <div class="mock-logo">FongAI</div>
+
+                    <div class="mock-menu">
+                      <div class="menu-item active">檢測統計摘要</div>
+                      <div class="menu-item">風險分級統計</div>
+                      <div class="menu-item">群體變化趨勢</div>
+                      <div class="menu-item">參與者狀態</div>
                     </div>
-                    <div class="sidebar-item"><span>場域 B 據點</span></div>
-                    <div class="sidebar-item"><span>場域 C 據點</span></div>
                   </div>
-                  <div class="system-main">
-                    <div class="main-header">
-                      <h6>受測者監測清單</h6>
-                      <div class="status-tags">
-                        <span class="tag-blue">全部 12 位</span>
+
+                  <div class="mock-main">
+                    <div class="mock-header">
+                      <h5>檢測統計摘要</h5>
+                    </div>
+
+                    <div class="mock-kpi-row">
+                      <div class="mock-kpi">
+                        <span class="kpi-label">總計檢測人數</span>
+                        <span class="kpi-value">72</span>
+                      </div>
+
+                      <div class="mock-kpi green">
+                        <span class="kpi-label">總計檢測人次</span>
+                        <span class="kpi-value">284</span>
                       </div>
                     </div>
-                    <div class="user-table">
-                      <div class="table-row head">
-                        <span>受測者</span><span>即時狀態</span
-                        ><span>風險趨勢</span>
+
+                    <div class="mock-cards">
+                      <div class="col-12 mb-2">
+                        <div
+                          class="card h-100 border-light shadow-sm"
+                          style="border-width: 2px"
+                        >
+                          <div class="card-body">
+                            <div
+                              class="d-flex justify-content-between align-items-center mb-3"
+                            >
+                              <div class="d-flex align-items-center">
+                                <div
+                                  class="status-indicator me-2 bg-primary"
+                                  style="
+                                    width: 12px;
+                                    height: 12px;
+                                    border-radius: 50%;
+                                  "
+                                ></div>
+                                <span class="fw-bold text-dark"
+                                  >2026/02/27</span
+                                >
+                              </div>
+
+                              <span
+                                class="badge bg-white text-primary border border-primary-subtle"
+                              >
+                                12人
+                              </span>
+                            </div>
+
+                            <div class="row g-2 text-center mb-3">
+                              <div class="col-12 col-sm-4">
+                                <div class="p-2 rounded bg-white border">
+                                  <small
+                                    class="text-muted"
+                                    style="font-size: 0.75rem"
+                                    >平均站立秒數</small
+                                  >
+                                  <span class="fw-bold text-dark">12.0秒</span>
+                                </div>
+                              </div>
+
+                              <div class="col-12 col-sm-4">
+                                <div class="p-2 rounded bg-white border">
+                                  <small
+                                    class="text-muted"
+                                    style="font-size: 0.75rem"
+                                    >平均評分</small
+                                  >
+                                  <span class="fw-bold text-dark">3.6分</span>
+                                </div>
+                              </div>
+
+                              <div class="col-12 col-sm-4">
+                                <div class="p-2 rounded bg-white border">
+                                  <small
+                                    class="text-muted"
+                                    style="font-size: 0.75rem"
+                                    >步行速度</small
+                                  >
+                                  <span class="fw-bold text-dark"
+                                    >124 cm/s</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="mt-2">
+                              <div
+                                class="d-flex justify-content-between mb-1 small"
+                              >
+                                <span class="text-muted fw-bold"
+                                  >平均跌倒風險</span
+                                >
+                                <span class="fw-bold text-success">5.5%</span>
+                              </div>
+
+                              <div
+                                class="progress"
+                                style="height: 8px; background: #e9ecef"
+                              >
+                                <div
+                                  class="progress-bar bg-primary"
+                                  style="width: 5.5%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="table-row">
-                        <span>受測者 001</span><span class="st-good">正常</span
-                        ><span class="trend-up">↑</span>
-                      </div>
-                      <div class="table-row">
-                        <span>受測者 002</span><span class="st-good">正常</span
-                        ><span class="trend-stable">→</span>
-                      </div>
-                      <div class="table-row alert">
-                        <span>受測者 003</span><span class="st-warn">異常</span
-                        ><span class="trend-down">↓</span>
+                      <div class="col-12 mb-2">
+                        <div
+                          class="card h-100 border-light shadow-sm"
+                          style="border-width: 2px"
+                        >
+                          <div class="card-body">
+                            <div
+                              class="d-flex justify-content-between align-items-center mb-3"
+                            >
+                              <div class="d-flex align-items-center">
+                                <div
+                                  class="status-indicator me-2 bg-primary"
+                                  style="
+                                    width: 12px;
+                                    height: 12px;
+                                    border-radius: 50%;
+                                  "
+                                ></div>
+                                <span class="fw-bold text-dark"
+                                  >2026/04/27</span
+                                >
+                              </div>
+
+                              <span
+                                class="badge bg-white text-primary border border-primary-subtle"
+                              >
+                                30人
+                              </span>
+                            </div>
+
+                            <div class="row g-2 text-center mb-3">
+                              <div class="col-12 col-sm-4">
+                                <div class="p-2 rounded bg-white border">
+                                  <small
+                                    class="text-muted"
+                                    style="font-size: 0.75rem"
+                                    >平均站立秒數</small
+                                  >
+                                  <span class="fw-bold text-dark">8.7秒</span>
+                                </div>
+                              </div>
+
+                              <div class="col-12 col-sm-4">
+                                <div class="p-2 rounded bg-white border">
+                                  <small
+                                    class="text-muted"
+                                    style="font-size: 0.75rem"
+                                    >平均評分</small
+                                  >
+                                  <span class="fw-bold text-dark">2.0分</span>
+                                </div>
+                              </div>
+
+                              <div class="col-12 col-sm-4">
+                                <div class="p-2 rounded bg-white border">
+                                  <small
+                                    class="text-muted"
+                                    style="font-size: 0.75rem"
+                                    >步行速度</small
+                                  >
+                                  <span class="fw-bold text-dark">96 cm/s</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="mt-2">
+                              <div
+                                class="d-flex justify-content-between mb-1 small"
+                              >
+                                <span class="text-muted fw-bold"
+                                  >平均跌倒風險</span
+                                >
+                                <span class="fw-bold text-success">5.5%</span>
+                              </div>
+
+                              <div
+                                class="progress"
+                                style="height: 8px; background: #e9ecef"
+                              >
+                                <div
+                                  class="progress-bar bg-primary"
+                                  style="width: 5.5%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -632,7 +841,7 @@
                 </div>
                 <h3>個人健康報告</h3>
                 <p>
-                  專為受測者。將 AI 偵測的 33
+                  專為受測者。將 AI 偵測的 17
                   個骨架點數據轉換為直觀的行動力指標，記錄每一次測量的細微變化，打造個人專屬的健康追蹤檔案。
                 </p>
                 <div class="report-features">
@@ -751,7 +960,7 @@
                 </div>
                 <h4>隨地開啟監測</h4>
                 <p>
-                  拿起裝置對準受測者，AI 將透過鏡頭自動提取 33
+                  拿起裝置對準受測者，AI 將透過鏡頭自動提取 17
                   個關鍵骨架點。不受場域限制，無論在走廊、客廳或診間皆能作業。
                 </p>
               </div>
@@ -990,6 +1199,21 @@
         );
 
         counters.forEach((c) => observer.observe(c));
+      });
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((b) => b.classList.remove("active"));
+
+          document
+            .querySelectorAll(".tab-panel")
+            .forEach((p) => p.classList.remove("active"));
+
+          btn.classList.add("active");
+
+          document.getElementById(btn.dataset.tab).classList.add("active");
+        });
       });
     </script>
   </body>
