@@ -97,7 +97,7 @@
               </a>
             </li>
 
-            <li>
+            <!-- <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -105,7 +105,7 @@
               >
                 經銷商招募
               </a>
-            </li>
+            </li> -->
           </ul>
         </li>
 
@@ -260,19 +260,38 @@
 
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('zh')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('zh');
+                  return false;
+                "
+              >
                 繁體中文
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('en')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('en');
+                  return false;
+                "
+              >
                 English
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('ja')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('ja');
+                  return false;
+                "
+              >
                 日本語
               </a>
             </li>
@@ -287,14 +306,23 @@
     <main>
       <section class="vivi-hero">
         <div class="container text-center" data-reveal>
-          <div class="eyebrow mx-auto">EXERCISE GUIDE</div>
+          <div class="eyebrow mx-auto" data-i18n="vivi.hero_eyebrow">
+            EXERCISE GUIDE
+          </div>
           <h1 class="hero-title fw-bold">
-            Vivifrail <span class="text-gradient">活力運動指引</span>
+            Vivifrail
+            <span class="text-gradient" data-i18n="vivi.hero_title"
+              >活力運動指引</span
+            >
           </h1>
           <p class="lead text-muted mx-auto" style="max-width: 600px">
-            透過
-            <strong>FongAI 骨架鑑測 APP</strong>
-            準確評估，為您匹配專屬運動方案。從衰弱到健康，每個等級的運動方案都經過科學設計，旨在提升肌力、降低跌倒風險。
+            <span data-i18n="vivi.hero_desc_p1">透過</span>
+            <strong data-i18n="vivi.hero_desc_brand"
+              >FongAI 骨架鑑測 APP</strong
+            >
+            <span data-i18n="vivi.hero_desc_p2"
+              >準確評估，為您匹配專屬運動方案。從衰弱到健康，每個等級的運動方案都經過科學設計，旨在提升肌力、降低跌倒風險。</span
+            >
           </p>
         </div>
       </section>
@@ -303,163 +331,207 @@
         <div class="container">
           <div class="vivi-main-content-card">
             <div class="text-center mb-5" data-reveal>
-              <h4 class="fw-bold mb-4">找到您的 Vivifrail 等級</h4>
+              <h4 class="fw-bold mb-4" data-i18n="vivi.find_level">
+                找到您的 Vivifrail 等級
+              </h4>
               <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
-                <a href="#level-d" class="btn-vivi level-d">D級 健康者</a>
-                <a href="#level-c" class="btn-vivi level-c">C級 衰弱前期</a>
-                <a href="#level-b" class="btn-vivi level-b">B級 衰弱者</a>
-                <a href="#level-a" class="btn-vivi level-a">A級 失能者</a>
+                <a
+                  href="#level-d"
+                  class="btn-vivi level-d"
+                  data-i18n="vivi.btn_d"
+                  >D級 健康者</a
+                >
+                <a
+                  href="#level-c"
+                  class="btn-vivi level-c"
+                  data-i18n="vivi.btn_c"
+                  >C級 衰弱前期</a
+                >
+                <a
+                  href="#level-b"
+                  class="btn-vivi level-b"
+                  data-i18n="vivi.btn_b"
+                  >B級 衰弱者</a
+                >
+                <a
+                  href="#level-a"
+                  class="btn-vivi level-a"
+                  data-i18n="vivi.btn_a"
+                  >A級 失能者</a
+                >
               </div>
             </div>
 
             <div class="vivi-levels-container">
-              <div class="vivi-levels-container">
-                <div
-                  id="level-d"
-                  class="level-detail-row mb-5 pb-5 border-bottom"
-                  data-reveal
-                >
-                  <div class="row g-4 align-items-center">
-                    <div class="col-lg-8">
-                      <div class="position-relative">
-                        <img
-                          src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_4-1024x729.jpg"
-                          class="img-fluid rounded-4 shadow-sm border"
-                          alt="D級圖解"
-                        />
+              <div
+                id="level-d"
+                class="level-detail-row mb-5 pb-5 border-bottom"
+                data-reveal
+              >
+                <div class="row g-4 align-items-center">
+                  <div class="col-lg-8">
+                    <div class="position-relative">
+                      <img
+                        src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_4-1024x729.jpg"
+                        class="img-fluid rounded-4 shadow-sm border"
+                        alt="Level D"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="level-badge d-level mb-3">LEVEL D</div>
+                    <h3 class="fw-bold mb-3" data-i18n="vivi.d_title">
+                      健康者：持續保持活力
+                    </h3>
+                    <div class="info-stack mb-4">
+                      <div class="info-item-mini">
+                        <i class="bi bi-clock me-2"></i
+                        ><span data-i18n="vivi.d_time">20分鐘 / 組</span>
+                      </div>
+                      <div class="info-item-mini">
+                        <i class="bi bi-lightning-charge me-2"></i
+                        ><span data-i18n="vivi.d_focus">核心穩定</span>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="level-badge d-level mb-3">LEVEL D</div>
-                      <h3 class="fw-bold mb-3">健康者：持續保持活力</h3>
-                      <div class="info-stack mb-4">
-                        <div class="info-item-mini">
-                          <i class="bi bi-clock me-2"></i>20分鐘 / 組
-                        </div>
-                        <div class="info-item-mini">
-                          <i class="bi bi-lightning-charge me-2"></i>核心穩定
-                        </div>
-                      </div>
-                      <div class="mt-4">
-                        <a
-                          href="https://www.youtube.com/watch?v=eJhtVhSga_Q"
-                          target="_blank"
-                          class="vivi-video-link"
+                    <div class="mt-4">
+                      <a
+                        href="https://www.youtube.com/watch?v=eJhtVhSga_Q"
+                        target="_blank"
+                        class="vivi-video-link"
+                      >
+                        <i class="bi bi-play-circle-fill me-2"></i
+                        ><span data-i18n="vivi.video_link"
+                          >點我看本等級教學影片</span
                         >
-                          <i class="bi bi-play-circle-fill me-2"></i
-                          >點我看本等級教學影片
-                        </a>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div
-                  id="level-c"
-                  class="level-detail-row mb-5 pb-5 border-bottom"
-                  data-reveal
-                >
-                  <div class="row g-4 align-items-center">
-                    <div class="col-lg-8">
-                      <img
-                        src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_3-1024x724.jpg"
-                        class="img-fluid rounded-4 shadow-sm border"
-                        alt="C級圖解"
-                      />
+              <div
+                id="level-c"
+                class="level-detail-row mb-5 pb-5 border-bottom"
+                data-reveal
+              >
+                <div class="row g-4 align-items-center">
+                  <div class="col-lg-8">
+                    <img
+                      src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_3-1024x724.jpg"
+                      class="img-fluid rounded-4 shadow-sm border"
+                      alt="Level C"
+                    />
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="level-badge c-level mb-3">LEVEL C</div>
+                    <h3 class="fw-bold mb-3" data-i18n="vivi.c_title">
+                      衰弱前期：逆轉衰弱
+                    </h3>
+                    <div class="info-stack mb-4">
+                      <div class="info-item-mini">
+                        <i class="bi bi-clock me-2"></i
+                        ><span data-i18n="vivi.c_time">15分鐘 / 組</span>
+                      </div>
+                      <div class="info-item-mini">
+                        <i class="bi bi-person-walking me-2"></i
+                        ><span data-i18n="vivi.c_focus">步態改善</span>
+                      </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="level-badge c-level mb-3">LEVEL C</div>
-                      <h3 class="fw-bold mb-3">衰弱前期：逆轉衰弱</h3>
-                      <div class="info-stack mb-4">
-                        <div class="info-item-mini">
-                          <i class="bi bi-clock me-2"></i>15分鐘 / 組
-                        </div>
-                        <div class="info-item-mini">
-                          <i class="bi bi-person-walking me-2"></i>步態改善
-                        </div>
-                      </div>
-                      <div class="mt-4">
-                        <a
-                          href="https://www.youtube.com/watch?v=pwu4uGDn2Nc"
-                          target="_blank"
-                          class="vivi-video-link"
+                    <div class="mt-4">
+                      <a
+                        href="https://www.youtube.com/watch?v=pwu4uGDn2Nc"
+                        target="_blank"
+                        class="vivi-video-link"
+                      >
+                        <i class="bi bi-play-circle-fill me-2"></i
+                        ><span data-i18n="vivi.video_link"
+                          >點我看本等級教學影片</span
                         >
-                          <i class="bi bi-play-circle-fill me-2"></i
-                          >點我看本等級教學影片
-                        </a>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div
-                  id="level-b"
-                  class="level-detail-row mb-5 pb-5 border-bottom"
-                  data-reveal
-                >
-                  <div class="row g-4 align-items-center">
-                    <div class="col-lg-8">
-                      <img
-                        src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_2-1024x729.jpg"
-                        class="img-fluid rounded-4 shadow-sm border"
-                        alt="B級圖解"
-                      />
+              <div
+                id="level-b"
+                class="level-detail-row mb-5 pb-5 border-bottom"
+                data-reveal
+              >
+                <div class="row g-4 align-items-center">
+                  <div class="col-lg-8">
+                    <img
+                      src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_2-1024x729.jpg"
+                      class="img-fluid rounded-4 shadow-sm border"
+                      alt="Level B"
+                    />
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="level-badge b-level mb-3">LEVEL B</div>
+                    <h3 class="fw-bold mb-3" data-i18n="vivi.b_title">
+                      衰弱者：加強平衡與肌力
+                    </h3>
+                    <div class="info-stack mb-4">
+                      <div class="info-item-mini">
+                        <i class="bi bi-clock me-2"></i
+                        ><span data-i18n="vivi.b_time">10分鐘 / 組</span>
+                      </div>
+                      <div class="info-item-mini">
+                        <i class="bi bi-shield-check me-2"></i
+                        ><span data-i18n="vivi.b_focus">防跌訓練</span>
+                      </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="level-badge b-level mb-3">LEVEL B</div>
-                      <h3 class="fw-bold mb-3">衰弱者：加強平衡與肌力</h3>
-                      <div class="info-stack mb-4">
-                        <div class="info-item-mini">
-                          <i class="bi bi-clock me-2"></i>10分鐘 / 組
-                        </div>
-                        <div class="info-item-mini">
-                          <i class="bi bi-shield-check me-2"></i>防跌訓練
-                        </div>
-                      </div>
-                      <div class="mt-4">
-                        <a
-                          href="https://www.youtube.com/watch?v=11x5X6dDbvc"
-                          target="_blank"
-                          class="vivi-video-link"
+                    <div class="mt-4">
+                      <a
+                        href="https://www.youtube.com/watch?v=11x5X6dDbvc"
+                        target="_blank"
+                        class="vivi-video-link"
+                      >
+                        <i class="bi bi-play-circle-fill me-2"></i
+                        ><span data-i18n="vivi.video_link"
+                          >點我看本等級教學影片</span
                         >
-                          <i class="bi bi-play-circle-fill me-2"></i
-                          >點我看本等級教學影片
-                        </a>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div id="level-a" class="level-detail-row mb-5" data-reveal>
-                  <div class="row g-4 align-items-center">
-                    <div class="col-lg-8">
-                      <img
-                        src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_1-1024x729.jpg"
-                        class="img-fluid rounded-4 shadow-sm border"
-                        alt="A級圖解"
-                      />
+              <div id="level-a" class="level-detail-row mb-5" data-reveal>
+                <div class="row g-4 align-items-center">
+                  <div class="col-lg-8">
+                    <img
+                      src="https://fongai.co/wp-content/uploads/2024/12/4RUEDAS-CH_頁面_1-1024x729.jpg"
+                      class="img-fluid rounded-4 shadow-sm border"
+                      alt="Level A"
+                    />
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="level-badge a-level mb-3">LEVEL A</div>
+                    <h3 class="fw-bold mb-3" data-i18n="vivi.a_title">
+                      失能者：基礎活動力重建
+                    </h3>
+                    <div class="info-stack mb-4">
+                      <div class="info-item-mini">
+                        <i class="bi bi-clock me-2"></i
+                        ><span data-i18n="vivi.a_time">5-10分鐘 / 組</span>
+                      </div>
+                      <div class="info-item-mini">
+                        <i class="bi bi-heart-pulse me-2"></i
+                        ><span data-i18n="vivi.a_focus">低強度復健</span>
+                      </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="level-badge a-level mb-3">LEVEL A</div>
-                      <h3 class="fw-bold mb-3">失能者：基礎活動力重建</h3>
-                      <div class="info-stack mb-4">
-                        <div class="info-item-mini">
-                          <i class="bi bi-clock me-2"></i>5-10分鐘 / 組
-                        </div>
-                        <div class="info-item-mini">
-                          <i class="bi bi-heart-pulse me-2"></i>低強度復健
-                        </div>
-                      </div>
-                      <div class="mt-4">
-                        <a
-                          href="https://www.youtube.com/watch?v=mUPqkDisQDI"
-                          target="_blank"
-                          class="vivi-video-link"
+                    <div class="mt-4">
+                      <a
+                        href="https://www.youtube.com/watch?v=mUPqkDisQDI"
+                        target="_blank"
+                        class="vivi-video-link"
+                      >
+                        <i class="bi bi-play-circle-fill me-2"></i
+                        ><span data-i18n="vivi.video_link"
+                          >點我看本等級教學影片</span
                         >
-                          <i class="bi bi-play-circle-fill me-2"></i
-                          >點我看本等級教學影片
-                        </a>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -507,9 +579,9 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 

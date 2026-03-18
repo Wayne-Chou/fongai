@@ -97,7 +97,7 @@
               </a>
             </li>
 
-            <li>
+            <!-- <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -105,7 +105,7 @@
               >
                 經銷商招募
               </a>
-            </li>
+            </li> -->
           </ul>
         </li>
 
@@ -260,19 +260,38 @@
 
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('zh')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('zh');
+                  return false;
+                "
+              >
                 繁體中文
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('en')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('en');
+                  return false;
+                "
+              >
                 English
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('ja')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('ja');
+                  return false;
+                "
+              >
                 日本語
               </a>
             </li>
@@ -287,15 +306,22 @@
     <main>
       <section class="product-hero-minimal">
         <div class="container text-center" data-reveal>
-          <div class="eyebrow mx-auto">AI TECHNOLOGY</div>
-          <h1 class="display-3 fw-bold mb-4 text-gradient">
+          <div class="eyebrow mx-auto" data-i18n="product.hero_eyebrow">
+            AI TECHNOLOGY
+          </div>
+          <h1
+            class="display-3 fw-bold mb-4 text-gradient"
+            data-i18n="product.hero_title"
+          >
             FongAI 快速鑑測 APP
           </h1>
           <p class="lead text-muted mx-auto mb-5" style="max-width: 800px">
-            結合動態骨架捕捉技術，只需 2 分鐘即可完成專業防跌鑑測。<br
-              class="d-none d-md-block"
-            />
-            守護高齡健康，我們用新世代 AI 解方做到最精準的防護。
+            <span data-i18n="product.hero_desc_l1"
+              >結合動態骨架捕捉技術，只需 2 分鐘即可完成專業防跌鑑測。</span
+            ><br class="d-none d-md-block" />
+            <span data-i18n="product.hero_desc_l2"
+              >守護高齡健康，我們用新世代 AI 解方做到最精準的防護。</span
+            >
           </p>
         </div>
       </section>
@@ -306,8 +332,10 @@
             <div class="col-md-4" data-reveal>
               <div class="feature-card-simple">
                 <i class="bi bi-lightning-charge-fill text-accent fs-1"></i>
-                <h4 class="fw-bold mt-3">快速高效</h4>
-                <p class="text-muted">
+                <h4 class="fw-bold mt-3" data-i18n="product.feat_fast_t">
+                  快速高效
+                </h4>
+                <p class="text-muted" data-i18n="product.feat_fast_d">
                   2 分鐘即時分析，不需穿戴裝置，減少長者負擔。
                 </p>
               </div>
@@ -315,8 +343,10 @@
             <div class="col-md-4" data-reveal>
               <div class="feature-card-simple">
                 <i class="bi bi-graph-up-arrow text-accent fs-1"></i>
-                <h4 class="fw-bold mt-3">精準數據</h4>
-                <p class="text-muted">
+                <h4 class="fw-bold mt-3" data-i18n="product.feat_data_t">
+                  精準數據
+                </h4>
+                <p class="text-muted" data-i18n="product.feat_data_d">
                   自動化產出跌倒風險評估報告，數據清晰易懂。
                 </p>
               </div>
@@ -324,8 +354,10 @@
             <div class="col-md-4" data-reveal>
               <div class="feature-card-simple">
                 <i class="bi bi-shield-check text-accent fs-1"></i>
-                <h4 class="fw-bold mt-3">專業認證</h4>
-                <p class="text-muted">
+                <h4 class="fw-bold mt-3" data-i18n="product.feat_auth_t">
+                  專業認證
+                </h4>
+                <p class="text-muted" data-i18n="product.feat_auth_d">
                   符合臨床跌倒量表邏輯，與醫療場域無縫接軌。
                 </p>
               </div>
@@ -337,8 +369,10 @@
       <section class="workflow-section py-100">
         <div class="container">
           <div class="section-header text-center mb-5" data-reveal>
-            <div class="eyebrow">WORKFLOW</div>
-            <h2 class="fw-bold h1">從檢測到預防的一站式服務</h2>
+            <div class="eyebrow mx-auto" data-i18n="flow.eyebrow">WORKFLOW</div>
+            <h2 class="fw-bold h1" data-i18n="flow.main_title">
+              從檢測到預防的一站式服務
+            </h2>
           </div>
 
           <div class="row g-4 workflow-steps">
@@ -346,20 +380,17 @@
               <div class="step-card step-prepare">
                 <div class="step-number">01</div>
                 <h4 class="fw-bold">
-                  <i class="bi bi-person-bounding-box me-2"></i>簡易鑑測
+                  <i class="bi bi-person-bounding-box me-2"></i
+                  ><span data-i18n="flow.step1_t">簡易鑑測</span>
                 </h4>
                 <p class="text-muted">
-                  2 分鐘快速檢測
+                  <span data-i18n="flow.step1_d1">2 分鐘快速檢測</span>
                   <span class="badge bg-light text-primary border">SPPB</span
                   ><br />
-                  AI 跌倒風險機率評估
+                  <span data-i18n="flow.step1_d2">AI 跌倒風險機率評估</span>
                 </p>
                 <div class="step-img-box">
-                  <img
-                    src="手機截圖路徑1.png"
-                    alt="簡易鑑測"
-                    class="img-fluid"
-                  />
+                  <img src="/fongai/assets/%E6%89%8B%E6%A9%9F%E6%88%AA%E5%9C%96%E8%B7%AF%E5%BE%91.jpg" alt="Assessment" />
                 </div>
               </div>
             </div>
@@ -368,21 +399,20 @@
               <div class="step-card step-core active">
                 <div class="step-number">02</div>
                 <h4 class="fw-bold">
-                  <i class="bi bi-shield-check me-2"></i>快速分級
+                  <i class="bi bi-shield-check me-2"></i
+                  ><span data-i18n="flow.step2_t">快速分級</span>
                 </h4>
                 <div class="risk-labels mb-2">
                   <span class="r-a">A</span><span class="r-b">B</span
                   ><span class="r-c">C</span><span class="r-d">D</span>
                 </div>
                 <p class="text-muted">
-                  AI 動態骨架防跌報告<br />提供精準風險等級評估
+                  <span data-i18n="flow.step2_d1">AI 動態骨架防跌報告</span
+                  ><br />
+                  <span data-i18n="flow.step2_d2">提供精準風險等級評估</span>
                 </p>
                 <div class="step-img-box">
-                  <img
-                    src="報表截圖路徑2.png"
-                    alt="快速分級"
-                    class="img-fluid"
-                  />
+                  <img src="/fongai/assets/%E5%A0%B1%E8%A1%A8%E6%88%AA%E5%9C%96%E8%B7%AF%E5%BE%91.jpg" alt="快速分級" />
                 </div>
               </div>
             </div>
@@ -390,23 +420,32 @@
             <div class="col-lg-4" data-reveal>
               <div class="step-card step-service">
                 <div class="step-number">03</div>
-                <h4 class="fw-bold"><i class="bi bi-shop me-2"></i>後端導流</h4>
+                <h4 class="fw-bold">
+                  <i class="bi bi-shop me-2"></i
+                  ><span data-i18n="flow.step3_t">後端導流</span>
+                </h4>
                 <p class="text-muted">
-                  對接多元健康生態系資源<br />提供全方位長照預防方案
+                  <span data-i18n="flow.step3_d1">對接多元健康生態系資源</span
+                  ><br />
+                  <span data-i18n="flow.step3_d2">提供全方位長照預防方案</span>
                 </p>
                 <div class="step-img-box grid-icons">
                   <div class="mini-grid">
                     <span class="tag-v"
-                      ><i class="bi bi-book me-1"></i>多元課程</span
+                      ><i class="bi bi-book me-1"></i
+                      ><span data-i18n="flow.tag_courses">多元課程</span></span
                     >
                     <span class="tag-v"
-                      ><i class="bi bi-heart me-1"></i>長照輔具</span
+                      ><i class="bi bi-heart me-1"></i
+                      ><span data-i18n="flow.tag_assist">長照輔具</span></span
                     >
                     <span class="tag-v"
-                      ><i class="bi bi-hospital me-1"></i>職治物治</span
+                      ><i class="bi bi-hospital me-1"></i
+                      ><span data-i18n="flow.tag_therapy">職治物治</span></span
                     >
                     <span class="tag-v"
-                      ><i class="bi bi-droplet me-1"></i>中醫保健</span
+                      ><i class="bi bi-droplet me-1"></i
+                      ><span data-i18n="flow.tag_chinese">中醫保健</span></span
                     >
                   </div>
                 </div>
@@ -454,9 +493,9 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
