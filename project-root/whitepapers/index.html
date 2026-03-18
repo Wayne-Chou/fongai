@@ -15,11 +15,17 @@
     <main>
       <section class="whitepaper-hero">
         <div class="container" data-reveal>
-          <div class="eyebrow mx-auto">REPORTS & INSIGHTS</div>
-          <h1 class="hero-title fw-bold">
-            產業<span class="text-gradient">白皮書</span>
+          <div class="eyebrow mx-auto" data-i18n="wp.hero.eyebrow">
+            REPORTS & INSIGHTS
+          </div>
+
+          <h1 class="hero-title fw-bold" data-i18n="wp.hero.title">
+            產業白皮書
           </h1>
-          <p class="hero-subtitle">從 AI 防跌到行動力經濟，重塑高齡科技未來</p>
+
+          <p class="hero-subtitle" data-i18n="wp.hero.subtitle">
+            從 AI 防跌到行動力經濟，重塑高齡科技未來
+          </p>
         </div>
       </section>
 
@@ -41,39 +47,52 @@
         const grid = document.getElementById("whitepaperGrid");
         if (!grid || typeof whitepapersData === "undefined") return;
 
+        const lang = localStorage.getItem("lang") || "zh";
+
         whitepapersData.forEach((item) => {
           const card = document.createElement("a");
           card.href = `/whitepapers/detail.html?slug=${item.slug}`;
           card.className = "whitepaper-card";
           card.setAttribute("data-reveal", "");
 
-          const rawContent = item.content || "";
-          const cleanText = rawContent
-            .replace(/<[^>]*>/g, "")
-            .replace(/\s+/g, " ")
-            .trim();
-          const displayExcerpt = cleanText.substring(0, 90) + "...";
+          const getExcerpt = (html) =>
+            html
+              .replace(/<[^>]*>/g, "")
+              .replace(/\s+/g, " ")
+              .trim()
+              .substring(0, 90) + "...";
 
           card.innerHTML = `
         <div class="card-inner">
           <div class="card-visual" style="background-image: linear-gradient(rgba(3, 18, 29, 0.7), rgba(3, 18, 29, 0.7)), url('${item.image}');">
-            <div class="scan-effect"></div>
             <span class="year-badge">${item.year}</span>
-            <div class="visual-icon">
-              <i class="bi bi-file-earmark-pdf"></i>
-            </div>
+            <div class="visual-icon"><i class="bi bi-file-earmark-pdf"></i></div>
           </div>
           <div class="card-body">
-            <h3>${item.title}</h3>
-            <p>${displayExcerpt}</p> 
+            <h3 data-dynamic-i18n 
+                data-zh="${item.title}" 
+                data-en="${item.title_en}" 
+                data-ja="${item.title_ja}">
+                ${lang === "zh" ? item.title : item[`title_${lang}`] || item.title}
+            </h3>
+            
+            <p data-dynamic-i18n
+               data-zh="${getExcerpt(item.content)}" 
+               data-en="${getExcerpt(item.content_en)}" 
+               data-ja="${getExcerpt(item.content_ja)}">
+               ${getExcerpt(lang === "zh" ? item.content : item[`content_${lang}`] || item.content)}
+            </p> 
+
             <div class="card-footer">
-              <span class="read-more">閱讀報告 <i class="bi bi-arrow-right"></i></span>
-             
+              <span class="read-more" 
+                    data-i18n="wp.read_more">
+                    ${lang === "en" ? "Read Report" : lang === "ja" ? "レポートを読む" : "閱讀報告"}
+              </span>
+              <i class="bi bi-arrow-right"></i>
             </div>
           </div>
         </div>
       `;
-
           grid.appendChild(card);
         });
       });

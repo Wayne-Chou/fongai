@@ -101,7 +101,7 @@
               </a>
             </li>
 
-            <li>
+            <!-- <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -109,7 +109,7 @@
               >
                 經銷商招募
               </a>
-            </li>
+            </li> -->
           </ul>
         </li>
 
@@ -264,19 +264,38 @@
 
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('zh')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('zh');
+                  return false;
+                "
+              >
                 繁體中文
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('en')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('en');
+                  return false;
+                "
+              >
                 English
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('ja')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('ja');
+                  return false;
+                "
+              >
                 日本語
               </a>
             </li>
@@ -449,9 +468,9 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 

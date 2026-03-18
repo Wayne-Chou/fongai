@@ -101,7 +101,7 @@
               </a>
             </li>
 
-            <li>
+            <!-- <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -109,7 +109,7 @@
               >
                 經銷商招募
               </a>
-            </li>
+            </li> -->
           </ul>
         </li>
 
@@ -264,19 +264,38 @@
 
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('zh')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('zh');
+                  return false;
+                "
+              >
                 繁體中文
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('en')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('en');
+                  return false;
+                "
+              >
                 English
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('ja')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('ja');
+                  return false;
+                "
+              >
                 日本語
               </a>
             </li>
@@ -294,7 +313,9 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="/whitepapers/">白皮書系列</a>
+                <a href="/whitepapers/" data-i18n="wp.breadcrumb.list"
+                  >白皮書系列</a
+                >
               </li>
               <li class="breadcrumb-item" id="breadcrumb-active">載入中...</li>
             </ol>
@@ -302,7 +323,7 @@
 
           <div class="hero-flex">
             <div class="hero-text">
-              <span class="badge-year" id="detail-year">2026</span>
+              <span class="badge-year" id="detail-year"></span>
               <h1 class="detail-title" id="detail-title">載入中...</h1>
               <p class="detail-subtitle" id="detail-date"></p>
             </div>
@@ -315,11 +336,11 @@
           <div class="row g-5">
             <div class="col-lg-7">
               <div class="content-card" data-reveal>
-                <div class="card-tag">REPORT OVERVIEW</div>
+                <div class="card-tag" data-i18n="wp.detail.tag">
+                  REPORT OVERVIEW
+                </div>
                 <div id="detail-content" class="rich-text-area"></div>
-
                 <hr class="my-5 border-secondary opacity-25" />
-
                 <div id="apply-content" class="apply-highlights"></div>
               </div>
             </div>
@@ -328,66 +349,72 @@
               <div class="sticky-form-container">
                 <div class="form-card">
                   <div class="form-header">
-                    <h3>免費獲取完整報告</h3>
-                    <p>填寫資訊後，系統將寄送電子檔至您的信箱</p>
+                    <h3 data-i18n="wp.form.title">免費獲取完整報告</h3>
+                    <p data-i18n="wp.form.subtitle">
+                      填寫資訊後，系統將寄送電子檔至您的信箱
+                    </p>
                   </div>
 
                   <form id="whitepaperApplyForm">
                     <div class="input-group-custom">
-                      <label>您的姓名</label>
-                      <input type="text" placeholder="例如：王小明" required />
-                    </div>
-                    <div class="input-group-custom">
-                      <label>公司名稱</label>
+                      <label data-i18n="wp.form.name">您的姓名</label>
                       <input
                         type="text"
-                        placeholder="例如：數位發展部、○○有限公司"
+                        data-i18n-placeholder="wp.form.placeholder.name"
+                        placeholder="例如：王小明"
                         required
                       />
                     </div>
                     <div class="input-group-custom">
-                      <label
-                        >LINE ID
-                        <span class="optional-text">(選填)</span></label
-                      >
+                      <label data-i18n="wp.form.company">公司名稱</label>
+                      <input
+                        type="text"
+                        placeholder="例如：數位發展部、○○有限公司"
+                        data-i18n-placeholder="wp.form.placeholder.company"
+                        required
+                      />
+                    </div>
+                    <div class="input-group-custom">
+                      <label>
+                        <span data-i18n="wp.form.line">LINE ID</span>
+                        <span class="optional-text" data-i18n="wp.form.optional"
+                          >(選填)</span
+                        >
+                      </label>
                       <input
                         type="text"
                         id="line-id"
                         placeholder="例如：@fongai_service"
+                        data-i18n-placeholder="wp.form.placeholder.line"
                       />
                     </div>
                     <div class="input-group-custom">
-                      <label>職稱</label>
+                      <label data-i18n="wp.form.job">職稱</label>
                       <input
                         type="text"
                         placeholder="例如：營運總監"
+                        data-i18n-placeholder="wp.form.placeholder.job"
                         required
                       />
                     </div>
                     <div class="input-group-custom">
-                      <label>公司信箱</label>
+                      <label data-i18n="wp.form.email">公司信箱</label>
                       <input
                         type="email"
                         placeholder="name@company.com"
+                        data-i18n-placeholder="wp.form.placeholder.email"
                         required
                       />
                     </div>
 
-                    <button type="submit" class="apply-btn-submit">
-                      立即申請下載 <i class="bi bi-download ms-2"></i>
+                    <button
+                      type="submit"
+                      class="apply-btn-submit"
+                      data-i18n="wp.form.submit"
+                    >
+                      立即申請下載
                     </button>
                   </form>
-
-                  <div class="apply-success" id="applySuccess">
-                    <div class="success-icon">
-                      <i class="bi bi-check-circle-fill"></i>
-                    </div>
-                    <h4>申請已成功送出</h4>
-                    <p>
-                      感謝您的關注。報告將在 1
-                      分鐘內寄送至您的信箱，請查收信件（含垃圾信夾）。
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -433,9 +460,9 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -477,15 +504,57 @@
         const paper = whitepapersData.find((item) => item.slug === slug);
 
         if (paper) {
+          const lang = localStorage.getItem("lang") || "zh";
+
+          const titleEl = document.getElementById("detail-title");
+          const breadcrumbEl = document.getElementById("breadcrumb-active");
+
+          [titleEl, breadcrumbEl].forEach((el) => {
+            el.setAttribute("data-dynamic-i18n", "");
+            el.setAttribute("data-zh", paper.title);
+            el.setAttribute("data-en", paper.title_en);
+            el.setAttribute("data-ja", paper.title_ja);
+            el.innerText =
+              lang === "zh"
+                ? paper.title
+                : paper[`title_${lang}`] || paper.title;
+          });
+
           document.title = `${paper.title} | 產業白皮書`;
-          document.getElementById("breadcrumb-active").innerText = paper.title;
-          document.getElementById("detail-title").innerText = paper.title;
-          document.getElementById("detail-date").innerText =
-            `發佈日期：${paper.date}`;
-          document.getElementById("detail-year").innerText = paper.year;
-          document.getElementById("detail-content").innerHTML = paper.content;
-          document.getElementById("apply-content").innerHTML =
-            paper.applyContent;
+
+          const dateEl = document.getElementById("detail-date");
+
+          dateEl.setAttribute("data-dynamic-i18n", "");
+          dateEl.setAttribute("data-zh", `發佈日期：${paper.date}`);
+          dateEl.setAttribute("data-en", `Published: ${paper.date}`);
+          dateEl.setAttribute("data-ja", `公開日：${paper.date}`);
+
+          if (lang === "en") {
+            dateEl.innerText = `Published: ${paper.date}`;
+          } else if (lang === "ja") {
+            dateEl.innerText = `公開日：${paper.date}`;
+          } else {
+            dateEl.innerText = `發佈日期：${paper.date}`;
+          }
+          const contentEl = document.getElementById("detail-content");
+          contentEl.setAttribute("data-dynamic-i18n-html", "");
+          contentEl.setAttribute("data-zh", paper.content);
+          contentEl.setAttribute("data-en", paper.content_en);
+          contentEl.setAttribute("data-ja", paper.content_ja);
+          contentEl.innerHTML =
+            lang === "zh"
+              ? paper.content
+              : paper[`content_${lang}`] || paper.content;
+
+          const applyEl = document.getElementById("apply-content");
+          applyEl.setAttribute("data-dynamic-i18n-html", "");
+          applyEl.setAttribute("data-zh", paper.applyContent);
+          applyEl.setAttribute("data-en", paper.applyContent_en);
+          applyEl.setAttribute("data-ja", paper.applyContent_ja);
+          applyEl.innerHTML =
+            lang === "zh"
+              ? paper.applyContent
+              : paper[`applyContent_${lang}`] || paper.applyContent;
         } else {
           window.location.href = "/whitepapers/";
         }
@@ -496,7 +565,6 @@
           e.preventDefault();
           form.style.display = "none";
           success.style.display = "block";
-          // 這裡可以串接 API
         });
       });
     </script>

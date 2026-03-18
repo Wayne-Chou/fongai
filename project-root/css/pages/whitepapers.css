@@ -135,14 +135,14 @@
 
 /* 文字區 */
 
-.card-body {
+.page-whitepapers .card-body {
   padding: 28px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.card-body h3 {
+.page-whitepapers .card-body h3 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 14px;
@@ -150,7 +150,7 @@
   color: var(--jf-primary);
 }
 
-.card-body p {
+.page-whitepapers .card-body p {
   font-size: 0.95rem;
   color: var(--jf-text-secondary);
   line-height: 1.7;

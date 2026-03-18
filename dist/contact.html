@@ -97,7 +97,7 @@
               </a>
             </li>
 
-            <li>
+            <!-- <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -105,7 +105,7 @@
               >
                 經銷商招募
               </a>
-            </li>
+            </li> -->
           </ul>
         </li>
 
@@ -260,19 +260,38 @@
 
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('zh')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('zh');
+                  return false;
+                "
+              >
                 繁體中文
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('en')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('en');
+                  return false;
+                "
+              >
                 English
               </a>
             </li>
-
             <li>
-              <a class="dropdown-item" href="#" onclick="setLang('ja')">
+              <a
+                class="dropdown-item"
+                href="#"
+                onclick="
+                  setLang('ja');
+                  return false;
+                "
+              >
                 日本語
               </a>
             </li>
@@ -287,11 +306,20 @@
     <main>
       <section class="contact-hero">
         <div class="container text-center" data-reveal>
-          <div class="eyebrow mx-auto">CONTACT US</div>
+          <div class="eyebrow mx-auto" data-i18n="contact.hero_eyebrow">
+            CONTACT US
+          </div>
           <h1 class="hero-title fw-bold">
-            與建豐<span class="text-gradient">聯繫</span>
+            <span data-i18n="contact.hero_title_line1">與建豐</span
+            ><span class="text-gradient" data-i18n="contact.hero_title_line2"
+              >聯繫</span
+            >
           </h1>
-          <p class="lead text-muted mx-auto" style="max-width: 600px">
+          <p
+            class="lead text-muted mx-auto"
+            style="max-width: 600px"
+            data-i18n="contact.hero_desc"
+          >
             無論您是醫療場域、照護據點或有志推廣預防醫學的夥伴，我們都歡迎您的諮詢與合作。
           </p>
         </div>
@@ -302,14 +330,18 @@
           <div class="row g-5">
             <div class="col-lg-5" data-reveal>
               <div class="contact-info-wrapper">
-                <h3 class="fw-bold mb-4">聯繫資訊</h3>
+                <h3 class="fw-bold mb-4" data-i18n="contact.main_title">
+                  聯繫資訊
+                </h3>
 
                 <div class="info-card">
                   <div class="info-item">
                     <div class="info-icon"><i class="bi bi-geo-alt"></i></div>
                     <div class="info-text">
-                      <h6>公司地址</h6>
-                      <p>臺灣臺北市內湖區瑞光路168號9F</p>
+                      <h6 data-i18n="contact.info_addr_label">公司地址</h6>
+                      <p data-i18n="contact.info_addr_val">
+                        臺灣臺北市內湖區瑞光路168號9F
+                      </p>
                     </div>
                   </div>
                   <div class="info-item line-card">
@@ -317,12 +349,15 @@
                       <i class="bi bi-line"></i>
                     </div>
                     <div class="info-text">
-                      <h6>官方 LINE 諮詢</h6>
+                      <h6 data-i18n="contact.info_line_label">
+                        官方 LINE 諮詢
+                      </h6>
                       <a
                         href="https://lin.ee/gQGtodu"
                         target="_blank"
                         rel="noopener"
                         class="line-custom-btn"
+                        data-i18n="contact.info_line_btn"
                       >
                         立即加入好友
                       </a>
@@ -331,14 +366,14 @@
                   <div class="info-item">
                     <div class="info-icon"><i class="bi bi-envelope"></i></div>
                     <div class="info-text">
-                      <h6>電子郵件</h6>
+                      <h6 data-i18n="contact.info_email_label">電子郵件</h6>
                       <p>service@fongai.co</p>
                     </div>
                   </div>
                   <div class="info-item">
                     <div class="info-icon"><i class="bi bi-telephone"></i></div>
                     <div class="info-text">
-                      <h6>聯絡電話</h6>
+                      <h6 data-i18n="contact.info_tel_label">聯絡電話</h6>
                       <p>0938-932-306</p>
                     </div>
                   </div>
@@ -348,7 +383,7 @@
                     <i class="bi bi-bank"></i>
                   </div>
                   <div class="info-text">
-                    <h6>統一編號</h6>
+                    <h6 data-i18n="contact.info_tax_label">統一編號</h6>
                     <p>52564893</p>
                   </div>
                 </div>
@@ -369,57 +404,85 @@
 
             <div class="col-lg-7" data-reveal>
               <div class="contact-form-card">
-                <h3 class="fw-bold mb-4">傳送訊息</h3>
+                <h3 class="fw-bold mb-4" data-i18n="contact.form_title">
+                  傳送訊息
+                </h3>
                 <form id="contactForm">
                   <div class="row g-3">
                     <div class="col-md-6">
-                      <label class="form-label">您的姓名</label>
+                      <label
+                        class="form-label"
+                        data-i18n="contact.form_name_label"
+                        >您的姓名</label
+                      >
                       <input
                         type="text"
                         class="form-control"
                         placeholder="姓名"
+                        data-i18n-placeholder="contact.form_name_ph"
                         required
                       />
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label">聯絡電話</label>
+                      <label
+                        class="form-label"
+                        data-i18n="contact.form_tel_label"
+                        >聯絡電話</label
+                      >
                       <input
                         type="tel"
                         class="form-control"
                         placeholder="電話"
+                        data-i18n-placeholder="contact.form_tel_ph"
                         required
                       />
                     </div>
                     <div class="col-12">
-                      <label class="form-label">單位名稱</label>
+                      <label
+                        class="form-label"
+                        data-i18n="contact.form_org_label"
+                        >單位名稱</label
+                      >
                       <input
                         type="text"
                         class="form-control"
                         placeholder="例如：數位發展部、○○有限公司"
+                        data-i18n-placeholder="contact.form_org_ph"
                         required
                       />
                     </div>
                     <div class="col-12">
-                      <label class="form-label">電子郵件</label>
+                      <label
+                        class="form-label"
+                        data-i18n="contact.form_email_label"
+                        >電子郵件</label
+                      >
                       <input
                         type="email"
                         class="form-control"
                         placeholder="example@mail.com"
+                        data-i18n-placeholder="contact.form_email_ph"
                         required
                       />
                     </div>
 
                     <div class="col-12">
-                      <label class="form-label">訊息內容</label>
+                      <label
+                        class="form-label"
+                        data-i18n="contact.form_msg_label"
+                        >訊息內容</label
+                      >
                       <textarea
                         class="form-control"
                         rows="5"
                         placeholder="請輸入您的訊息..."
+                        data-i18n-placeholder="contact.form_msg_ph"
                       ></textarea>
                     </div>
                     <div class="col-12 mt-4">
                       <button type="submit" class="btn btn-primary-jf w-100">
-                        立即送出 <i class="bi bi-send ms-2"></i>
+                        <span data-i18n="contact.form_btn">立即送出</span>
+                        <i class="bi bi-send ms-2"></i>
                       </button>
                     </div>
                   </div>
@@ -468,9 +531,9 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 

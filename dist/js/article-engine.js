@@ -1,5 +1,5 @@
 /**
- * FongAI Article Engine v2.0
+
  * 功能：動態資料渲染、分類篩選、自動分頁、URL參數導向
  */
 document.addEventListener("DOMContentLoaded", () => {
