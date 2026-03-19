@@ -109,7 +109,7 @@
   "home.tech_card3_desc": "Analyzes stride, speed, center of gravity, and balance indices to create personalized mobility health models.",
   "home.tech_card4_title": "Risk Prediction",
   "home.tech_card4_desc": "Integrates clinical research models for real-time AI assessment of fall risks and early warning alerts.",
-  "home.mgmt_badge": "System Management",
+
   "home.mgmt_title": "Site Management Dashboard\nCross-Site Digital Monitoring",
   "home.mgmt_desc_pre": "A ",
   "home.mgmt_desc_bold": "web-based admin system",

@@ -108,7 +108,7 @@
   "home.tech_card3_desc": "歩幅、速度、重心、バランス指数を分析し、パーソナライズされた健康モデルを作成します。",
   "home.tech_card4_title": "リスク予測",
   "home.tech_card4_desc": "臨床研究モデルと統合し、AIがリアルタイムで転倒リスクを評価・警告します。",
-  "home.mgmt_badge": "システム管理",
+
   "home.mgmt_title": "現場管理ダッシュボード\n複数拠点のデジタル監視を実現",
   "home.mgmt_desc_pre": "管理者向けに設計された",
   "home.mgmt_desc_bold": "Web版バックエンドシステム",
