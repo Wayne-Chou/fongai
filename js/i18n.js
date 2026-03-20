@@ -4,6 +4,7 @@ window.setLang = async function (lang) {
 };
 
 async function loadLang(lang) {
+  document.documentElement.lang = lang;
   const base = location.hostname.includes("github.io") ? "/fongai" : "";
 
   const res = await fetch(base + "/lang/" + lang + ".json");
