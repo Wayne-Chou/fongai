@@ -415,8 +415,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/whitepapers-data.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="/fongai/js/main.js"></script>
+    <script src="/fongai/js/whitepapers-data.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -427,7 +427,7 @@
 
         whitepapersData.forEach((item) => {
           const card = document.createElement("a");
-          card.href = `detail.html?slug=${item.slug}`;
+          card.href = `./detail.html?slug=${item.slug}`;
           card.className = "whitepaper-card";
           card.setAttribute("data-reveal", "");
 
