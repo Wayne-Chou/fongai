@@ -5,18 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
 <script>
-  // if (location.hostname.includes("github.io")) {
-  //   document.addEventListener("DOMContentLoaded", () => {
-  //     document.querySelectorAll("a[href^='/']").forEach((link) => {
-  //       const href = link.getAttribute("href");
-
-  //       if (!href.startsWith("/fongai/")) {
-  //         link.setAttribute("href", "/fongai" + href);
-  //       }
-  //     });
-  //   });
-  // }
-  // 判斷是否在子目錄環境 (包含 GitHub Pages 或 WordPress 的 /fongai/ 目錄)
   const isSubFolder =
     location.hostname.includes("github.io") ||
     location.pathname.startsWith("/fongai/");
@@ -132,15 +120,15 @@
 
         <!-- NEWS -->
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
             最新消息
           </a>
-        </li>
+        </li> -->
 
         <!-- SERVICE -->
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -171,7 +159,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
         <!-- APP -->
 
@@ -262,7 +250,11 @@
         <!-- LOGIN -->
 
         <li class="nav-item">
-          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">
+          <a
+            class="nav-link"
+            href="https://fongai.co/dashboard/login.html"
+            data-i18n="nav.partnerLogin"
+          >
             夥伴登入
           </a>
         </li>
