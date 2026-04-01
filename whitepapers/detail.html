@@ -14,7 +14,6 @@
       document.querySelectorAll("a[href^='/']").forEach((link) => {
         const href = link.getAttribute("href");
 
-        // 檢查是否已經加上了 /fongai/，如果沒有則補上
         if (!href.startsWith("/fongai/")) {
           link.setAttribute("href", "/fongai" + href);
         }
@@ -106,7 +105,7 @@
               </a>
             </li>
 
-            <!-- <li>
+            <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -114,7 +113,7 @@
               >
                 經銷商招募
               </a>
-            </li> -->
+            </li>
           </ul>
         </li>
 
@@ -364,11 +363,16 @@
                     </p>
                   </div>
 
-                  <form id="whitepaperApplyForm">
+                  <form
+                    id="whitepaperApplyForm"
+                    action="https://formspree.io/f/mwvwovak"
+                    method="POST"
+                  >
                     <div class="input-group-custom">
                       <label data-i18n="wp.form.name">您的姓名</label>
                       <input
                         type="text"
+                        name="姓名"
                         data-i18n-placeholder="wp.form.placeholder.name"
                         placeholder="例如：王小明"
                         required
@@ -378,6 +382,7 @@
                       <label data-i18n="wp.form.company">公司名稱</label>
                       <input
                         type="text"
+                        name="公司名稱"
                         placeholder="例如：數位發展部、○○有限公司"
                         data-i18n-placeholder="wp.form.placeholder.company"
                         required
@@ -393,6 +398,7 @@
                       <input
                         type="text"
                         id="line-id"
+                        name="LineID"
                         placeholder="例如：@fongai_service"
                         data-i18n-placeholder="wp.form.placeholder.line"
                       />
@@ -401,6 +407,7 @@
                       <label data-i18n="wp.form.job">職稱</label>
                       <input
                         type="text"
+                        name="職稱"
                         placeholder="例如：營運總監"
                         data-i18n-placeholder="wp.form.placeholder.job"
                         required
@@ -410,6 +417,7 @@
                       <label data-i18n="wp.form.email">公司信箱</label>
                       <input
                         type="email"
+                        name="email"
                         placeholder="name@company.com"
                         data-i18n-placeholder="wp.form.placeholder.email"
                         required
@@ -424,6 +432,33 @@
                       立即申請下載
                     </button>
                   </form>
+                  <div
+                    id="applySuccess"
+                    style="display: none"
+                    class="text-center py-5"
+                  >
+                    <div class="mb-4">
+                      <i
+                        class="bi bi-clock-history text-primary"
+                        style="font-size: 3rem"
+                      ></i>
+                    </div>
+                    <h3 data-i18n="wp.form.pending_title">申請已送出</h3>
+                    <p
+                      class="text-secondary"
+                      data-i18n="wp.form.pending_subtitle"
+                    >
+                      您的申請正在等待審核中，通過後系統將寄送通知至您的信箱。
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary mt-4"
+                      onclick="location.href = './index.html'"
+                      data-i18n="wp.form.back_to_list"
+                    >
+                      返回列表
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -469,13 +504,13 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li> -->
+          </li>
         </ul>
       </div>
 
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-6">
         <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
         <ul class="list-unstyled contact-info">
           <li>
@@ -570,10 +605,31 @@
 
         const form = document.getElementById("whitepaperApplyForm");
         const success = document.getElementById("applySuccess");
-        form.addEventListener("submit", function (e) {
+        form.addEventListener("submit", async function (e) {
           e.preventDefault();
-          form.style.display = "none";
-          success.style.display = "block";
+
+          const formData = new FormData(this);
+
+          try {
+            const response = await fetch(this.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              form.style.display = "none";
+              success.style.display = "block";
+
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+              alert("送出失敗，請稍後再試。");
+            }
+          } catch (error) {
+            alert("網路異常，請檢查連線。");
+          }
         });
       });
     </script>

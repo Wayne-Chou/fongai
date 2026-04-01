@@ -14,7 +14,6 @@
       document.querySelectorAll("a[href^='/']").forEach((link) => {
         const href = link.getAttribute("href");
 
-        // 檢查是否已經加上了 /fongai/，如果沒有則補上
         if (!href.startsWith("/fongai/")) {
           link.setAttribute("href", "/fongai" + href);
         }
@@ -101,7 +100,7 @@
               </a>
             </li>
 
-            <!-- <li>
+            <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -109,7 +108,7 @@
               >
                 經銷商招募
               </a>
-            </li> -->
+            </li>
           </ul>
         </li>
 
@@ -371,6 +370,9 @@
               <div class="hero-image-box motion motion-zoom-in motion-delay-1">
                 <img src="/fongai/assets/hero-image.png" class="hero-image" />
               </div>
+              <div class="image-ai-note" data-i18n="home.hero_image_note">
+                * 此為 AI 技術模擬示意圖，非真實受測者影像
+              </div>
             </div>
           </div>
 
@@ -519,6 +521,12 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <div
+                  class="image-ai-note mt-3 text-center"
+                  data-i18n="home.hero_image_note"
+                >
+                  * 此為 AI 技術模擬示意圖，非真實受測者影像
                 </div>
               </div>
             </div>
@@ -746,208 +754,78 @@
                         <span class="kpi-value">284</span>
                       </div>
                     </div>
-
-                    <div class="mock-cards">
-                      <div class="col-12 mb-2">
+                    <div class="mock-chart-container">
+                      <div
+                        class="chart-header d-flex justify-content-between align-items-center mb-3"
+                      >
                         <div
-                          class="card h-100 border-light shadow-sm"
-                          style="border-width: 2px"
+                          class="chart-title small fw-bold text-muted"
+                          data-i18n="home.mgmt_mock_chart_title"
                         >
-                          <div class="card-body">
-                            <div
-                              class="d-flex justify-content-between align-items-center mb-3"
-                            >
-                              <div class="d-flex align-items-center">
-                                <div
-                                  class="status-indicator me-2 bg-primary"
-                                  style="
-                                    width: 12px;
-                                    height: 12px;
-                                    border-radius: 50%;
-                                  "
-                                ></div>
-                                <span class="fw-bold text-dark"
-                                  >2026/02/27</span
-                                >
-                              </div>
-                              <span
-                                class="badge bg-white text-primary border border-primary-subtle"
-                              >
-                                12<span data-i18n="home.mgmt_mock_unit_ppl"
-                                  >人</span
-                                >
-                              </span>
-                            </div>
-
-                            <div class="row g-2 text-center mb-3">
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_stand"
-                                    >平均站立秒數</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >12.0<span
-                                      data-i18n="home.mgmt_mock_unit_sec"
-                                      >秒</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_score"
-                                    >平均評分</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >3.6<span
-                                      data-i18n="home.mgmt_mock_unit_score"
-                                      >分</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_speed"
-                                    >步行速度</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >124 cm/s</span
-                                  >
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="mt-2">
-                              <div
-                                class="d-flex justify-content-between mb-1 small"
-                              >
-                                <span
-                                  class="text-muted fw-bold"
-                                  data-i18n="home.mgmt_mock_card_risk"
-                                  >平均跌倒風險</span
-                                >
-                                <span class="fw-bold text-success">5.5%</span>
-                              </div>
-                              <div
-                                class="progress"
-                                style="height: 8px; background: #e9ecef"
-                              >
-                                <div
-                                  class="progress-bar bg-primary"
-                                  style="width: 5.5%"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
+                          跌倒風險趨勢分析
+                        </div>
+                        <div class="chart-legend d-flex gap-2">
+                          <span
+                            class="badge rounded-pill bg-primary-subtle text-primary border-0"
+                            style="font-size: 0.65rem"
+                            >Risk %</span
+                          >
                         </div>
                       </div>
-                      <div class="col-12 mb-2">
-                        <div
-                          class="card h-100 border-light shadow-sm"
-                          style="border-width: 2px"
-                        >
-                          <div class="card-body">
-                            <div
-                              class="d-flex justify-content-between align-items-center mb-3"
-                            >
-                              <div class="d-flex align-items-center">
-                                <div
-                                  class="status-indicator me-2 bg-primary"
-                                  style="
-                                    width: 12px;
-                                    height: 12px;
-                                    border-radius: 50%;
-                                  "
-                                ></div>
-                                <span class="fw-bold text-dark"
-                                  >2026/04/27</span
-                                >
-                              </div>
-                              <span
-                                class="badge bg-white text-primary border border-primary-subtle"
+
+                      <div class="mock-chart-body">
+                        <div class="chart-y-axis">
+                          <span>15%</span>
+                          <span>10%</span>
+                          <span>5%</span>
+                          <span>0%</span>
+                        </div>
+                        <div class="chart-content">
+                          <div class="grid-line"></div>
+                          <div class="grid-line"></div>
+                          <div class="grid-line"></div>
+                          <div class="grid-line"></div>
+
+                          <svg class="trend-line-svg" viewBox="0 0 100 40">
+                            <path
+                              d="M0,35 Q15,30 30,32 T60,15 T100,5"
+                              fill="none"
+                              stroke="var(--jf-accent)"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M0,35 Q15,30 30,32 T60,15 T100,5 V40 H0 Z"
+                              fill="url(#chartGradient)"
+                              opacity="0.1"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="chartGradient"
+                                x1="0"
+                                y1="0"
+                                x2="0"
+                                y2="1"
                               >
-                                30<span data-i18n="home.mgmt_mock_unit_ppl"
-                                  >人</span
-                                >
-                              </span>
-                            </div>
-                            <div class="row g-2 text-center mb-3">
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_stand"
-                                    >平均站立秒數</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >8.7<span
-                                      data-i18n="home.mgmt_mock_unit_sec"
-                                      >秒</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_score"
-                                    >平均評分</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >2.0<span
-                                      data-i18n="home.mgmt_mock_unit_score"
-                                      >分</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_speed"
-                                    >步行速度</small
-                                  >
-                                  <span class="fw-bold text-dark">96 cm/s</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mt-2">
-                              <div
-                                class="d-flex justify-content-between mb-1 small"
-                              >
-                                <span
-                                  class="text-muted fw-bold"
-                                  data-i18n="home.mgmt_mock_card_risk"
-                                  >平均跌倒風險</span
-                                >
-                                <span class="fw-bold text-success">5.5%</span>
-                              </div>
-                              <div
-                                class="progress"
-                                style="height: 8px; background: #e9ecef"
-                              >
-                                <div
-                                  class="progress-bar bg-primary"
-                                  style="width: 5.5%"
-                                ></div>
-                              </div>
-                            </div>
+                                <stop
+                                  offset="0%"
+                                  stop-color="var(--jf-accent)"
+                                />
+                                <stop offset="100%" stop-color="transparent" />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+
+                          <div class="chart-point" style="left: 60%; top: 38%">
+                            <div class="point-tooltip">Risk: 8.2%</div>
                           </div>
+                        </div>
+                        <div
+                          class="chart-x-axis d-flex justify-content-between mt-2"
+                        >
+                          <span>Jan</span>
+                          <span>Feb</span>
+                          <span>Mar</span>
+                          <span>Apr</span>
                         </div>
                       </div>
                     </div>
@@ -1295,13 +1173,13 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li> -->
+          </li>
         </ul>
       </div>
 
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-6">
         <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
         <ul class="list-unstyled contact-info">
           <li>

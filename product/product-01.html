@@ -14,7 +14,6 @@
       document.querySelectorAll("a[href^='/']").forEach((link) => {
         const href = link.getAttribute("href");
 
-        // 檢查是否已經加上了 /fongai/，如果沒有則補上
         if (!href.startsWith("/fongai/")) {
           link.setAttribute("href", "/fongai" + href);
         }
@@ -102,7 +101,7 @@
               </a>
             </li>
 
-            <!-- <li>
+            <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -110,7 +109,7 @@
               >
                 經銷商招募
               </a>
-            </li> -->
+            </li>
           </ul>
         </li>
 
@@ -316,7 +315,7 @@
       <!-- Hero -->
       <section class="product-hero">
         <div class="container">
-          <h1 class="product-title">「足適能」調整式醫療矯正鞋墊</h1>
+          <h1 class="product-title">「足適能」調整式遠紅外線鞋墊</h1>
         </div>
       </section>
 
@@ -326,7 +325,7 @@
           <!-- 左圖 -->
           <div class="product-image">
             <img
-              src="https://fongai.co/wp-content/uploads/2024/10/1713337331_30c099543b11ebc95055.avif"
+              src="https://cdn-next.cybassets.com/media/W1siZiIsIjI4ODAzL3Byb2R1Y3RzLzQ1ODM4ODgzLzE3NjYwNDUzODZfODAwMjIyNjU5MmI5OGIwZjhmODEuanBlZyJdLFsicCIsInRodW1iIiwiMjA0OHgyMDQ4Il1d.jpeg?sha=6df249e0e664b425"
               alt="足適能鞋墊"
             />
             <div class="caption">「足適能」調整式醫療矯正鞋墊</div>
@@ -338,7 +337,10 @@
               <li><strong>產品：</strong>滿足五大生物力學需求</li>
               <li><strong>包覆：</strong>足跟外型設計，站得更穩定</li>
               <li><strong>支撐：</strong>足弓加強支撐殼，長效支撐不塌陷</li>
-              <li><strong>減壓：</strong>足掌、足跟矽膠軟墊，減少局部壓力</li>
+              <li>
+                <strong>減壓：</strong
+                >足掌、足跟專利Bouncer軟墊(成人)及TPR軟墊(兒童)，減少局部壓力
+              </li>
               <li><strong>平衡：</strong>幫助分散壓力，維持身體穩定</li>
               <li><strong>調整：</strong>改善足部不正確姿勢與步態</li>
             </ul>
@@ -348,17 +350,17 @@
             </div>
 
             <p class="slogan">有效支撐您的下半身，陪您穩健走過下半生。</p>
+            <div class="product-action mt-4">
+              <a
+                href="https://www.acon-biomedical.com/products/insole"
+                target="_blank"
+                class="btn-buy"
+              >
+                立即前往官網購買 <i class="bi bi-cart-fill ms-2"></i>
+              </a>
+              <p class="buy-notice mt-2">* 點擊將跳轉至授權經銷官網</p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <!-- DM 圖 -->
-      <section class="product-dm">
-        <div class="container">
-          <img
-            src="https://fongai.co/wp-content/uploads/2024/10/足適能DM含建豐LOGO-pdf-724x1024.jpg"
-            alt=""
-          />
         </div>
       </section>
 
@@ -415,6 +417,20 @@
           </div>
         </div>
       </section>
+      <section class="buy-cta-section text-center">
+        <div class="container">
+          <div class="cta-content" data-reveal>
+            <h3 class="mb-4">準備好體驗「足適能」帶來的穩定感了嗎？</h3>
+            <a
+              href="https://www.acon-biomedical.com/products/insole"
+              target="_blank"
+              class="btn-buy-lg"
+            >
+              前往官網購買商品 <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -454,13 +470,13 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li> -->
+          </li>
         </ul>
       </div>
 
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-6">
         <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
         <ul class="list-unstyled contact-info">
           <li>
