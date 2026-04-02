@@ -43,7 +43,6 @@ async function loadLang(lang) {
       if (targetText) el.innerText = targetText;
     });
 
-    // C. 處理動態 HTML (如 content, applyContent)
     document.querySelectorAll("[data-dynamic-i18n-html]").forEach((el) => {
       const targetHtml = el.getAttribute(`data-${lang}`);
       if (targetHtml) el.innerHTML = targetHtml;
