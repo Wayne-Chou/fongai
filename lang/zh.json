@@ -67,7 +67,7 @@
   "home_scenario3_title": "社區據點",
   "home_scenario3_desc": "多人快速篩檢，提早發現高風險對象",
 
-  "hero.title": "數據與標準\n打造智慧健康照護的新信任",
+  "hero.title": "讓 AI 預見風險\n高齡跌倒與行動力動態評估系統",
   "hero.desc": "FongAI 結合 AI 動態骨架分析與臨床行動力評估，建立高齡跌倒風險預測模型，協助醫療與長照機構打造更安全的智慧照護環境。",
   "hero.stat_data": "國際規範行動影像數據庫",
   "hero.stat_partners": "合作據點",
@@ -153,7 +153,7 @@
   "home.onboarding_main_desc": "FongAI 讓昂貴的步態實驗室走入日常。透過手機或平板，照護人員隨時隨地都能完成專業級的行動力評估。",
   "home.onboarding_step1_t": "裝置即時啟用",
   "home.onboarding_step1_d": "無需購買特規硬體或進行場域施工。只需在現有的手機或平板安裝 App，即可將裝置轉換為高精準度的 AI 偵測器。",
-  "home.onboarding_step2_t": "隨地開啟監測",
+  "home.onboarding_step2_t": "隨時隨地開啟檢測",
   "home.onboarding_step2_d": "拿起裝置對準受測者，AI 將透過鏡頭自動提取 17 個關鍵骨架點。不受場域限制，無論在走廊、客廳或診間皆能作業。",
   "home.onboarding_step3_t": "結果即時產出",
   "home.onboarding_step3_d": "系統完成分析後，將自動產出檢測結果與評估報告，可匯出為 PDF 提供醫療人員或照護人員保存與參考，方便追蹤受測者的行動能力變化。",

@@ -66,7 +66,7 @@
   "home_scenario3_title": "地域拠点",
   "home_scenario3_desc": "多人数の迅速な検査で、ハイリスク対象者を早期に発見。",
 
-  "hero.title": "データと標準\nスマートヘルスケアの新しい信頼を築く",
+  "hero.title": "AIでリスクを予見する\n高齢者の転倒・移動能力動的評価システム",
   "hero.desc": "FongAIは、AI動的骨格分析と臨床的な可動性評価を組み合わせ、高齢者の転倒リスク予測モデルを構築。医療・介護施設がより安全なスマートケア環境を実現できるよう支援します。",
   "hero.stat_data": "国際基準動作画像データベース",
   "hero.stat_partners": "提携拠点",
@@ -325,7 +325,7 @@
   "prog.flex_t": "柔軟性 Flexibility",
   "prog.flex_d": "関節の可動域と身体のしなやかさを高め、筋肉の強張りと怪我のリスクを低減します。",
   "wp.hero.eyebrow": "REPORTS & INSIGHTS",
-  "wp.hero.title": "産業白皮書",
+  "wp.hero.title": "産業ホワイトペーパー",
   "wp.hero.subtitle": "AI転倒予防からモビリティ経済まで、高齢者向けテクノロジーの未来を再構築する。",
   "wp.read_more": "レポートを読む",
   "wp.breadcrumb.list": "白皮書シリーズ",
