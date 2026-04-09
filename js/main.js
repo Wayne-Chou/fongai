@@ -1,3 +1,10 @@
+import "./i18n.js";
+import "./animation.js";
+import "./article-engine.js";
+import "./articles-data.js";
+import "./whitepapers-data.js";
+
+// 你的 navbar code
 document.addEventListener("DOMContentLoaded", () => {
   const waitForNavbar = setInterval(() => {
     const nav = document.querySelector(".navbar");
