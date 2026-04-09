@@ -2,3 +2,39 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   color: var(--jf-text-main);
 }
+/* 共用（先給安全基礎） */
+h1,
+h2,
+.section-title,
+.hero-title {
+  overflow-wrap: break-word;
+}
+
+/* 中文（你原本效果是對的） */
+html:lang(zh) h1,
+html:lang(zh) h2,
+html:lang(zh) .section-title,
+html:lang(zh) .hero-title {
+  word-break: keep-all;
+}
+
+/* 英文 */
+html:lang(en) h1,
+html:lang(en) h2,
+html:lang(en) .section-title,
+html:lang(en) .hero-title {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* 日文（重點） */
+html:lang(ja) h1,
+html:lang(ja) h2,
+html:lang(ja) .section-title,
+html:lang(ja) .hero-title {
+  word-break: normal;
+  line-break: strict;
+}
+.hero-title {
+  white-space: pre-line; /* 這會讓 \n 變成實際的換行 */
+}

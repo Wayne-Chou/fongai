@@ -75,6 +75,16 @@
   border-radius: 50%;
   z-index: -1;
 }
+.image-ai-note {
+  font-size: 0.75rem;
+
+  color: #0f4c81;
+  text-align: right;
+  margin-top: 8px;
+  padding: 2px 10px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
 
 /* =========================================
    文字與標題
@@ -86,24 +96,29 @@
 }
 
 .hero-badge {
-  /* display: inline-block;
-  padding: 6px 18px;
-  background: rgba(0, 160, 255, 0.08);
-  color: var(--jf-accent);
-  border: 1px solid rgba(0, 160, 255, 0.2);
-  border-radius: 50px;
-
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 20px; */
   display: inline-block;
   padding: 6px 18px;
-  background: #e6d2a3;
-  color: #6b5a2b;
   border-radius: 50px;
 
   font-weight: 600;
   font-size: 14px;
+  letter-spacing: 0.3px;
+
+  background: linear-gradient(
+    135deg,
+    #f2e2b8 0%,
+    #e0c78f 40%,
+    #c9a96a 60%,
+    #f2e2b8 100%
+  );
+
+  color: #4b3f1d;
+
+  border: 1px solid rgba(120, 95, 40, 0.25);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .hero-title {
@@ -339,7 +354,7 @@
   position: relative;
   width: 320px;
   height: 640px;
-  background: #1e293b;
+  /* background: #1e293b; */
   border: 12px solid #0f172a;
   border-radius: 40px;
   margin: 0 auto;
@@ -363,7 +378,7 @@
 .app-screen {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 90%;
   background: #f8fafc;
 }
 
@@ -496,16 +511,32 @@
 /* RIGHT CONTENT */
 
 .section-heading .sub-title {
-  /* color: #18a999; */
-  background: #e6d2a3;
-  color: #6b5a2b;
-  border-radius: 50px;
-  font-weight: 700;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 6px 18px;
-  display: inline-block;
+
   margin-bottom: 10px;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 50px;
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+
+  background: linear-gradient(
+    135deg,
+    #f2e2b8 0%,
+    #e0c78f 40%,
+    #c9a96a 60%,
+    #f2e2b8 100%
+  );
+
+  color: #4b3f1d;
+
+  border: 1px solid rgba(120, 95, 40, 0.25);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .section-heading .title {
@@ -785,15 +816,31 @@
    ========================================= */
 
 .section-badge {
-  /* color: #18a999; */
-  background: #e6d2a3;
-  color: #6b5a2b;
-  border-radius: 50px;
-  padding: 6px 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   display: inline-block;
+  padding: 6px 18px;
+  border-radius: 50px;
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+
+  background: linear-gradient(
+    135deg,
+    #f2e2b8 0%,
+    #e0c78f 40%,
+    #c9a96a 60%,
+    #f2e2b8 100%
+  );
+
+  color: #4b3f1d;
+
+  border: 1px solid rgba(120, 95, 40, 0.25);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+  text-transform: uppercase;
+
   margin-bottom: 10px;
 }
 
@@ -944,36 +991,98 @@
   font-size: 18px;
   color: #0f4c81;
 }
+/* 曲線圖 */
+.mock-chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid var(--jf-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 10px;
+}
 
-/* =========================================
-   MOCK CARDS (重點調整)
-   ========================================= */
-
-.mock-cards {
+.mock-chart-body {
+  height: 150px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  position: relative;
 }
 
-/* 調整 card 縮小 */
-
-.mock-cards .card {
-  transform: scale(0.92);
-  transform-origin: top left;
+.chart-y-axis {
+  position: absolute;
+  left: -5px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  color: #adb5bd;
+  text-align: right;
+  z-index: 1;
 }
 
-/* 調整文字 */
-
-.mock-cards small {
-  font-size: 10px;
+.chart-content {
+  flex-grow: 1;
+  margin-left: 25px;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
 }
 
-.mock-cards .fw-bold {
-  font-size: 12px;
+.grid-line {
+  width: 100%;
+  height: 1px;
+  background: #f8f9fa;
+  margin-bottom: 39px;
 }
 
-.mock-cards .badge {
-  font-size: 10px;
+/* SVG 曲線動畫 */
+.trend-line-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawLine 2s ease-out forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 數據提示點 */
+.chart-point {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--jf-accent);
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 160, 255, 0.5);
+  z-index: 2;
+}
+
+.point-tooltip {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--jf-primary);
+  color: white;
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.chart-x-axis span {
+  font-size: 0.65rem;
+  color: #adb5bd;
 }
 
 /* =========================================

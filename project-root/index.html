@@ -11,13 +11,11 @@
         <div class="container hero-container">
           <div class="row align-items-center hero-main motion motion-fade-up">
             <div class="col-lg-6 hero-text">
-              <div class="hero-badge" data-i18n="hero.badge">
-                Trust & Compliance
-              </div>
+              <div class="hero-badge">Trust & Compliance</div>
 
               <h1 class="hero-title" data-i18n="hero.title">
-                數據與標準<br />
-                打造智慧健康照護的新信任
+                讓 AI 預見風險<br />
+                高齡跌倒與行動力動態評估系統
               </h1>
 
               <p class="hero-desc" data-i18n="hero.desc">
@@ -43,7 +41,7 @@
                   class="hero-stat-item motion motion-fade-up motion-delay-2"
                 >
                   <div class="stat-number">
-                    <span class="counter" data-target="120">0</span
+                    <span class="counter" data-target="150">0</span
                     ><span class="stat-plus">+</span>
                   </div>
                   <div class="stat-label" data-i18n="hero.stat_partners">
@@ -68,6 +66,9 @@
             <div class="col-lg-6 hero-image-wrapper">
               <div class="hero-image-box motion motion-zoom-in motion-delay-1">
                 <img src="/assets/images/hero-image.png" class="hero-image" />
+              </div>
+              <div class="image-ai-note" data-i18n="home.hero_image_note">
+                * 此為 AI 技術模擬示意圖，非真實受測者影像
               </div>
             </div>
           </div>
@@ -218,6 +219,12 @@
                     </div>
                   </div>
                 </div>
+                <div
+                  class="image-ai-note mt-3 text-center"
+                  data-i18n="home.hero_image_note"
+                >
+                  * 此為 AI 技術模擬示意圖，非真實受測者影像
+                </div>
               </div>
             </div>
 
@@ -354,9 +361,7 @@
           <div class="row align-items-center">
             <div class="col-lg-6 ps-lg-5">
               <div class="feature-content motion motion-fade-up">
-                <div class="section-badge" data-i18n="home.mgmt_badge">
-                  System Management
-                </div>
+                <div class="section-badge">System Management</div>
                 <h2 class="section-title" data-i18n="home.mgmt_title">
                   場域管理儀表板<br />實現跨據點數位化監測
                 </h2>
@@ -446,208 +451,78 @@
                         <span class="kpi-value">284</span>
                       </div>
                     </div>
-
-                    <div class="mock-cards">
-                      <div class="col-12 mb-2">
+                    <div class="mock-chart-container">
+                      <div
+                        class="chart-header d-flex justify-content-between align-items-center mb-3"
+                      >
                         <div
-                          class="card h-100 border-light shadow-sm"
-                          style="border-width: 2px"
+                          class="chart-title small fw-bold text-muted"
+                          data-i18n="home.mgmt_mock_chart_title"
                         >
-                          <div class="card-body">
-                            <div
-                              class="d-flex justify-content-between align-items-center mb-3"
-                            >
-                              <div class="d-flex align-items-center">
-                                <div
-                                  class="status-indicator me-2 bg-primary"
-                                  style="
-                                    width: 12px;
-                                    height: 12px;
-                                    border-radius: 50%;
-                                  "
-                                ></div>
-                                <span class="fw-bold text-dark"
-                                  >2026/02/27</span
-                                >
-                              </div>
-                              <span
-                                class="badge bg-white text-primary border border-primary-subtle"
-                              >
-                                12<span data-i18n="home.mgmt_mock_unit_ppl"
-                                  >人</span
-                                >
-                              </span>
-                            </div>
-
-                            <div class="row g-2 text-center mb-3">
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_stand"
-                                    >平均站立秒數</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >12.0<span
-                                      data-i18n="home.mgmt_mock_unit_sec"
-                                      >秒</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_score"
-                                    >平均評分</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >3.6<span
-                                      data-i18n="home.mgmt_mock_unit_score"
-                                      >分</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_speed"
-                                    >步行速度</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >124 cm/s</span
-                                  >
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="mt-2">
-                              <div
-                                class="d-flex justify-content-between mb-1 small"
-                              >
-                                <span
-                                  class="text-muted fw-bold"
-                                  data-i18n="home.mgmt_mock_card_risk"
-                                  >平均跌倒風險</span
-                                >
-                                <span class="fw-bold text-success">5.5%</span>
-                              </div>
-                              <div
-                                class="progress"
-                                style="height: 8px; background: #e9ecef"
-                              >
-                                <div
-                                  class="progress-bar bg-primary"
-                                  style="width: 5.5%"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
+                          跌倒風險趨勢分析
+                        </div>
+                        <div class="chart-legend d-flex gap-2">
+                          <span
+                            class="badge rounded-pill bg-primary-subtle text-primary border-0"
+                            style="font-size: 0.65rem"
+                            >Risk %</span
+                          >
                         </div>
                       </div>
-                      <div class="col-12 mb-2">
-                        <div
-                          class="card h-100 border-light shadow-sm"
-                          style="border-width: 2px"
-                        >
-                          <div class="card-body">
-                            <div
-                              class="d-flex justify-content-between align-items-center mb-3"
-                            >
-                              <div class="d-flex align-items-center">
-                                <div
-                                  class="status-indicator me-2 bg-primary"
-                                  style="
-                                    width: 12px;
-                                    height: 12px;
-                                    border-radius: 50%;
-                                  "
-                                ></div>
-                                <span class="fw-bold text-dark"
-                                  >2026/04/27</span
-                                >
-                              </div>
-                              <span
-                                class="badge bg-white text-primary border border-primary-subtle"
+
+                      <div class="mock-chart-body">
+                        <div class="chart-y-axis">
+                          <span>15%</span>
+                          <span>10%</span>
+                          <span>5%</span>
+                          <span>0%</span>
+                        </div>
+                        <div class="chart-content">
+                          <div class="grid-line"></div>
+                          <div class="grid-line"></div>
+                          <div class="grid-line"></div>
+                          <div class="grid-line"></div>
+
+                          <svg class="trend-line-svg" viewBox="0 0 100 40">
+                            <path
+                              d="M0,35 Q15,30 30,32 T60,15 T100,5"
+                              fill="none"
+                              stroke="var(--jf-accent)"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M0,35 Q15,30 30,32 T60,15 T100,5 V40 H0 Z"
+                              fill="url(#chartGradient)"
+                              opacity="0.1"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="chartGradient"
+                                x1="0"
+                                y1="0"
+                                x2="0"
+                                y2="1"
                               >
-                                30<span data-i18n="home.mgmt_mock_unit_ppl"
-                                  >人</span
-                                >
-                              </span>
-                            </div>
-                            <div class="row g-2 text-center mb-3">
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_stand"
-                                    >平均站立秒數</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >8.7<span
-                                      data-i18n="home.mgmt_mock_unit_sec"
-                                      >秒</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_score"
-                                    >平均評分</small
-                                  >
-                                  <span class="fw-bold text-dark"
-                                    >2.0<span
-                                      data-i18n="home.mgmt_mock_unit_score"
-                                      >分</span
-                                    ></span
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-4">
-                                <div class="p-2 rounded bg-white border">
-                                  <small
-                                    class="text-muted"
-                                    style="font-size: 0.75rem"
-                                    data-i18n="home.mgmt_mock_card_speed"
-                                    >步行速度</small
-                                  >
-                                  <span class="fw-bold text-dark">96 cm/s</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mt-2">
-                              <div
-                                class="d-flex justify-content-between mb-1 small"
-                              >
-                                <span
-                                  class="text-muted fw-bold"
-                                  data-i18n="home.mgmt_mock_card_risk"
-                                  >平均跌倒風險</span
-                                >
-                                <span class="fw-bold text-success">5.5%</span>
-                              </div>
-                              <div
-                                class="progress"
-                                style="height: 8px; background: #e9ecef"
-                              >
-                                <div
-                                  class="progress-bar bg-primary"
-                                  style="width: 5.5%"
-                                ></div>
-                              </div>
-                            </div>
+                                <stop
+                                  offset="0%"
+                                  stop-color="var(--jf-accent)"
+                                />
+                                <stop offset="100%" stop-color="transparent" />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+
+                          <div class="chart-point" style="left: 60%; top: 38%">
+                            <div class="point-tooltip">Risk: 8.2%</div>
                           </div>
+                        </div>
+                        <div
+                          class="chart-x-axis d-flex justify-content-between mt-2"
+                        >
+                          <span>Jan</span>
+                          <span>Feb</span>
+                          <span>Mar</span>
+                          <span>Apr</span>
                         </div>
                       </div>
                     </div>
@@ -830,7 +705,7 @@
                 <div class="step-icon">
                   <i class="bi bi-bounding-box-circles"></i>
                 </div>
-                <h4 data-i18n="home.onboarding_step2_t">隨地開啟監測</h4>
+                <h4 data-i18n="home.onboarding_step2_t">隨時隨地開啟檢測</h4>
                 <p data-i18n="home.onboarding_step2_d">
                   拿起裝置對準受測者，AI 將透過鏡頭自動提取 17
                   個關鍵骨架點。不受場域限制，無論在走廊、客廳或診間皆能作業。

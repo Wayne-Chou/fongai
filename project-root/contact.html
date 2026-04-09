@@ -112,7 +112,11 @@
                 <h3 class="fw-bold mb-4" data-i18n="contact.form_title">
                   傳送訊息
                 </h3>
-                <form id="contactForm">
+                <form
+                  id="contactForm"
+                  action="https://formspree.io/f/mwvwovak"
+                  method="POST"
+                >
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label
@@ -122,6 +126,7 @@
                       >
                       <input
                         type="text"
+                        name="姓名"
                         class="form-control"
                         placeholder="姓名"
                         data-i18n-placeholder="contact.form_name_ph"
@@ -136,6 +141,7 @@
                       >
                       <input
                         type="tel"
+                        name="電話"
                         class="form-control"
                         placeholder="電話"
                         data-i18n-placeholder="contact.form_tel_ph"
@@ -150,6 +156,7 @@
                       >
                       <input
                         type="text"
+                        name="單位名稱"
                         class="form-control"
                         placeholder="例如：數位發展部、○○有限公司"
                         data-i18n-placeholder="contact.form_org_ph"
@@ -164,6 +171,7 @@
                       >
                       <input
                         type="email"
+                        name="email"
                         class="form-control"
                         placeholder="example@mail.com"
                         data-i18n-placeholder="contact.form_email_ph"
@@ -178,12 +186,20 @@
                         >訊息內容</label
                       >
                       <textarea
+                        name="訊息內容"
                         class="form-control"
                         rows="5"
                         placeholder="請輸入您的訊息..."
                         data-i18n-placeholder="contact.form_msg_ph"
                       ></textarea>
                     </div>
+
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="新的聯絡我們表單提交 (FongAI Website)"
+                    />
+
                     <div class="col-12 mt-4">
                       <button type="submit" class="btn btn-primary-jf w-100">
                         <span data-i18n="contact.form_btn">立即送出</span>
@@ -192,6 +208,20 @@
                     </div>
                   </div>
                 </form>
+                <div
+                  id="contactSuccess"
+                  style="display: none"
+                  class="text-center py-4"
+                >
+                  <div class="mb-3">
+                    <i
+                      class="bi bi-check-circle text-success"
+                      style="font-size: 2rem"
+                    ></i>
+                  </div>
+                  <h4 data-i18n="contact.success_title"></h4>
+                  <p data-i18n="contact.success_msg"></p>
+                </div>
               </div>
             </div>
           </div>
@@ -205,5 +235,47 @@
 
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/animation.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contactForm = document.getElementById("contactForm");
+        const contactSuccess = document.getElementById("contactSuccess");
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            try {
+              const response = await fetch(this.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                  Accept: "application/json",
+                },
+              });
+
+              if (response.ok) {
+                contactForm.style.display = "none";
+
+                if (contactSuccess) {
+                  contactSuccess.style.display = "block";
+                } else {
+                  alert("訊息已送出，我們會盡快回覆您！");
+                }
+                window.scrollTo({
+                  top: contactForm.offsetTop - 100,
+                  behavior: "smooth",
+                });
+              } else {
+                alert("送出失敗，請檢查網路連線或稍後再試。");
+              }
+            } catch (error) {
+              alert("傳送發生錯誤，請稍後再試。");
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

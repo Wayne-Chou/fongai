@@ -1,8 +1,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="google-site-verification"
+  content="6yaFGbhL9o_X_K-7ZYJCv5QiWQCrMXJMC6D60L9_Eh8"
+/>
+
 <title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
 <script>
-  if (location.hostname.includes("github.io")) {
+  const isSubFolder =
+    location.hostname.includes("github.io") ||
+    location.pathname.startsWith("/fongai/");
+
+  if (isSubFolder) {
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("a[href^='/']").forEach((link) => {
         const href = link.getAttribute("href");

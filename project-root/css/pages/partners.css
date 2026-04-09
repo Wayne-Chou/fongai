@@ -1,5 +1,5 @@
 /* ===================================== */
-/* PARTNER RECRUITMENT */
+/* PARTNER RECRUITMENT - JF STYLE */
 /* ===================================== */
 
 .page-partner-recruitment {
@@ -7,48 +7,52 @@
   color: var(--jf-text-main);
 }
 
-/* HERO */
-
+/* HERO SECTION */
 .page-partner-recruitment .detail-hero-section {
   padding: 120px 0 80px;
   text-align: center;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef4f9 100%);
 }
-.page-partner-recruitment .rich-text-area h2,
-.page-partner-recruitment .rich-text-area h3 {
-  color: var(--jf-primary);
-  font-weight: 700;
-}
+
 .page-partner-recruitment .eyebrow {
-  display: table;
-  color: var(--jf-accent);
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  margin-bottom: 15px;
-  background: rgba(0, 160, 255, 0.08);
+  display: inline-block;
+  padding: 6px 18px;
   border-radius: 50px;
-  border: 1px solid rgba(0, 160, 255, 0.2);
-  padding: 6px 16px;
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+
+  background: linear-gradient(
+    135deg,
+    #f2e2b8 0%,
+    #e0c78f 40%,
+    #c9a96a 60%,
+    #f2e2b8 100%
+  );
+
+  color: #4b3f1d;
+
+  border: 1px solid rgba(120, 95, 40, 0.25);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
-.page-partner-recruitment .rich-text-area p {
-  color: var(--jf-text-secondary);
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
+
 .page-partner-recruitment .detail-title {
   font-weight: 800;
   color: var(--jf-primary);
+  margin-bottom: 20px;
 }
 
 .page-partner-recruitment .detail-subtitle {
   color: var(--jf-text-secondary);
   max-width: 640px;
   margin: auto;
+  line-height: 1.8;
 }
 
-/* MAIN CARD */
-
+/* CONTENT CARD */
 .page-partner-recruitment .content-card {
   background: white;
   border-radius: 24px;
@@ -65,8 +69,7 @@
   margin-bottom: 20px;
 }
 
-/* HIGHLIGHTS */
-
+/* HIGHLIGHTS (圖片 2) */
 .page-partner-recruitment .apply-highlights ul {
   display: grid;
   gap: 16px;
@@ -82,16 +85,25 @@
   border: 1px solid var(--jf-border);
   border-left: 4px solid var(--jf-accent);
   border-radius: 8px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .page-partner-recruitment .apply-highlights li:hover {
   transform: translateX(6px);
+  background: white;
   box-shadow: var(--jf-shadow-sm);
 }
 
 .page-partner-recruitment .apply-highlights li strong {
   color: var(--jf-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.page-partner-recruitment .apply-highlights li p {
+  font-size: 0.95rem;
+  color: var(--jf-text-secondary);
+  margin: 0;
 }
 
 .page-partner-recruitment .apply-highlights li::before {
@@ -104,40 +116,79 @@
   font-size: 1.1rem;
 }
 
-/* TABLE */
-
-.page-partner-recruitment .table-dark-custom {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  border: 1px solid var(--jf-border);
-  border-radius: 12px;
-  overflow: hidden;
+/* TARGET GRID (圖片 3) */
+.page-partner-recruitment .target-grid-jf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
 }
 
-.page-partner-recruitment .table-dark-custom th {
-  background: #f1f5f9;
-  padding: 16px;
-  color: var(--jf-primary);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-align: left;
-}
-
-.page-partner-recruitment .table-dark-custom td {
-  padding: 16px;
-  border-top: 1px solid var(--jf-border);
-  background: white;
-  font-size: 0.95rem;
-  color: var(--jf-text-secondary);
-}
-
-.page-partner-recruitment .table-dark-custom tr:hover td {
+.page-partner-recruitment .target-item-jf {
   background: #f8fafc;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--jf-border);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
 }
 
-/* FORM */
+.page-partner-recruitment .target-item-jf i {
+  color: var(--jf-accent);
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
 
+.page-partner-recruitment .target-item-jf:hover {
+  border-color: var(--jf-accent);
+  background: white;
+  transform: translateY(-2px);
+}
+
+/* TIMELINE (圖片 4) */
+.page-partner-recruitment .process-timeline-jf {
+  border-left: 2px dashed var(--jf-border);
+  margin-left: 10px;
+  padding-left: 25px;
+}
+
+.page-partner-recruitment .process-step-jf {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.page-partner-recruitment .process-step-jf::before {
+  content: "";
+  position: absolute;
+  left: -32.5px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: var(--jf-accent);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--jf-accent);
+}
+
+.page-partner-recruitment .step-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--jf-accent);
+  background: rgba(0, 160, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.page-partner-recruitment .process-step-jf h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--jf-primary);
+}
+
+/* RIGHT CONTACT CARD (圖片 5) */
 .page-partner-recruitment .sticky-form-container {
   position: sticky;
   top: 120px;
@@ -148,114 +199,20 @@
   border-radius: 24px;
   border: 1px solid var(--jf-border);
   box-shadow: var(--jf-shadow-md);
-  padding: 35px;
+  padding: 40px 35px;
 }
 
-.page-partner-recruitment .form-header h3 {
-  font-weight: 700;
-  color: var(--jf-primary);
-}
-
-.page-partner-recruitment .form-header p {
-  color: var(--jf-text-secondary);
-}
-
-/* INPUT */
-
-.page-partner-recruitment .input-group-custom {
-  margin-bottom: 18px;
-}
-
-.page-partner-recruitment .input-group-custom label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  color: var(--jf-text-secondary);
-}
-
-.page-partner-recruitment .input-group-custom input,
-.page-partner-recruitment .input-group-custom textarea {
-  width: 100%;
-  padding: 12px 14px;
+.page-partner-recruitment .contact-details-jf {
   background: #f8fafc;
   border: 1px solid var(--jf-border);
-  border-radius: 8px;
-  color: var(--jf-text-main);
-  transition: 0.25s;
 }
 
-.page-partner-recruitment .input-group-custom input:focus,
-.page-partner-recruitment .input-group-custom textarea:focus {
-  outline: none;
-  border-color: var(--jf-accent);
-  box-shadow: 0 0 0 3px rgba(0, 160, 255, 0.15);
-}
-
-/* BUTTON */
-
-.page-partner-recruitment .apply-btn-submit {
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(90deg, var(--jf-accent), #6bdcff);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.25s;
-  margin-top: 10px;
-}
-
-.page-partner-recruitment .apply-btn-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 160, 255, 0.25);
-}
-
-/* SUCCESS */
-
-.page-partner-recruitment .apply-success {
-  display: none;
-  text-align: center;
-  padding: 30px 10px;
-}
-
-.page-partner-recruitment .success-icon {
-  font-size: 4rem;
-  color: var(--jf-accent);
-  margin-bottom: 20px;
-  animation: scaleIn 0.5s ease;
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* MOBILE */
-
+/* MOBILE ADJUSTMENT */
 @media (max-width: 768px) {
-  .page-partner-recruitment .detail-hero-section {
-    padding: 80px 0 40px;
-  }
-
   .page-partner-recruitment .content-card {
-    padding: 35px;
+    padding: 30px 20px;
   }
-
   .page-partner-recruitment .sticky-form-container {
     position: static;
-  }
-
-  .page-partner-recruitment .table-dark-custom {
-    display: block;
-    overflow-x: auto;
   }
 }

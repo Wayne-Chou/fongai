@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="google-site-verification"
+  content="6yaFGbhL9o_X_K-7ZYJCv5QiWQCrMXJMC6D60L9_Eh8"
+/>
+
 <title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
 <script>
-  if (location.hostname.includes("github.io")) {
+  const isSubFolder =
+    location.hostname.includes("github.io") ||
+    location.pathname.startsWith("/fongai/");
+
+  if (isSubFolder) {
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("a[href^='/']").forEach((link) => {
         const href = link.getAttribute("href");
@@ -96,7 +105,7 @@
               </a>
             </li>
 
-            <!-- <li>
+            <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -104,21 +113,21 @@
               >
                 經銷商招募
               </a>
-            </li> -->
+            </li>
           </ul>
         </li>
 
         <!-- NEWS -->
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
             最新消息
           </a>
-        </li>
+        </li> -->
 
         <!-- SERVICE -->
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -149,7 +158,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
         <!-- APP -->
 
@@ -240,7 +249,11 @@
         <!-- LOGIN -->
 
         <li class="nav-item">
-          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">
+          <a
+            class="nav-link"
+            href="https://fongai.co/dashboard/login.html"
+            data-i18n="nav.partnerLogin"
+          >
             夥伴登入
           </a>
         </li>
@@ -391,13 +404,13 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li> -->
+          </li>
         </ul>
       </div>
 
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-6">
         <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
         <ul class="list-unstyled contact-info">
           <li>

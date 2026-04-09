@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="google-site-verification"
+  content="6yaFGbhL9o_X_K-7ZYJCv5QiWQCrMXJMC6D60L9_Eh8"
+/>
+
 <title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
 <script>
-  if (location.hostname.includes("github.io")) {
+  const isSubFolder =
+    location.hostname.includes("github.io") ||
+    location.pathname.startsWith("/fongai/");
+
+  if (isSubFolder) {
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("a[href^='/']").forEach((link) => {
         const href = link.getAttribute("href");
@@ -97,7 +106,7 @@
               </a>
             </li>
 
-            <!-- <li>
+            <li>
               <a
                 class="dropdown-item"
                 href="/partners.html"
@@ -105,21 +114,21 @@
               >
                 經銷商招募
               </a>
-            </li> -->
+            </li>
           </ul>
         </li>
 
         <!-- NEWS -->
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
             最新消息
           </a>
-        </li>
+        </li> -->
 
         <!-- SERVICE -->
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -150,7 +159,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
         <!-- APP -->
 
@@ -241,7 +250,11 @@
         <!-- LOGIN -->
 
         <li class="nav-item">
-          <a class="nav-link" href="#" data-i18n="nav.partnerLogin">
+          <a
+            class="nav-link"
+            href="https://fongai.co/dashboard/login.html"
+            data-i18n="nav.partnerLogin"
+          >
             夥伴登入
           </a>
         </li>
@@ -334,7 +347,7 @@
               <div class="col-lg-6" data-reveal>
                 <div class="tech-image-wrapper p-3 bg-light rounded-4">
                   <img
-                    src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&w=800"
+                    src="/fongai/assets/sppb-motion-analysis-ai.png"
                     class="img-fluid rounded-4"
                     alt="SPPB AI Assessment"
                   />
@@ -345,37 +358,60 @@
                   class="fw-bold mb-3 text-primary"
                   data-i18n="tech.main_sppb_title"
                 >
-                  臨床 SPPB 標準自動化
+                  SPPB 臨床評估指標自動化解決方案
                 </h3>
                 <p
                   class="text-secondary fs-5 mb-4"
                   data-i18n="tech.main_sppb_desc"
                 >
-                  我們深入 SPPB (Short Physical Performance Battery)
-                  臨床評估框架，將原本需要 15 分鐘的人工測量，轉化為僅需
-                  **2分鐘** 的 AI 即時分析。
+                  完全符合 SPPB 臨床評估框架，實現相較傳統方式 86.6%
+                  的時間縮短（15 分鐘 → 2 分鐘）。透過 AI 動態分析，可在短短 2
+                  分鐘內完成精準解析，大幅提升臨床評估的效率與準確性。
                 </p>
                 <ul class="list-unstyled text-secondary feature-list">
-                  <li class="mb-3">
-                    <i class="bi bi-check-circle-fill text-accent me-2"></i>
-                    <strong data-i18n="tech.main_sppb_f1_t">平衡測試：</strong>
-                    <span data-i18n="tech.main_sppb_f1_d"
-                      >自動計算身體重心偏移軌跡。</span
-                    >
+                  <li class="feature-item">
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    <div class="feature-content">
+                      <div
+                        class="feature-title"
+                        data-i18n="tech.main_sppb_f1_t"
+                      >
+                        平衡能力：
+                      </div>
+                      <div class="feature-desc" data-i18n="tech.main_sppb_f1_d">
+                        量化身體重心（CoM）移動軌跡，並進行穩定性精準評估。
+                      </div>
+                    </div>
                   </li>
-                  <li class="mb-3">
-                    <i class="bi bi-check-circle-fill text-accent me-2"></i>
-                    <strong data-i18n="tech.main_sppb_f2_t">步速測試：</strong>
-                    <span data-i18n="tech.main_sppb_f2_d"
-                      >毫秒級精準計算連續步長與頻率。</span
-                    >
+
+                  <li class="feature-item">
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    <div class="feature-content">
+                      <div
+                        class="feature-title"
+                        data-i18n="tech.main_sppb_f2_t"
+                      >
+                        步行速度：
+                      </div>
+                      <div class="feature-desc" data-i18n="tech.main_sppb_f2_d">
+                        精確計算連續步幅與步頻（Cadence），達毫秒級分析。
+                      </div>
+                    </div>
                   </li>
-                  <li class="mb-3">
-                    <i class="bi bi-check-circle-fill text-accent me-2"></i>
-                    <strong data-i18n="tech.main_sppb_f3_t">起坐測試：</strong>
-                    <span data-i18n="tech.main_sppb_f3_d"
-                      >分析起立時的關節受力與肌耐力。</span
-                    >
+
+                  <li class="feature-item">
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    <div class="feature-content">
+                      <div
+                        class="feature-title"
+                        data-i18n="tech.main_sppb_f3_t"
+                      >
+                        五次起立測試：
+                      </div>
+                      <div class="feature-desc" data-i18n="tech.main_sppb_f3_d">
+                        分析起身過程的運動力學，並量化肌耐力表現。
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -566,13 +602,13 @@
           <li>
             <a href="/technology.html" data-i18n="nav.technology">核心技術</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="/partners.html" data-i18n="nav.partners">經銷商招募</a>
-          </li> -->
+          </li>
         </ul>
       </div>
 
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-6">
         <h6 class="footer-title" data-i18n="footer.contactTitle">聯絡資訊</h6>
         <ul class="list-unstyled contact-info">
           <li>

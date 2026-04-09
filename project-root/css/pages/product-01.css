@@ -121,26 +121,6 @@
 }
 
 /* ============================= */
-/* DM */
-/* ============================= */
-
-.page-product01 .product-dm {
-  padding: 100px 0;
-  text-align: center;
-}
-
-.page-product01 .product-dm img {
-  max-width: 700px;
-  width: 100%;
-
-  border-radius: 20px;
-
-  border: 1px solid var(--jf-border);
-
-  box-shadow: var(--jf-shadow-lg);
-}
-
-/* ============================= */
 /* DETAIL SECTION */
 /* ============================= */
 
@@ -211,7 +191,77 @@
 
   color: #ff3b30;
 }
+.page-product01 .detail-content ul {
+  list-style: auto;
+}
+/* ============================= */
+/* BUY BUTTONS */
+/* ============================= */
 
+/* 右側資訊卡按鈕 */
+.page-product01 .btn-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, var(--jf-primary), #004a99);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 74, 153, 0.2);
+}
+
+.page-product01 .btn-buy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 74, 153, 0.3);
+  color: white;
+}
+
+.page-product01 .buy-notice {
+  font-size: 13px;
+  color: var(--jf-text-secondary);
+  text-align: center;
+}
+
+.page-product01 .buy-cta-section {
+  padding: 100px 0;
+  background: #f1f7fd;
+}
+
+.page-product01 .cta-content h3 {
+  color: var(--jf-primary);
+  font-weight: 800;
+}
+
+.page-product01 .btn-buy-lg {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 60px;
+  background: linear-gradient(90deg, var(--jf-accent), #6bdcff);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: var(--jf-shadow-lg);
+}
+
+.page-product01 .btn-buy-lg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 160, 255, 0.4);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .page-product01 .btn-buy-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+}
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
