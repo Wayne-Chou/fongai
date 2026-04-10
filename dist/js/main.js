@@ -1,3 +1,4 @@
+// 你的 navbar code
 document.addEventListener("DOMContentLoaded", () => {
   const waitForNavbar = setInterval(() => {
     const nav = document.querySelector(".navbar");
