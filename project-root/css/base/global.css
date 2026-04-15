@@ -16,6 +16,7 @@ html:lang(zh) h2,
 html:lang(zh) .section-title,
 html:lang(zh) .hero-title {
   word-break: keep-all;
+  
 }
 
 /* 英文 */
@@ -35,6 +36,6 @@ html:lang(ja) .hero-title {
   word-break: normal;
   line-break: strict;
 }
-.hero-title {
-  white-space: pre-line; /* 這會讓 \n 變成實際的換行 */
+#hero-title {
+  white-space: pre-line; 
 }
