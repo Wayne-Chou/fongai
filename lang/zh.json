@@ -13,10 +13,10 @@
   "nav.app": "FongAI APP",
   "nav.vivifrail": "長者活力體能訓練方案｜建豐健康科技 FongAI 防跌APP",
   "nav.exercise": "FongAI建議運動課程｜高齡防跌",
-  "nav.selected": "建豐嚴選",
-  "nav.prod1": "「足適能」調整式醫療矯正鞋墊",
-  "nav.prod2": "運動地墊遊戲平台",
-  "nav.prod3": "HappyGoGo團體運動軟體",
+  "nav.companyIntro": "公司介紹",
+  
+  "nav.appIntro": "APP 介紹",
+ 
   "nav.contact": "聯絡我們",
   "nav.partnerLogin": "夥伴登入",
   "nav.language": "語系",
@@ -185,10 +185,33 @@
   "about.timeline_main_title": "建豐健康科技里程碑",
   "about.timeline_main_subtitle": "深耕 AI 科技，守護行動力，從台灣邁向國際",
   "about.timeline_2016_t": "公司正式成立",
-  "about.timeline_2016_d": "取得「專利」物聯網健康促進系統與方法。",
-  "about.timeline_2018_d": "與勞動部「不老接棒」銀髮人力六合服務協力開發計畫合作，展開大規模數據基礎建設。",
-  "about.timeline_2025_t": "整合服務、海外拓展、規模突破",
-  "about.timeline_2025_d": "推動 AI 檢測結合運動與健康促進介入；受邀參與新加坡 2025 World Ageing Festival；累積服務與檢測人數突破 50,000+；持續深化國際合作、場域應用與平台整合。",
+"about.timeline_2016_d": "取得「專利」物聯網健康促進系統與方法。",
+
+"about.timeline_2017_t": "策略轉型",
+"about.timeline_2017_d": "參與台灣桃園市高齡體力推動委員會。",
+
+"about.timeline_2018_t": "數據資料收集",
+"about.timeline_2018_d": "與勞動部「不老接棒」銀髮人力六合服務協力開發計畫合作，展開大規模數據基礎建設。",
+
+"about.timeline_2019_t": "發表與累積",
+"about.timeline_2019_l1": "社區式長期照護成果觀摩暨學術研討會發表",
+"about.timeline_2019_l2": "健康老化智慧科技新思維 運動智慧老化工作坊",
+"about.timeline_2019_l3": "Fun大視野 想像未來 青年公益實踐計畫 決賽獲勝",
+
+"about.timeline_2020_t": "深化與成果",
+"about.timeline_2020_d": "取得「專利」AI復健檢測系統與方法，獲選「資訊創新應用獎」。獲得政府單位及民間場域採用，累積4,000+位長者影像數據，並布建50個社區據點。",
+
+"about.timeline_2022_t": "AI 防跌數據資料庫．啟動元年",
+"about.timeline_2022_d": "與全球健康論壇研討會合作，累積達18,000+位長者影像數據，服務據點擴展至85個。",
+
+"about.timeline_2023_t": "雛具雛型、異業拓展、跨國合作",
+"about.timeline_2023_d": "與荷蘭／關西／上海進行跨國交流與合作。累積32,000+位長者AI影像數據，並完成120個社區據點之建構與服務。",
+
+"about.timeline_2024_t": "國際獲獎、產業鏈結、場域擴張",
+"about.timeline_2024_d": "參與高齡健康產業博覽會｜於第10屆AFHC全球青年健康論壇獲首獎｜參與FINDIT冬季媒合會｜持續擴大品牌曝光與合作鏈結。",
+
+"about.timeline_2025_t": "整合服務、海外拓展、規模突破",
+"about.timeline_2025_d": "推動AI檢測結合運動與健康促進介入；受邀參與新加坡2025 World Ageing Festival；累積服務與檢測人數突破50,000+；持續深化國際合作、場域應用與平台整合。",
   "tech.hero_eyebrow": "TECHNOLOGY DEEP DIVE",
   "tech.hero_title_line1": "解碼行動力：",
   "tech.hero_title_line2": "AI 深度影像分析",

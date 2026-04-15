@@ -57,8 +57,8 @@
 
 
 
-    <script type="module" crossorigin src="/fongai/assets/style.BGdjiYgo.js"></script>
-    <link rel="stylesheet" crossorigin href="/fongai/assets/style.YXvmpebs.css">
+    <script type="module" crossorigin src="/fongai/assets/style.BAJJm2D-.js"></script>
+    <link rel="stylesheet" crossorigin href="/fongai/assets/style.Bhv7jyVM.css">
   </head>
   <body class="page-article-detail">
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -92,13 +92,20 @@
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="/about.html"
+            href="#"
             data-i18n="nav.about"
+            data-bs-toggle="dropdown"
+            
           >
             關於我們
           </a>
 
           <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item " href="/about.html" data-i18n="nav.companyIntro">
+                公司介紹
+              </a>
+            </li>
             <li>
               <a
                 class="dropdown-item"
@@ -179,13 +186,23 @@
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="/fongaiapp.html"
+            data-bs-toggle="dropdown"
+            href="#"
             data-i18n="nav.app"
           >
             FongAI APP
           </a>
 
           <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                href="/fongaiapp.html"
+                data-i18n="nav.appIntro"
+              >
+                app介紹
+              </a>
+            </li>
             <li>
               <a
                 class="dropdown-item"
@@ -213,8 +230,8 @@
         <li class="nav-item dropdown" id="nav-selected-products">
           <a
             class="nav-link dropdown-toggle"
-            href="/product/selected-products.html"
-            data-i18n="nav.selected"
+            href="#"
+            data-bs-toggle="dropdown"
           >
             建豐嚴選
           </a>
@@ -223,8 +240,17 @@
             <li>
               <a
                 class="dropdown-item"
+                href="/product/selected-products.html"
+              >
+                嚴選系列總覽
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
                 href="/product/product-01.html"
-                data-i18n="nav.prod1"
+                
               >
                 足適能矯正鞋墊
               </a>
@@ -234,7 +260,7 @@
               <a
                 class="dropdown-item"
                 href="/product/product-02.html"
-                data-i18n="nav.prod2"
+                
               >
                 運動地墊遊戲平台
               </a>
@@ -244,7 +270,7 @@
               <a
                 class="dropdown-item"
                 href="/product/product-03.html"
-                data-i18n="nav.prod3"
+                
               >
                 HappyGoGo團體運動軟體
               </a>
@@ -418,7 +444,13 @@
 
       <div class="col-lg-4 col-md-6">
         <h6 class="footer-title" data-i18n="nav.about">關於我們</h6>
+        
         <ul class="list-unstyled">
+          <li>
+            <a href="/about.html" data-i18n="nav.companyIntro"
+              > 公司介紹</a
+            >
+          </li>
           <li>
             <a href="/whitepapers/index.html" data-i18n="nav.whitepaper"
               >白皮書</a

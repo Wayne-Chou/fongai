@@ -13,10 +13,9 @@
   "nav.app": "FongAI APP",
   "nav.vivifrail": "ViviFrail Training",
   "nav.exercise": "FongAI Exercise",
-  "nav.selected": "Selections",
-  "nav.prod1": "Custom Medical Insoles",
-  "nav.prod2": "Exercise Mat Platform",
-  "nav.prod3": "HappyGoGo Software",
+  "nav.companyIntro": "Company Profile",
+  "nav.appIntro": "APP Overview",
+  
   "nav.contact": "Contact",
   "nav.partnerLogin": "Partner Login",
   "nav.language": "Language",
