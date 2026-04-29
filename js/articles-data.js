@@ -391,14 +391,7 @@ const articlesData = [
       <p>2026年には大同地区へ展開し、より多くの高齢者へサービスを提供する予定です。</p>
   
       <p>AIと専門ケアの融合により、行動能力は「見える化」され、継続的な改善が可能となっています。</p>
-      <div class="case-images">
-        <div class="case-image">
-          <img src="/assets/images/cases/taipei-wanhua-fongai2.jpg" alt="台北市立心基金會">
-        </div>
-        <div class="case-image">
-          <img src="/assets/images/cases/taipei-wanhua-fongai3.png" alt="台北市立心基金會">
-        </div>
-      </div>
+      
       <h3>リハビリプログラム</h3>
       <p>筋力トレーニングにより、バランスと持久力を向上させ、転倒リスクを低減します。</p>
       <div class="case-images">
