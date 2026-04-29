@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-md-6 col-lg-4 article-item" data-reveal>
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
             <div class="card-img-wrapper" style="aspect-ratio: 16/9; background: #f0f0f0;">
-              <img src="${article.image}" 
+              <img src="${article.image}">
                    loading="lazy" 
                    class="card-img-top" 
                    style="width: 100%; height: 100%; object-fit: cover;" 
