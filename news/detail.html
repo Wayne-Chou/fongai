@@ -41,14 +41,15 @@
         }
         
       });
-    });
-    document.querySelectorAll("img[src^='/']").forEach((img) => {
+      document.querySelectorAll("img[src^='/']").forEach((img) => {
       const src = img.getAttribute("src");
 
       if (!src.startsWith("/fongai/")) {
         img.setAttribute("src", "/fongai" + src);
       }
     });
+    });
+   
   }
 </script>
 <link rel="icon" href="/fongai/assets/favicon.BT9gSkEm.ico" />
