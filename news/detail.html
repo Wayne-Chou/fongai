@@ -563,19 +563,22 @@
       
          
           let content = article[`content_${lang}`] || article.content_zh;
-      
+
          
           const tempDiv = document.createElement("div");
           tempDiv.innerHTML = content;
 
           
           tempDiv.querySelectorAll("img").forEach((img) => {
-            if (img.src.includes("/assets")) {
-              img.src = BASE + img.getAttribute("src");
+            const src = img.getAttribute("src");
+
+            if (src && src.startsWith("/assets")) {
+              img.setAttribute("src", BASE + src);
             }
           });
-      
-          contentEl.innerHTML = content;
+
+    
+          contentEl.innerHTML = tempDiv.innerHTML;
           console.log("BASE:", BASE);
           console.log("content:", content);
           // ===== 語系 =====
