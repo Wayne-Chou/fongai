@@ -565,7 +565,15 @@
           let content = article[`content_${lang}`] || article.content_zh;
       
          
-          content = content.replace(/src\s*=\s*["']\/assets/g, `src="${BASE}/assets`);
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = content;
+
+          
+          tempDiv.querySelectorAll("img").forEach((img) => {
+            if (img.src.includes("/assets")) {
+              img.src = BASE + img.getAttribute("src");
+            }
+          });
       
           contentEl.innerHTML = content;
       
