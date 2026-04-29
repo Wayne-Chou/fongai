@@ -3,6 +3,7 @@ import injectHTML from "vite-plugin-html-inject";
 import { resolve } from "path";
 
 export default defineConfig(({ command }) => {
+  const version = Date.now();
   return {
     // 1. 設定專案根目錄，讓 Vite 去這裡找 index.html
     root: "project-root",
@@ -11,7 +12,13 @@ export default defineConfig(({ command }) => {
     // 本機開發時使用 '/'，部署到 GitHub 時自動切換為 '/fongai/'
     base: command === "serve" ? "/" : "/fongai/",
 
-    plugins: [injectHTML()],
+    plugins: [
+      injectHTML({
+        data: {
+          APP_VERSION: version,
+        },
+      }),
+    ],
 
     build: {
       // 3. 設定打包輸出的位置 (相對於 project-root 的上一層)

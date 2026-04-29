@@ -383,5 +383,8 @@
   "partner.contact.title": "今すぐパートナーに参加",
   "partner.contact.subtitle": "私たちと共に高齢者市場を牽引し、新たなビジネスチャンスを創出しましょう。",
   "partner.contact.email_label": "メールアドレス",
-  "partner.contact.tel_label": "電話番号"
+  "partner.contact.tel_label": "電話番号",
+  "article.read_more": "続きを読む",
+  "category.all": "すべての記事",
+  "category.enterprise": "企業事例"
 }
