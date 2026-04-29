@@ -12,7 +12,7 @@ const articlesData = [
     categoryName_en: "Enterprise Case",
     categoryName_ja: "企業事例",
     date: "2026-04-27",
-    image: "/assets/images/cases/kaohsiung-fongai-bac.jpg",
+    image: "../assets/images/cases/kaohsiung-fongai-bac.jpg",
   
     // ===== 中文 =====
     title_zh: "偏鄉健康行動力：高雄市政府運動發展局導入 FongAI 防跌鑑測",
@@ -108,7 +108,7 @@ const articlesData = [
     categoryName_en: "Enterprise Case",
     categoryName_ja: "企業事例",
     date: "2026-04-27",
-    image: "/assets/images/cases/fitness-fongai-bac.jpg",
+    image: "../assets/images/cases/fitness-fongai-bac.jpg",
   
     // ===== 中文 =====
     title_zh: "社區健康新模式：菲特邦健康管理顧問有限公司",
@@ -195,7 +195,7 @@ const articlesData = [
     categoryName_en: "Enterprise Case",
     categoryName_ja: "企業事例",
     date: "2026-04-27",
-    image: "/assets/images/cases/home-care-fongai.jpg",
+    image: "../assets/images/cases/home-care-fongai.jpg",
   
     // ===== 中文 =====
     title_zh: "把關懷送到家：全成獨居長者到府 FongAI 鑑測服務",
@@ -279,7 +279,7 @@ const articlesData = [
     categoryName_en: "Enterprise Case",
     categoryName_ja: "企業事例",
     date: "2026-04-27",
-    image: "/assets/images/cases/taipei-wanhua-fongai.jpg",
+    image: "../assets/images/cases/taipei-wanhua-fongai.jpg",
   
     // ===== 中文 =====
     title_zh: "用科技守護萬華：台北市立心基金會導入 FongAI 防跌鑑測",
