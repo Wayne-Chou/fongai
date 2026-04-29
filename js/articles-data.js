@@ -315,7 +315,7 @@ const articlesData = [
       <p>透過專業肌力訓練課程，協助長者提升平衡能力與肌耐力，降低跌倒風險，讓日常生活更加安全。</p>
       <div class="case-images">
         <div class="case-image">
-          <img src="/assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
+          <img src="../assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
         </div>
         <div class="case-image">
           <img src="../assets/images/cases/taipei-wanhua-fongai4.png" alt="台北市立心基金會">
