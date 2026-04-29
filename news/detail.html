@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <meta
   name="google-site-verification"
   content="6yaFGbhL9o_X_K-7ZYJCv5QiWQCrMXJMC6D60L9_Eh8"
@@ -14,6 +15,7 @@
   async
   src="https://www.googletagmanager.com/gtag/js?id=G-922001BSQN"
 ></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -23,6 +25,7 @@
 
   gtag("config", "G-922001BSQN");
 </script>
+
 <script>
   const isSubFolder =
     location.hostname.includes("github.io") ||
@@ -59,8 +62,8 @@
 
 
 
-    <script type="module" crossorigin src="/fongai/assets/style.BAJJm2D-.js"></script>
-    <link rel="stylesheet" crossorigin href="/fongai/assets/style.Bhv7jyVM.css">
+    <script type="module" crossorigin src="/fongai/assets/style.iVKWjYi_.js"></script>
+    <link rel="stylesheet" crossorigin href="/fongai/assets/style.0D02E_wK.css">
   </head>
   <body class="page-article-detail">
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -142,11 +145,11 @@
 
         <!-- NEWS -->
 
-        <!-- <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
             最新消息
           </a>
-        </li> -->
+        </li>
 
         <!-- SERVICE -->
 
@@ -363,7 +366,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="index.html" class="text-decoration-none">資訊與案例</a>
+                <a href="/news/news.html" class="text-decoration-none" data-i18n="archive.hero.title">資訊與案例</a>
               </li>
               <li
                 class="breadcrumb-item active"
@@ -374,29 +377,25 @@
               </li>
             </ol>
           </nav>
-          <div class="detail-header-content mt-4">
-            <span class="badge badge-category mb-3" id="detail-category"
-              >分類</span
-            >
-            <h1 class="display-5 fw-bold mb-4" id="detail-title">
+          <div class="detail-header-content ">
+            
+            <h1 class=" fw-bold " id="detail-title">
               文章標題載入中...
             </h1>
             <div
               class="article-meta d-flex align-items-center gap-4 text-muted"
             >
-              <span id="detail-date"
-                ><i class="bi bi-calendar3 me-2"></i>0000-00-00</span
-              >
-              <span><i class="bi bi-person me-2"></i>建豐編輯部</span>
+             
+              
             </div>
           </div>
         </div>
       </section>
 
-      <section class="article-body-section py-5">
+      <section class="article-body-section ">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8" id="article-main-col">
+          <div>
+            <div  id="article-main-col">
               <div class="main-article-img mb-5">
                 <img
                   src=""
@@ -504,44 +503,74 @@
     <script src="../js/main.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // 1. 從網址取得 ID 參數 (detail.html?id=xxx)
         const urlParams = new URLSearchParams(window.location.search);
         const articleId = urlParams.get("id");
-
-        // 檢查資料庫 articlesData 是否存在
+      
         if (typeof articlesData === "undefined") {
           console.error("找不到 articles-data.js 檔案");
           return;
         }
-
-        // 2. 尋找對應 ID 的文章物件
+      
         const article = articlesData.find((item) => item.id === articleId);
-
-        // 3. 渲染邏輯
+      
         if (article) {
-          // 替換網頁 Title
-          document.title = `${article.title} | 建豐健康科技 FongAI`;
-
-          // 替換標籤與麵包屑
-          document.getElementById("breadcrumb-active").innerText =
-            article.title;
-          document.getElementById("detail-category").innerText =
-            article.categoryName;
-
-          // 替換標題與日期
-          document.getElementById("detail-title").innerText = article.title;
-          document.getElementById("detail-date").innerHTML =
-            `<i class="bi bi-calendar3 me-2"></i>${article.date}`;
-
-          // 替換圖片
+          const lang = localStorage.getItem("lang") || "zh";
+      
+         
+          const titleEl = document.getElementById("detail-title");
+      
+          titleEl.setAttribute("data-dynamic-i18n", "");
+          titleEl.setAttribute("data-zh", article.title_zh);
+          titleEl.setAttribute("data-en", article.title_en || article.title_zh);
+          titleEl.setAttribute("data-ja", article.title_ja || article.title_zh);
+      
+          titleEl.innerText = article[`title_${lang}`] || article.title_zh;
+      
+        
+          document.title = `${titleEl.innerText} | 建豐健康科技 FongAI`;
+      
+          
+          const breadcrumbEl = document.getElementById("breadcrumb-active");
+      
+          breadcrumbEl.setAttribute("data-dynamic-i18n", "");
+          breadcrumbEl.setAttribute("data-zh", article.title_zh);
+          breadcrumbEl.setAttribute("data-en", article.title_en || article.title_zh);
+          breadcrumbEl.setAttribute("data-ja", article.title_ja || article.title_zh);
+      
+          breadcrumbEl.innerText = article[`title_${lang}`] || article.title_zh;
+      
+         
+          
+      
+         
+          
+      
+         
           const imgElement = document.getElementById("detail-image");
-          imgElement.src = article.image;
-          imgElement.alt = article.title;
-
-          // 替換主內容 (innerHTML 允許解析資料庫中的 <p>, <h3> 等標籤)
-          document.getElementById("detail-content").innerHTML = article.content;
+      
+          if (article.showDetailImage === false) {
+            imgElement.parentElement.style.display = "none";
+          } else {
+            imgElement.src = article.detailImage || article.image;
+            imgElement.alt = article.title_zh;
+          }
+      
+          
+          const contentEl = document.getElementById("detail-content");
+      
+          contentEl.setAttribute("data-dynamic-i18n-html", "");
+          contentEl.setAttribute("data-zh", article.content_zh);
+          contentEl.setAttribute("data-en", article.content_en || article.content_zh);
+          contentEl.setAttribute("data-ja", article.content_ja || article.content_zh);
+      
+          contentEl.innerHTML = article[`content_${lang}`] || article.content_zh;
+      
+          
+          if (window.loadLang) {
+            window.loadLang(lang);
+          }
+      
         } else {
-          // 找不到文章時的處理
           document.getElementById("detail-title").innerText = "文章不存在";
           document.getElementById("article-main-col").innerHTML = `
             <div class="text-center py-5">
@@ -552,6 +581,6 @@
           `;
         }
       });
-    </script>
+      </script>
   </body>
 </html>

@@ -385,5 +385,8 @@
   "partner.contact.title": "Join Us Today",
   "partner.contact.subtitle": "Partner with us to drive the senior tech market and create new opportunities.",
   "partner.contact.email_label": "Email",
-  "partner.contact.tel_label": "Phone"
+  "partner.contact.tel_label": "Phone",
+  "article.read_more": "Read More",
+  "category.all": "All Articles",
+  "category.enterprise": "Enterprise Case"
 }
