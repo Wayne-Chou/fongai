@@ -38,7 +38,15 @@
         if (!href.startsWith("/fongai/")) {
           link.setAttribute("href", "/fongai" + href);
         }
+        
       });
+    });
+    document.querySelectorAll("img[src^='/']").forEach((img) => {
+      const src = img.getAttribute("src");
+
+      if (!src.startsWith("/fongai/")) {
+        img.setAttribute("src", "/fongai" + src);
+      }
     });
   }
 </script>
