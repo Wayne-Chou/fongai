@@ -41,13 +41,7 @@
         }
         
       });
-      document.querySelectorAll("img[src^='/']").forEach((img) => {
-      const src = img.getAttribute("src");
-
-      if (!src.startsWith("/fongai/")) {
-        img.setAttribute("src", "/fongai" + src);
-      }
-    });
+      
     });
    
   }
@@ -574,7 +568,16 @@
       
           contentEl.innerHTML = article[`content_${lang}`] || article.content_zh;
       
-          
+          const isSubFolder =
+            location.hostname.includes("github.io") ||
+            location.pathname.startsWith("/fongai/");
+
+          if (isSubFolder) {
+            contentEl.innerHTML = contentEl.innerHTML.replaceAll(
+              'src="/assets',
+              'src="/fongai/assets'
+            );
+          }
           if (window.loadLang) {
             window.loadLang(lang);
           }
