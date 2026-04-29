@@ -565,7 +565,7 @@
           let content = article[`content_${lang}`] || article.content_zh;
       
          
-          content = content.replace(/src="\/assets/g, `src="${BASE}/assets`);
+          content = content.replace(/src\s*=\s*["']\/assets/g, `src="${BASE}/assets`);
       
           contentEl.innerHTML = content;
       
