@@ -28,23 +28,32 @@
 
 <script>
   const isSubFolder =
-    location.hostname.includes("github.io") ||
-    location.pathname.startsWith("/fongai/");
+  location.hostname.includes("github.io") ||
+  location.pathname.startsWith("/fongai/");
 
-  if (isSubFolder) {
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("a[href^='/']").forEach((link) => {
-        const href = link.getAttribute("href");
+if (isSubFolder) {
+  document.addEventListener("DOMContentLoaded", () => {
 
-        if (!href.startsWith("/fongai/")) {
-          link.setAttribute("href", "/fongai" + href);
-        }
-        
-      });
-      
-    });
    
-  }
+    document.querySelectorAll("a[href^='/']").forEach((link) => {
+      const href = link.getAttribute("href");
+
+      if (!href.startsWith("/fongai/")) {
+        link.setAttribute("href", "/fongai" + href);
+      }
+    });
+
+    
+    document.querySelectorAll("img[src^='/']").forEach((img) => {
+      const src = img.getAttribute("src");
+
+      if (!src.startsWith("/fongai/")) {
+        img.setAttribute("src", "/fongai" + src);
+      }
+    });
+
+  });
+}
 </script>
 <link rel="icon" href="/fongai/assets/favicon.BT9gSkEm.ico" />
 <script type="module" src="/fongai/js/i18n.js"></script>
