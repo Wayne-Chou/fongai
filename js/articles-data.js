@@ -8,9 +8,9 @@ const articlesData = [
   {
     id: "enterprise-2026-004",
     category: "enterprise",
-    categoryName_zh: "企業案例",
-    categoryName_en: "Enterprise Case",
-    categoryName_ja: "企業事例",
+    categoryName_zh: "合作案例",
+    categoryName_en: "Case Studies",
+    categoryName_ja: "導入事例",
     date: "2026-04-27",
     image: "../assets/images/cases/kaohsiung-fongai-bac.jpg",
   
@@ -104,9 +104,9 @@ const articlesData = [
   {
     id: "enterprise-2026-005",
     category: "enterprise",
-    categoryName_zh: "企業案例",
-    categoryName_en: "Enterprise Case",
-    categoryName_ja: "企業事例",
+    categoryName_zh: "合作案例",
+    categoryName_en: "Case Studies",
+    categoryName_ja: "導入事例",
     date: "2026-04-27",
     image: "../assets/images/cases/fitness-fongai-bac.jpg",
   
@@ -191,9 +191,9 @@ const articlesData = [
   {
     id: "enterprise-2026-006",
     category: "enterprise",
-    categoryName_zh: "企業案例",
-    categoryName_en: "Enterprise Case",
-    categoryName_ja: "企業事例",
+    categoryName_zh: "合作案例",
+    categoryName_en: "Case Studies",
+    categoryName_ja: "導入事例",
     date: "2026-04-27",
     image: "../assets/images/cases/home-care-fongai.jpg",
   
@@ -275,9 +275,9 @@ const articlesData = [
   {
     id: "enterprise-2026-007",
     category: "enterprise",
-    categoryName_zh: "企業案例",
-    categoryName_en: "Enterprise Case",
-    categoryName_ja: "企業事例",
+    categoryName_zh: "合作案例",
+    categoryName_en: "Case Studies",
+    categoryName_ja: "導入事例",
     date: "2026-04-27",
     image: "../assets/images/cases/taipei-wanhua-fongai.jpg",
   
