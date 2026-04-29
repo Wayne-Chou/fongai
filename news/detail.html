@@ -517,43 +517,35 @@
       
         if (article) {
           const lang = localStorage.getItem("lang") || "zh";
-      
-          
           const BASE = location.hostname.includes("github.io") ? "/fongai" : "";
       
-          
+          // ===== 標題 =====
           const titleEl = document.getElementById("detail-title");
-      
           titleEl.setAttribute("data-dynamic-i18n", "");
           titleEl.setAttribute("data-zh", article.title_zh);
           titleEl.setAttribute("data-en", article.title_en || article.title_zh);
           titleEl.setAttribute("data-ja", article.title_ja || article.title_zh);
-      
           titleEl.innerText = article[`title_${lang}`] || article.title_zh;
       
           document.title = `${titleEl.innerText} | 建豐健康科技 FongAI`;
       
-          
+          // ===== breadcrumb =====
           const breadcrumbEl = document.getElementById("breadcrumb-active");
-      
           breadcrumbEl.setAttribute("data-dynamic-i18n", "");
           breadcrumbEl.setAttribute("data-zh", article.title_zh);
           breadcrumbEl.setAttribute("data-en", article.title_en || article.title_zh);
           breadcrumbEl.setAttribute("data-ja", article.title_ja || article.title_zh);
-      
           breadcrumbEl.innerText = article[`title_${lang}`] || article.title_zh;
       
-          
+          // ===== 主圖 =====
           const imgElement = document.getElementById("detail-image");
-      
           if (article.showDetailImage === false) {
             imgElement.parentElement.style.display = "none";
           } else {
             imgElement.src = BASE + (article.detailImage || article.image);
-            imgElement.alt = article.title_zh;
           }
       
-          
+          // ===== content（保留 i18n）=====
           const contentEl = document.getElementById("detail-content");
       
           contentEl.setAttribute("data-dynamic-i18n-html", "");
@@ -561,31 +553,23 @@
           contentEl.setAttribute("data-en", article.content_en || article.content_zh);
           contentEl.setAttribute("data-ja", article.content_ja || article.content_zh);
       
-         
-          let content = article[`content_${lang}`] || article.content_zh;
-
-         
-          const tempDiv = document.createElement("div");
-          tempDiv.innerHTML = content;
-
           
-          tempDiv.querySelectorAll("img").forEach((img) => {
-            const src = img.getAttribute("src");
-
-            if (src && src.startsWith("/assets")) {
-              img.setAttribute("src", BASE + src);
-            }
-            console.log("after:", img.getAttribute("src"));
-          });
-
-    
-          contentEl.innerHTML = tempDiv.innerHTML;
-          console.log("BASE:", BASE);
-          console.log("content:", content);
-          // ===== 語系 =====
           if (window.loadLang) {
             window.loadLang(lang);
           }
+      
+        
+          const fixImages = () => {
+            contentEl.querySelectorAll("img").forEach((img) => {
+              const src = img.getAttribute("src");
+              if (src && src.startsWith("/assets")) {
+                img.setAttribute("src", BASE + src);
+              }
+            });
+          };
+      
+          
+          setTimeout(fixImages, 0);
       
         } else {
           document.getElementById("detail-title").innerText = "文章不存在";
@@ -593,7 +577,7 @@
             <div class="text-center py-5">
               <h2 class="text-muted">抱歉，找不到該文章內容。</h2>
               <p>它可能已被移動或移除。</p>
-              <a href="index.html" class="btn btn-primary rounded-pill mt-3">回文章列表</a>
+              <a href="news.html" class="btn btn-primary rounded-pill mt-3">回文章列表</a>
             </div>
           `;
         }
