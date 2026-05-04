@@ -390,6 +390,8 @@
   overflow: hidden;
   background-image: url("/assets/images/walk.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 /* SCAN LINE */

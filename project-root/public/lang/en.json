@@ -206,14 +206,14 @@
   "tech.hero_eyebrow": "TECHNOLOGY DEEP DIVE",
   "tech.hero_title_line1": "Decoding Mobility:",
   "tech.hero_title_line2": "AI Deep Video Analysis",
-  "tech.hero_desc": "Applying the FongAI technology mentioned in 'About Us' at a deeper level. We analyze more than just single movements—through 17 key skeletal points, we achieve clinical-grade automated SPPB assessments.",
+  "tech.hero_desc": "Utilizing image recognition technology, this system goes beyond analyzing individual movements to provide real-time fall risk assessments by tracking 17 key skeletal joints.",
   "tech.main_sppb_title": "Automated Solution for SPPB Clinical Assessment Metrics",
   "tech.main_sppb_desc": "Fully compliant with the SPPB clinical assessment framework, achieving an 86.6% reduction in evaluation time (from 15 minutes to 2 minutes). Powered by AI-driven motion analysis, it delivers precise results within just 2 minutes, significantly enhancing both efficiency and accuracy in clinical assessments.",
-  "tech.main_sppb_f1_t": "Balance: ",
+  "tech.main_sppb_f1_t": "Balance Test: ",
   "tech.main_sppb_f1_d": "Quantifies center of mass (CoM) trajectory and provides precise postural stability assessment.",
   "tech.main_sppb_f2_t": "Gait Speed: ",
   "tech.main_sppb_f2_d": "Accurately calculates stride length and cadence with millisecond-level precision.",
-  "tech.main_sppb_f3_t": "Five Times Sit-to-Stand:: ",
+  "tech.main_sppb_f3_t": "5-Times Sit-to-Stand: ",
   "tech.main_sppb_f3_d": "Analyzes movement biomechanics during standing and evaluates muscular endurance quantitatively.",
   "tech.main_risk_title": "Predictive AI Risk Model",
   "tech.main_risk_desc": "Based on **50,000+** elderly video data trajectories, our model enables early fall risk prediction rather than just reactive detection.",
@@ -230,7 +230,7 @@
   "tech.comparison_legacy_f2_d": "Single-point cross-sectional measurements; difficult to establish long-term continuous tracking.",
   "tech.comparison_jf_label": "FongAI Solution",
   "tech.comparison_jf_f1_t": "Quantitative Data",
-  "tech.comparison_jf_f1_d": "Converts movement into objective video trajectory data, providing clinical-grade quantitative results.",
+  "tech.comparison_jf_f1_d": "Converts motion into objective visual trajectory data to provide quantitative analysis results.",
   "tech.comparison_jf_f2_t": "Dynamic Risk Assessment",
   "tech.comparison_jf_f2_d": "Cloud-based long-term trend analysis to warn of potential risks through data changes.",
   "tech.comparison_badge": "Digital Transformation",
@@ -388,5 +388,5 @@
   "partner.contact.tel_label": "Phone",
   "article.read_more": "Read More",
   "category.all": "All Articles",
-  "category.enterprise": "Enterprise Case"
+  "category.enterprise": "Case Studies"
 }
