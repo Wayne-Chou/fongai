@@ -3,7 +3,31 @@ import injectHTML from "vite-plugin-html-inject";
 import { resolve } from "path";
 
 export default defineConfig(({ command }) => {
-  const version = Date.now();
+
+  const version = new Date().toISOString().replace(/[-:T]/g,'').slice(0,14);
+  function htmlVersioningPlugin(version) {
+    return {
+      name: "html-versioning",
+      enforce: "post",
+      transformIndexHtml(html) {
+        return html
+          // JS
+          .replace(
+            /<script type="module" crossorigin src="([^"]+)"><\/script>/g,
+            (match, src) => {
+              return `<script type="module" crossorigin src="${src}?v=${version}"></script>`;
+            }
+          )
+          // CSS
+          .replace(
+            /<link rel="stylesheet" crossorigin href="([^"]+)">/g,
+            (match, href) => {
+              return `<link rel="stylesheet" crossorigin href="${href}?v=${version}">`;
+            }
+          );
+      },
+    };
+  }
   return {
     // 1. 設定專案根目錄，讓 Vite 去這裡找 index.html
     root: "project-root",
@@ -18,6 +42,7 @@ export default defineConfig(({ command }) => {
           APP_VERSION: version,
         },
       }),
+      htmlVersioningPlugin(version),
     ],
 
     build: {
@@ -59,12 +84,12 @@ export default defineConfig(({ command }) => {
         },
 
         output: {
-          // entryFileNames: `assets/[name].js`,
-          // chunkFileNames: `assets/[name].js`,
-          // assetFileNames: `assets/[name].[ext]`,
-          entryFileNames: `assets/[name].[hash].js`,
-          chunkFileNames: `assets/[name].[hash].js`,
-          assetFileNames: `assets/[name].[hash].[ext]`,
+          entryFileNames: `assets/[name].js`,
+          chunkFileNames: `assets/[name].js`,
+          assetFileNames: `assets/[name].[ext]`,
+          // entryFileNames: `assets/[name].[hash].js`,
+          // chunkFileNames: `assets/[name].[hash].js`,
+          // assetFileNames: `assets/[name].[hash].[ext]`,
         },
       },
     },
