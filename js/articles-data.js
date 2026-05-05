@@ -438,21 +438,30 @@ const articlesData = [
   
       <h3>建豐 × 信義區健康服務中心的核心成效</h3>
       <p>1. 將 AI 防跌鑑測導入政府公共衛生服務</p>
+      <p>FongAI 協助健康服務中心在社區中快速執行長者行動力評估，使跌倒風險辨識不再只依賴主觀詢問，而能透過數據輔助判斷。</p>
+
       <p>2. 建立長者行動力資料與追蹤基礎</p>
+      <p>透過前後測與量化結果，健康服務中心能掌握長者行動力變化，並作為課程安排、衛教建議與後續追蹤的依據。</p>
+
       <p>3. 串接延緩失能與社區資源轉介</p>
+      <p>鑑測結果可協助辨識高風險長者，並銜接延緩失能課程、社區據點、醫療院所或藥局等資源，提高公共衛生服務的連續性。</p>
+
       <p>4. 形成可複製的 B2G 合作模型</p>
-  
+      <p>此案例展現 FongAI 可導入地方政府、健康服務中心與高齡友善城市計畫，協助公部門以更具效率與數據基礎的方式推動長者防跌服務。</p>
+
       <h3>可複製合作模式｜適合地方政府與健康服務中心導入</h3>
+      <p>建豐可協助地方政府或健康服務中心建立以下服務流程：</p>
+
       <p>導入 FongAI AI 動態骨架防跌鑑測</p>
       <p>於健康服務中心、社區據點或活動現場設置檢測流程</p>
       <p>完成長者行動力與跌倒風險評估</p>
       <p>依據結果提供衛教、課程建議或資源轉介</p>
       <p>進行前後測追蹤，建立量化成果</p>
       <p>彙整場域資料，作為政策成果、專案報告與擴點依據</p>
-  
+
       <h3>結語｜從單次檢測走向政府級長者行動力管理</h3>
       <p>建豐健康科技與臺北市信義區健康服務中心的合作，展現了 AI 科技導入公共衛生場域的實際價值。透過 FongAI 動態骨架防跌鑑測，長者能更早了解自身行動力與跌倒風險，健康服務中心也能以數據為基礎，安排後續介入、轉介與成效追蹤。</p>
-  
+
       <p>這項合作不只是一次健康活動，而是一套可延伸至其他行政區、縣市政府與高齡友善城市計畫的 B2G 服務模式。對正在尋找長者防跌、健康促進與延緩失能解決方案的公部門而言，信義區經驗提供了一個可落地、可追蹤、也可擴散的成功案例。</p>
       <img style="max-width:500px" src="../assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
       <p>信義區寒冬送暖活動FongAI動態骨架行動力鑑測</p>
@@ -481,21 +490,30 @@ const articlesData = [
       
       <h3>Key Outcomes of FongAI × Xinyi Health Center</h3>
       <p>1. Integration of AI fall risk assessment into public health services</p>
+      <p>FongAI enables health centers to quickly conduct mobility assessments for seniors in the community, ensuring that fall risk identification is no longer solely based on subjective judgment, but supported by data-driven insights.</p>
+
       <p>2. Establishment of senior mobility data and tracking foundation</p>
-      <p>3. Connection to disability prevention programs and community resources</p>
+      <p>Through pre- and post-assessments and quantitative results, health centers can monitor changes in senior mobility and use the data for course planning, health education, and follow-up tracking.</p>
+
+      <p>3. Integration with disability prevention programs and community resources</p>
+      <p>Assessment results help identify high-risk individuals and connect them with prevention programs, community centers, hospitals, and pharmacies, enhancing the continuity of public health services.</p>
+
       <p>4. Formation of a scalable B2G collaboration model</p>
-      
+      <p>This case demonstrates that FongAI can be integrated into local governments, health centers, and age-friendly city initiatives, enabling the public sector to promote fall prevention services more efficiently with a data-driven approach.</p>
+
       <h3>Scalable Collaboration Model｜Suitable for Local Governments and Health Centers</h3>
-      <p>Implement FongAI AI skeletal fall risk assessment</p>
+      <p>FongAI can support local governments and health centers in building the following workflow:</p>
+
+      <p>Implement FongAI AI-based skeletal fall risk assessment</p>
       <p>Set up assessment processes in health centers, community locations, or event sites</p>
-      <p>Complete mobility and fall risk evaluations for seniors</p>
+      <p>Conduct mobility and fall risk evaluations for seniors</p>
       <p>Provide health education, course recommendations, or resource referrals based on results</p>
-      <p>Conduct pre- and post-assessment tracking to build measurable outcomes</p>
-      <p>Aggregate site data for policy results, project reports, and expansion planning</p>
-      
+      <p>Perform pre- and post-assessment tracking to establish measurable outcomes</p>
+      <p>Aggregate site data for policy outcomes, project reports, and expansion planning</p>
+
       <h3>Conclusion｜From Single Assessment to Government-Level Mobility Management</h3>
-      <p>The collaboration between FongAI and the Taipei Xinyi District Health Center demonstrates the real value of integrating AI technology into public health settings. Through FongAI’s skeletal fall risk assessment, seniors can better understand their mobility and fall risks, while health centers can use data to guide interventions, referrals, and outcome tracking.</p>
-      
+      <p>The collaboration between FongAI and the Taipei Xinyi District Health Center demonstrates the real value of integrating AI technology into public health settings. Through FongAI’s skeletal fall risk assessment, seniors can better understand their mobility and fall risks, while health centers can use data to guide intervention, referral, and outcome tracking.</p>
+
       <p>This collaboration is not just a one-time health activity, but a scalable B2G service model that can be extended to other districts, cities, and age-friendly initiatives. For public sector organizations seeking fall prevention, health promotion, and disability prevention solutions, the Xinyi model provides a practical, trackable, and scalable success case.</p>
       <img style="max-width:500px" src="../assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
       <p>Xinyi District Winter Care Event – FongAI Mobility Assessment</p>
@@ -524,24 +542,33 @@ const articlesData = [
       
       <h3>建豐 × 信義区健康センターの主な成果</h3>
       <p>1. AI転倒リスク評価の公共衛生サービスへの導入</p>
+      <p>FongAIは地域において高齢者の行動能力評価を迅速に実施できるよう支援し、転倒リスクの判定を主観的判断だけに依存せず、データに基づいた判断を可能にします。</p>
+
       <p>2. 高齢者の行動能力データと追跡基盤の構築</p>
-      <p>3. 介護予防プログラムや地域資源との連携</p>
-      <p>4. 再現可能なB2Gモデルの確立</p>
-      
+      <p>前後評価と定量データにより、高齢者の身体能力の変化を把握し、プログラム設計や健康指導、継続的なフォローに活用できます。</p>
+
+      <p>3. 介護予防プログラムおよび地域資源との連携</p>
+      <p>評価結果により高リスク対象者を特定し、介護予防プログラムや地域拠点、医療機関、薬局などと連携することで、公共衛生サービスの継続性を向上させます。</p>
+
+      <p>4. 再現可能なB2G協力モデルの構築</p>
+      <p>本事例は、FongAIが地方政府や健康センター、高齢者に優しい都市政策へ導入可能であり、データに基づいた効率的な転倒予防サービスを実現できることを示しています。</p>
+
       <h3>展開可能な協力モデル｜地方政府・健康センター向け</h3>
+      <p>建豐は以下のサービスフロー構築を支援します：</p>
+
       <p>FongAI AI転倒リスク評価の導入</p>
-      <p>健康センターや地域拠点での評価プロセス構築</p>
+      <p>健康センターや地域拠点、イベント会場での評価プロセス構築</p>
       <p>高齢者の行動能力および転倒リスク評価の実施</p>
       <p>結果に基づく健康指導・プログラム提案・資源紹介</p>
-      <p>前後比較による成果の追跡</p>
+      <p>前後比較による成果追跡</p>
       <p>データ集約による政策・レポート・拡張活用</p>
-      
+
       <h3>結論｜単発評価から政府レベルの健康管理へ</h3>
-      <p>本取り組みは、AI技術を公共衛生分野に導入する実質的な価値を示しています。FongAIにより、高齢者は自身の身体能力と転倒リスクを早期に把握でき、健康センターはデータに基づく介入・紹介・追跡が可能になります。</p>
-      
-      <p>これは単なる一度限りの活動ではなく、他地域や自治体にも展開可能なB2Gモデルです。高齢者の転倒予防や健康促進を検討する公的機関にとって、信義区の事例は実践的かつ拡張可能な成功モデルとなります。</p>
+      <p>建豐と台北市信義区健康センターの連携は、AI技術を公共衛生分野に導入する実質的な価値を示しています。FongAIにより、高齢者は自身の身体能力と転倒リスクをより早期に把握でき、健康センターはデータに基づいた介入・紹介・追跡が可能になります。</p>
+
+      <p>この取り組みは単なる一度の健康イベントではなく、他地域や自治体へ展開可能なB2Gモデルです。転倒予防や健康促進、介護予防を検討する公共機関にとって、信義区の事例は実践的かつ拡張可能な成功モデルとなります。</p>
       <img style="max-width:500px" src="../assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
-      <p>信義区 冬の支援イベント FongAI行動能力評価</p>
+      <p>信義区 冬季支援イベント FongAI行動能力評価</p>
       `,
   }
 ];
