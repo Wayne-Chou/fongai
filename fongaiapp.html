@@ -62,8 +62,8 @@
 />
 
 
-  <script type="module" crossorigin src="/fongai/assets/style.js?v=20260507072733"></script>
-  <link rel="stylesheet" crossorigin href="/fongai/assets/style.css?v=20260507072733">
+  <script type="module" crossorigin src="/fongai/assets/style.js?v=20260507081830"></script>
+  <link rel="stylesheet" crossorigin href="/fongai/assets/style.css?v=20260507081830">
 
   <body class="page-product">
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -762,31 +762,31 @@
                         >
                       </div>
                     </div>
-                    <div class="mt-5 pt-4 border-top">
-                      <div
-                        class="d-flex align-items-center justify-content-between flex-wrap gap-3"
-                      >
-                        <div class="file-info d-flex align-items-center">
-                          <div class="pdf-pill me-3">
-                            <i class="bi bi-file-earmark-pdf-fill"></i>
-                          </div>
-                          <div
-                            class="fw-bold text-dark"
-                            data-i18n="manual.step5_file"
-                          >
-                            FongAI-操作手冊.pdf
-                          </div>
+                  </div>
+                  <div class="mt-5 pt-4 border-top">
+                    <div
+                      class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+                    >
+                      <div class="file-info d-flex align-items-center">
+                        <div class="pdf-pill me-3">
+                          <i class="bi bi-file-earmark-pdf-fill"></i>
                         </div>
-                        <button
-                          type="button"
-                          id="downloadBtn"
-                          class="btn btn-primary rounded-pill px-4 shadow"
-                          data-i18n="manual.step5_download"
-                          onclick="handleDownload()"
+                        <div
+                          class="fw-bold text-dark"
+                          data-i18n="manual.step5_file"
                         >
-                          下載 PDF
-                        </button>
+                          FongAI建豐鑑測APP-操作手冊
+                        </div>
                       </div>
+                      <button
+                        type="button"
+                        id="downloadBtn"
+                        class="btn btn-primary rounded-pill px-4 shadow"
+                        data-i18n="manual.step5_download"
+                        onclick="handleDownload()"
+                      >
+                        下載 PDF
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -842,7 +842,10 @@
                   <span data-i18n="flow.step2_d2">提供精準風險等級評估</span>
                 </p>
                 <div class="step-img-box">
-                  <img src="/fongai/assets/images/報表截圖路徑.jpg" alt="快速分級" />
+                  <img
+                    src="/fongai/assets/images/AI動態骨架防跌報告正反面.png"
+                    alt="快速分級"
+                  />
                 </div>
               </div>
             </div>
@@ -983,6 +986,66 @@
         link.click();
         document.body.removeChild(link);
       }
+      document.addEventListener("DOMContentLoaded", () => {
+        const steps = [
+          "step1-trigger",
+          "step2-trigger",
+          "step3-trigger",
+          "step4-trigger",
+          "step5-trigger",
+        ];
+        const wrapper = document.querySelector(".learning-wrapper");
+        let currentStep = 0;
+        let autoPlayInterval = null;
+        const duration = 3000;
+
+        const isDesktop = () => window.innerWidth >= 992;
+
+        function updateCurrentStepIndex() {
+          steps.forEach((id, index) => {
+            const el = document.getElementById(id);
+            if (el && el.checked) {
+              currentStep = index;
+            }
+          });
+        }
+
+        function startAutoPlay() {
+          if (!isDesktop() || autoPlayInterval) return;
+
+          autoPlayInterval = setInterval(() => {
+            updateCurrentStepIndex();
+            currentStep = (currentStep + 1) % steps.length;
+            const nextStep = document.getElementById(steps[currentStep]);
+            if (nextStep) nextStep.checked = true;
+          }, duration);
+        }
+
+        function stopAutoPlay() {
+          if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+          }
+        }
+
+        wrapper.addEventListener("mouseenter", () => {
+          stopAutoPlay();
+        });
+
+        wrapper.addEventListener("mouseleave", () => {
+          startAutoPlay();
+        });
+
+        startAutoPlay();
+
+        window.addEventListener("resize", () => {
+          if (!isDesktop()) {
+            stopAutoPlay();
+          } else {
+            startAutoPlay();
+          }
+        });
+      });
     </script>
   </body>
 </html>
