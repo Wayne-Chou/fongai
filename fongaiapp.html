@@ -62,8 +62,8 @@
 />
 
 
-  <script type="module" crossorigin src="/fongai/assets/style.js?v=20260505051153"></script>
-  <link rel="stylesheet" crossorigin href="/fongai/assets/style.css?v=20260505051153">
+  <script type="module" crossorigin src="/fongai/assets/style.js?v=20260507072733"></script>
+  <link rel="stylesheet" crossorigin href="/fongai/assets/style.css?v=20260507072733">
 
   <body class="page-product">
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -423,6 +423,379 @@
         </div>
       </section>
 
+      <!-- 操作手冊 -->
+      <section class="manual-learning-section py-100">
+        <div class="container">
+          <div class="section-header text-center mb-5" data-reveal>
+            <div class="eyebrow mx-auto" data-i18n="manual.eyebrow">
+              SOP GUIDE
+            </div>
+            <h2 class="fw-bold h1" data-i18n="manual.title">
+              FongAI 鑑測 APP 操作手冊
+            </h2>
+            <p
+              class="text-muted mx-auto"
+              style="max-width: 760px"
+              data-i18n="manual.desc"
+            >
+              本手冊依據 SPPB 簡易身體功能量表標準設計，包含 APP
+              下載、鏡頭校準與五大操作流程，協助人員精確完成防跌鑑測作業。
+            </p>
+          </div>
+
+          <div class="learning-wrapper">
+            <input
+              type="radio"
+              name="step-control"
+              id="step1-trigger"
+              checked
+              hidden
+            />
+            <input type="radio" name="step-control" id="step2-trigger" hidden />
+            <input type="radio" name="step-control" id="step3-trigger" hidden />
+            <input type="radio" name="step-control" id="step4-trigger" hidden />
+            <input type="radio" name="step-control" id="step5-trigger" hidden />
+
+            <div class="row g-0">
+              <!-- 左側：導覽步進器 -->
+              <div class="col-lg-4 border-end">
+                <div class="step-nav p-4">
+                  <label for="step1-trigger" class="nav-item" id="nav-item-1">
+                    <span class="nav-num">01</span>
+                    <div class="nav-text">
+                      <h6 data-i18n="manual.nav_step1_t">軟體下載</h6>
+                      <small data-i18n="manual.nav_step1_s"
+                        >APP 安裝與準備</small
+                      >
+                    </div>
+                  </label>
+                  <label for="step2-trigger" class="nav-item" id="nav-item-2">
+                    <span class="nav-num">02</span>
+                    <div class="nav-text">
+                      <h6 data-i18n="manual.nav_step2_t">環境與校準</h6>
+                      <small data-i18n="manual.nav_step2_s"
+                        >腳架擺位與空間測量</small
+                      >
+                    </div>
+                  </label>
+                  <label for="step3-trigger" class="nav-item" id="nav-item-3">
+                    <span class="nav-num">03</span>
+                    <div class="nav-text">
+                      <h6 data-i18n="manual.nav_step3_t">受測者管理</h6>
+                      <small data-i18n="manual.nav_step3_s"
+                        >名單建置與搜尋</small
+                      >
+                    </div>
+                  </label>
+                  <label for="step4-trigger" class="nav-item" id="nav-item-4">
+                    <span class="nav-num">04</span>
+                    <div class="nav-text">
+                      <h6 data-i18n="manual.nav_step4_t">SPPB 鑑測流程</h6>
+                      <small data-i18n="manual.nav_step4_s"
+                        >起站、平衡、步速測試</small
+                      >
+                    </div>
+                  </label>
+                  <label for="step5-trigger" class="nav-item" id="nav-item-5">
+                    <span class="nav-num">05</span>
+                    <div class="nav-text">
+                      <h6 data-i18n="manual.nav_step5_t">資料上傳</h6>
+                      <small data-i18n="manual.nav_step5_s"
+                        >影像與結果產出</small
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 右側：詳細教學內容區 -->
+              <div class="col-lg-8">
+                <div class="learning-content p-5">
+                  <!-- 步驟 01 -->
+                  <div class="tutorial-pane" id="content-1">
+                    <h4 class="fw-bold mb-4 d-flex align-items-center">
+                      <i class="bi bi-phone me-2 text-primary"></i>
+                      <span data-i18n="manual.step1_header"
+                        >步驟 01：APP 下載與安裝</span
+                      >
+                    </h4>
+                    <div class="instruction-box mb-4">
+                      <div
+                        class="instruction-label"
+                        data-i18n="manual.step1_label"
+                      >
+                        SOP 下載流程
+                      </div>
+                      <ul class="list-unstyled custom-list mb-0">
+                        <li>
+                          <i class="bi bi-check2-circle text-success"></i>
+                          <span data-i18n="manual.step1_i1"
+                            >在 App Store 搜尋 <strong>FongAI</strong> 或
+                            <strong>建豐鑑測</strong></span
+                          >
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle text-success"></i>
+                          <span data-i18n="manual.step1_i2"
+                            >建議裝置：iOS 15.2 或以上版本之 iPhone/iPad</span
+                          >
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle text-success"></i>
+                          <span data-i18n="manual.step1_i3"
+                            >下載完成後請登入工作人員授權帳號</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- 步驟 02 -->
+                  <div class="tutorial-pane" id="content-2">
+                    <h4 class="fw-bold mb-4">
+                      <i class="bi bi-camera-video me-2 text-primary"></i>
+                      <span data-i18n="manual.step2_header"
+                        >步驟 02：鏡頭校準與前置作業</span
+                      >
+                    </h4>
+                    <div class="instruction-box mb-4">
+                      <div
+                        class="instruction-label"
+                        data-i18n="manual.step2_label"
+                      >
+                        環境佈置要點
+                      </div>
+                      <ul class="list-unstyled custom-list mb-0">
+                        <li>
+                          <i class="bi bi-aspect-ratio text-primary"></i>
+                          <span data-i18n="manual.step2_i1"
+                            >鏡頭高度與地面距離約
+                            <strong>95-97 公分</strong></span
+                          >
+                        </li>
+                        <li>
+                          <i class="bi bi-bounding-box text-primary"></i>
+                          <span data-i18n="manual.step2_i2"
+                            >垂直角度需在 <strong>3度內</strong>，水平 ±0.03
+                            內</span
+                          >
+                        </li>
+                        <li>
+                          <i class="bi bi-broadcast text-primary"></i>
+                          <span data-i18n="manual.step2_i3"
+                            >向鏡頭後退至
+                            <strong>4公尺</strong>
+                            處，聽到「校準完成」即成功</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="pro-tip p-3 rounded-3 bg-light border-start border-primary border-4"
+                    >
+                      <strong data-i18n="manual.step2_tip_t">重要提醒：</strong>
+                      <span data-i18n="manual.step2_tip_d"
+                        >請打開裝置聲音，鑑測開始後會有詳細語音提示引導。</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- 步驟 03 -->
+                  <div class="tutorial-pane" id="content-3">
+                    <h4 class="fw-bold mb-4">
+                      <i class="bi bi-person-plus me-2 text-primary"></i>
+                      <span data-i18n="manual.step3_header"
+                        >步驟 03：受測者名單管理</span
+                      >
+                    </h4>
+                    <div class="instruction-box mb-4">
+                      <div
+                        class="instruction-label"
+                        data-i18n="manual.step3_label"
+                      >
+                        管理操作要點
+                      </div>
+                      <p class="text-muted" data-i18n="manual.step3_desc">
+                        進入「受測者管理」建立或搜尋受測人員資料：
+                      </p>
+                      <ul class="list-unstyled custom-list mb-0">
+                        <li>
+                          <i class="bi bi-folder-plus text-primary"></i>
+                          <span data-i18n="manual.step3_i1"
+                            >選擇對應的資料夾 / 班級 / 單位</span
+                          >
+                        </li>
+                        <li>
+                          <i class="bi bi-pencil-square text-primary"></i>
+                          <span data-i18n="manual.step3_i2"
+                            >輸入姓名、性別、出生年後按下「註冊」</span
+                          >
+                        </li>
+                        <li>
+                          <i class="bi bi-search text-primary"></i>
+                          <span data-i18n="manual.step3_i3"
+                            >亦可透過右上角放大鏡功能快速搜尋現有名單</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- 步驟 04 -->
+                  <div class="tutorial-pane" id="content-4">
+                    <h4 class="fw-bold mb-4">
+                      <i class="bi bi-activity me-2 text-primary"></i>
+                      <span data-i18n="manual.step4_header"
+                        >步驟 04：SPPB 標準鑑測程序</span
+                      >
+                    </h4>
+                    <div class="instruction-box mb-4">
+                      <div
+                        class="instruction-label"
+                        data-i18n="manual.step4_label"
+                      >
+                        標準測驗項目
+                      </div>
+                      <div class="row g-4">
+                        <div class="col-12 border-bottom pb-3">
+                          <div class="d-flex align-items-center mb-2">
+                            <span
+                              class="badge bg-soft-primary text-primary me-2"
+                              >01</span
+                            >
+                            <small
+                              class="text-primary fw-bold"
+                              data-i18n="manual.step4_t1_t"
+                              >椅子起站測驗</small
+                            >
+                          </div>
+                          <p
+                            class="small text-muted mb-0 ps-4"
+                            data-i18n="manual.step4_t1_d"
+                          >
+                            雙手交叉抱胸，完成連續五下起坐。系統將自動記錄所需時間。
+                          </p>
+                        </div>
+                        <div class="col-12 border-bottom pb-3">
+                          <div class="d-flex align-items-center mb-2">
+                            <span
+                              class="badge bg-soft-primary text-primary me-2"
+                              >02</span
+                            >
+                            <small
+                              class="text-primary fw-bold"
+                              data-i18n="manual.step4_t2_t"
+                              >平衡功能測驗</small
+                            >
+                          </div>
+                          <p
+                            class="small text-muted mb-0 ps-4"
+                            data-i18n="manual.step4_t2_d"
+                          >
+                            包含併攏站、半前站、直線站（各10秒）。
+                          </p>
+                        </div>
+                        <div class="col-12 pb-2">
+                          <div class="d-flex align-items-center mb-2">
+                            <span
+                              class="badge bg-soft-primary text-primary me-2"
+                              >03</span
+                            >
+                            <small
+                              class="text-primary fw-bold"
+                              data-i18n="manual.step4_t3_t"
+                              >步行速度測驗</small
+                            >
+                          </div>
+                          <p
+                            class="small text-muted mb-0 ps-4"
+                            data-i18n="manual.step4_t3_d"
+                          >
+                            測量步行 4 公尺時間，請提醒受測者依平時速度行走。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="pro-tip p-3 rounded-3 bg-light border-start border-warning border-4"
+                    >
+                      <strong data-i18n="manual.step4_warn_t">注意：</strong>
+                      <span data-i18n="manual.step4_warn_d"
+                        >若受測者穿著寬褲導致偵測異常，可點擊「手動開始」。</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- 步驟 05 -->
+                  <div class="tutorial-pane" id="content-5">
+                    <h4 class="fw-bold mb-4">
+                      <i class="bi bi-cloud-arrow-up me-2 text-primary"></i>
+                      <span data-i18n="manual.step5_header"
+                        >步驟 05：資料影像上傳</span
+                      >
+                    </h4>
+                    <div class="instruction-box mb-4 text-center py-4">
+                      <div
+                        class="instruction-label"
+                        data-i18n="manual.step5_label"
+                      >
+                        上傳作業說明
+                      </div>
+                      <p data-i18n="manual.step5_desc">
+                        測驗結束後，請點選「影像上傳」選擇日期與據點，產出儀表板報告。
+                      </p>
+                      <div class="d-flex justify-content-center gap-2 mt-3">
+                        <span
+                          class="badge bg-soft-primary text-primary px-3 py-2"
+                          data-i18n="manual.step5_b1"
+                          >影像上傳</span
+                        >
+                        <span
+                          class="badge bg-soft-primary text-primary px-3 py-2"
+                          data-i18n="manual.step5_b2"
+                          >選擇日期</span
+                        >
+                        <span
+                          class="badge bg-soft-primary text-primary px-3 py-2"
+                          data-i18n="manual.step5_b3"
+                          >開始上傳</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-5 pt-4 border-top">
+                      <div
+                        class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+                      >
+                        <div class="file-info d-flex align-items-center">
+                          <div class="pdf-pill me-3">
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+                          </div>
+                          <div
+                            class="fw-bold text-dark"
+                            data-i18n="manual.step5_file"
+                          >
+                            FongAI-操作手冊.pdf
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          id="downloadBtn"
+                          class="btn btn-primary rounded-pill px-4 shadow"
+                          data-i18n="manual.step5_download"
+                          onclick="handleDownload()"
+                        >
+                          下載 PDF
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="workflow-section py-100">
         <div class="container">
           <div class="section-header text-center mb-5" data-reveal>
@@ -597,5 +970,19 @@
 
     <script type="module" src="/fongai/js/main.js"></script>
     <script type="module" src="/fongai/js/animation.js"></script>
+    <script>
+      function handleDownload() {
+        const filePath = "./assets/pdf/FongAI APP操作手冊_V1.1.1_TW.pdf";
+        const fileName = "FongAI_APP_操作手冊_V1.1.1.pdf";
+
+        const link = document.createElement("a");
+        link.href = filePath;
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
   </body>
 </html>
