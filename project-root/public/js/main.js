@@ -30,4 +30,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateNavbar();
   }, 50);
+  const counters = document.querySelectorAll(".counter");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+
+          const target = +el.dataset.target;
+
+          let current = 0;
+
+          const increment = target / 60;
+
+          function update() {
+            current += increment;
+
+            if (current < target) {
+              el.innerText = Math.floor(current).toLocaleString();
+
+              requestAnimationFrame(update);
+            } else {
+              el.innerText = target.toLocaleString();
+            }
+          }
+
+          update();
+
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.6 },
+  );
+
+  counters.forEach((c) => observer.observe(c));
+});
+document.querySelectorAll(".tab-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document
+      .querySelectorAll(".tab-btn")
+      .forEach((b) => b.classList.remove("active"));
+
+    document
+      .querySelectorAll(".tab-panel")
+      .forEach((p) => p.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
 });

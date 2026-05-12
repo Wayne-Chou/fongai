@@ -3,28 +3,42 @@ import injectHTML from "vite-plugin-html-inject";
 import { resolve } from "path";
 
 export default defineConfig(({ command }) => {
-
-  const version = new Date().toISOString().replace(/[-:T]/g,'').slice(0,14);
+  const version = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14);
   function htmlVersioningPlugin(version) {
     return {
       name: "html-versioning",
       enforce: "post",
       transformIndexHtml(html) {
-        return html
-          // JS
-          .replace(
-            /<script type="module" crossorigin src="([^"]+)"><\/script>/g,
-            (match, src) => {
-              return `<script type="module" crossorigin src="${src}?v=${version}"></script>`;
-            }
-          )
-          // CSS
-          .replace(
-            /<link rel="stylesheet" crossorigin href="([^"]+)">/g,
-            (match, href) => {
-              return `<link rel="stylesheet" crossorigin href="${href}?v=${version}">`;
-            }
-          );
+        return (
+          html
+            // 1. 替換所有的 {{APP_VERSION}} 佔位符 (處理 Meta, favicon, 甚至自訂路徑)
+            .replace(/{{APP_VERSION}}/g, version)
+
+            // 2. 自動處理 JS (只要 src 不是 http 開頭的都補版本號)
+            .replace(
+              /<script([^>]+)src="([^">]+)"([^>]*)><\/script>/g,
+              (match, before, src, after) => {
+                if (src.includes("http") || src.includes("?v=")) return match;
+                const connector = src.includes("?") ? "&" : "?";
+                return `<script${before}src="${src}${connector}v=${version}"${after}></script>`;
+              },
+            )
+
+            // 3. 自動處理 CSS (只要 href 不是 http 開頭且是 .css 結尾的都補)
+            .replace(
+              /<link([^>]+)href="([^">]+)"([^>]*)/g,
+              (match, before, href, after) => {
+                if (
+                  href.includes("http") ||
+                  href.includes("?v=") ||
+                  !href.includes(".css")
+                )
+                  return match;
+                const connector = href.includes("?") ? "&" : "?";
+                return `<link${before}href="${href}${connector}v=${version}"${after}`;
+              },
+            )
+        );
       },
     };
   }

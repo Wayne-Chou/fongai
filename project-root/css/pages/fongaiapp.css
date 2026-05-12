@@ -197,7 +197,165 @@
 
   display: block;
 }
+/* 操作手冊 */
 
+.manual-learning-section .learning-wrapper {
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* 左側導覽列 */
+.manual-learning-section .step-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  background: #fbfcfe;
+}
+
+.manual-learning-section .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  user-select: none;
+}
+
+.manual-learning-section .nav-num {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #dee2e6;
+  transition: color 0.3s ease;
+}
+
+.manual-learning-section .nav-item h6 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #475569;
+}
+
+/* 右側教學內容細節 */
+.manual-learning-section .instruction-box {
+  background: #f8fbff;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+}
+
+.manual-learning-section .instruction-label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background: #0d6efd;
+  color: white;
+  padding: 2px 15px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.manual-learning-section .custom-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.manual-learning-section .custom-list li:last-child {
+  border-bottom: none;
+}
+
+.manual-learning-section .pro-tip {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.manual-learning-section .bg-soft-primary {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.manual-learning-section .pdf-pill {
+  width: 48px;
+  height: 48px;
+  background: #fff1f2;
+  color: #e11d48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.5rem;
+}
+
+.manual-learning-section .pdf-pill i {
+  color: #ef4444;
+}
+
+/* --- 純 CSS 切換邏輯 --- */
+
+.manual-learning-section .tutorial-pane {
+  display: none;
+  animation: fadeInStep 0.4s ease forwards;
+}
+
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 顯示選中的內容 */
+#step1-trigger:checked ~ .row #content-1,
+#step2-trigger:checked ~ .row #content-2,
+#step3-trigger:checked ~ .row #content-3,
+#step4-trigger:checked ~ .row #content-4,
+#step5-trigger:checked ~ .row #content-5 {
+  display: block;
+}
+
+/* 選中狀態下左側選單的視覺回饋 */
+#step1-trigger:checked ~ .row #nav-item-1,
+#step2-trigger:checked ~ .row #nav-item-2,
+#step3-trigger:checked ~ .row #nav-item-3,
+#step4-trigger:checked ~ .row #nav-item-4,
+#step5-trigger:checked ~ .row #nav-item-5 {
+  background: white;
+  border-color: rgba(13, 110, 253, 0.1);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.05);
+}
+
+#step1-trigger:checked ~ .row #nav-item-1 .nav-num,
+#step2-trigger:checked ~ .row #nav-item-2 .nav-num,
+#step3-trigger:checked ~ .row #nav-item-3 .nav-num,
+#step4-trigger:checked ~ .row #nav-item-4 .nav-num,
+#step5-trigger:checked ~ .row #nav-item-5 .nav-num {
+  color: #0d6efd;
+}
+
+#step1-trigger:checked ~ .row #nav-item-1 h6,
+#step2-trigger:checked ~ .row #nav-item-2 h6,
+#step3-trigger:checked ~ .row #nav-item-3 h6,
+#step4-trigger:checked ~ .row #nav-item-4 h6,
+#step5-trigger:checked ~ .row #nav-item-5 h6 {
+  color: #0d6efd;
+}
+@media (max-width: 460px) {
+  .manual-learning-section .learning-content {
+    padding: 2rem !important;
+  }
+}
 /* ============================= */
 /* MINI GRID */
 /* ============================= */
