@@ -18,20 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const paginationContainer = document.getElementById("pagination");
   const tags = document.querySelectorAll(".filter-tag");
 
-  
-
   function renderArticleList(data, page = 1) {
     if (!articleList) return;
 
-    
     const lang = localStorage.getItem("lang") || "zh";
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const pagedData = data.slice(start, end);
 
     articleList.innerHTML = pagedData
-    .map((article) => {
-      return `
+      .map((article) => {
+        return `
         <div class="col-md-6 col-lg-4 article-item" data-reveal>
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
             <div class="card-img-wrapper" style="aspect-ratio: 16/9; background: #f0f0f0;">
@@ -70,17 +67,22 @@ document.addEventListener("DOMContentLoaded", () => {
                  ${article.excerpt_zh}
               </p>
   
-            <a href="detail.html?id=${article.id}" 
-              class="stretched-link text-decoration-none fw-bold"
-              data-i18n="article.read_more">
-              閱讀更多 <i class="bi bi-arrow-right ms-1"></i>
-            </a>
+            <a href="${
+              location.hostname.includes("fongai.co") &&
+              location.pathname.startsWith("/fongai/")
+                ? `/fongai/index.php?page=news/detail&id=${article.id}`
+                : `detail.html?id=${article.id}`
+            }" 
+  class="stretched-link text-decoration-none fw-bold"
+  data-i18n="article.read_more">
+  閱讀更多 <i class="bi bi-arrow-right ms-1"></i>
+</a>
             </div>
           </div>
         </div>
       `;
-    })
-    .join("");
+      })
+      .join("");
 
     if (window.refreshRevealAnimations) {
       window.refreshRevealAnimations();

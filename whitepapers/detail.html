@@ -3,12 +3,10 @@
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta
-  name="google-site-verification"
-  content="6yaFGbhL9o_X_K-7ZYJCv5QiWQCrMXJMC6D60L9_Eh8"
-/>
+<meta name="version" content="20260527121427" />
 
 <title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
+
 <!-- google的GA -->
 <script
   async
@@ -21,31 +19,103 @@
     dataLayer.push(arguments);
   }
   gtag("js", new Date());
-
   gtag("config", "G-922001BSQN");
 </script>
 
 <script>
+  // const isSubFolder =
+  //   location.hostname.includes("github.io") ||
+  //   location.pathname.startsWith("/fongai/");
+
+  // if (isSubFolder) {
+  //   document.addEventListener("DOMContentLoaded", () => {
+  //     document.querySelectorAll("a[href^='/']").forEach((link) => {
+  //       const href = link.getAttribute("href");
+
+  //       if (!href.startsWith("/fongai/")) {
+  //         link.setAttribute("href", "/fongai" + href);
+  //       }
+  //     });
+  //   });
+  // }
+
   const isSubFolder =
     location.hostname.includes("github.io") ||
     location.pathname.startsWith("/fongai/");
 
+  // 是否正式站
+  const isProd =
+    location.hostname.includes("fongai.co") &&
+    location.pathname.startsWith("/fongai/");
+
   if (isSubFolder) {
     document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("a[href^='/']").forEach((link) => {
-        const href = link.getAttribute("href");
+      // =========================
+      // 所有 a link
+      // =========================
+      document.querySelectorAll("a[href]").forEach((link) => {
+        let href = link.getAttribute("href");
 
-        if (!href.startsWith("/fongai/")) {
-          link.setAttribute("href", "/fongai" + href);
+        if (!href) return;
+
+        // 外部連結不處理
+        if (
+          href.startsWith("http") ||
+          href.startsWith("#") ||
+          href.includes("dashboard")
+        ) {
+          return;
         }
-        
+
+        // =========================
+        // 正式站 PHP Router
+        // =========================
+        if (isProd) {
+          // 首頁
+          if (href === "/" || href === "/index.html") {
+            link.setAttribute("href", "/fongai/index.php?page=index");
+
+            return;
+          }
+
+          // 移除開頭 ./ 或 /
+          href = href.replace(/^\.?\//, "");
+
+          // 移除 .html
+          href = href.replace(".html", "");
+
+          // detail 特殊處理
+          if (href.includes("detail?slug=")) {
+            href = href.replace("detail?slug=", "whitepapers/detail&slug=");
+
+            link.setAttribute("href", `/fongai/index.php?page=${href}`);
+
+            return;
+          }
+
+          // 一般頁面
+          link.setAttribute("href", `/fongai/index.php?page=${href}`);
+
+          return;
+        }
+
+        // =========================
+        // GitHub Pages
+        // =========================
+        if (
+          location.hostname.includes("github.io") &&
+          !href.startsWith("/fongai/")
+        ) {
+          link.setAttribute("href", "/fongai/" + href);
+        }
       });
     });
-    
   }
 </script>
-<link rel="icon" href="/fongai/assets/images/favicon.ico" />
-<script type="module" src="/fongai/js/i18n.js"></script>
+
+<link rel="icon" href="/fongai/assets/images/favicon.ico?v=20260527121427" />
+<script type="module" src="/fongai/js/i18n.js?v=20260527121427"></script>
+
 <link
   href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
   rel="stylesheet"
@@ -63,15 +133,15 @@
 
 
 
-  <script type="module" crossorigin src="/fongai/assets/style.js?v=20260507083526"></script>
-  <link rel="stylesheet" crossorigin href="/fongai/assets/style.css?v=20260507083526">
+  <script type="module" crossorigin src="/fongai/assets/style.Dok9r8Ok.js?v=20260527121427"></script>
+  <link rel="stylesheet" crossorigin href="/fongai/assets/style.B5-KRw6y.css?v=20260527121427">
 
   <body class="page-whitepaper-detail">
     <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <!-- LOGO -->
 
-    <a class="navbar-brand fw-bold" href="/index.html">
+    <a class="navbar-brand fw-bold" href="/index">
       <img src="/fongai/assets/images/logo.png" alt="logo" />
       <span data-i18n="nav.name">建豐健康科技FongAI</span>
     </a>
@@ -101,21 +171,24 @@
             href="#"
             data-i18n="nav.about"
             data-bs-toggle="dropdown"
-            
           >
             關於我們
           </a>
 
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item " href="/about.html" data-i18n="nav.companyIntro">
+              <a
+                class="dropdown-item"
+                href="/about"
+                data-i18n="nav.companyIntro"
+              >
                 公司介紹
               </a>
             </li>
             <li>
               <a
                 class="dropdown-item"
-                href="/whitepapers/index.html"
+                href="/whitepapers/index"
                 data-i18n="nav.whitepaper"
               >
                 白皮書
@@ -125,7 +198,7 @@
             <li>
               <a
                 class="dropdown-item"
-                href="/technology.html"
+                href="/technology"
                 data-i18n="nav.technology"
               >
                 核心技術
@@ -135,7 +208,7 @@
             <!-- <li>
               <a
                 class="dropdown-item"
-                href="/partners.html"
+                href="/partners"
                 data-i18n="nav.partners"
               >
                 經銷商招募
@@ -147,7 +220,7 @@
         <!-- NEWS -->
 
         <li class="nav-item">
-          <a class="nav-link" href="/news/news.html" data-i18n="nav.news">
+          <a class="nav-link" href="/news/news" data-i18n="nav.news">
             最新消息
           </a>
         </li>
@@ -168,7 +241,7 @@
             <li>
               <a
                 class="dropdown-item"
-                href="/news/news.html?type=service"
+                href="/news/news?type=service"
                 data-i18n="nav.institution"
               >
                 機構合作案例
@@ -178,7 +251,7 @@
             <li>
               <a
                 class="dropdown-item"
-                href="/news/news.html?type=enterprise"
+                href="/news/news?type=enterprise"
                 data-i18n="nav.enterprise"
               >
                 企業健康講座
@@ -203,7 +276,7 @@
             <li>
               <a
                 class="dropdown-item"
-                href="/fongaiapp.html"
+                href="/fongaiapp"
                 data-i18n="nav.appIntro"
               >
                 app介紹
@@ -212,7 +285,7 @@
             <li>
               <a
                 class="dropdown-item"
-                href="/vivifrail.html"
+                href="/vivifrail"
                 data-i18n="nav.vivifrail"
               >
                 長者活力體能訓練方案
@@ -222,7 +295,7 @@
             <li>
               <a
                 class="dropdown-item"
-                href="/fongai-exercise.html"
+                href="/fongai-exercise"
                 data-i18n="nav.exercise"
               >
                 FongAI建議運動課程
@@ -244,40 +317,25 @@
 
           <ul class="dropdown-menu">
             <li>
-              <a
-                class="dropdown-item"
-                href="/product/selected-products.html"
-              >
+              <a class="dropdown-item" href="/product/selected-products">
                 嚴選系列總覽
               </a>
             </li>
-            
+
             <li>
-              <a
-                class="dropdown-item"
-                href="/product/product-01.html"
-                
-              >
+              <a class="dropdown-item" href="/product/product-01">
                 足適能矯正鞋墊
               </a>
             </li>
 
             <li>
-              <a
-                class="dropdown-item"
-                href="/product/product-02.html"
-                
-              >
+              <a class="dropdown-item" href="/product/product-02">
                 運動地墊遊戲平台
               </a>
             </li>
 
             <li>
-              <a
-                class="dropdown-item"
-                href="/product/product-03.html"
-                
-              >
+              <a class="dropdown-item" href="/product/product-03">
                 HappyGoGo團體運動軟體
               </a>
             </li>
@@ -287,7 +345,7 @@
         <!-- CONTACT -->
 
         <li class="nav-item">
-          <a class="nav-link" href="/contact.html" data-i18n="nav.contact">
+          <a class="nav-link" href="/contact" data-i18n="nav.contact">
             聯絡我們
           </a>
         </li>
@@ -411,7 +469,7 @@
 
                   <form
                     id="whitepaperApplyForm"
-                    action="https://formspree.io/f/mwvwovak"
+                    action="https://formspree.io/f/mykookzq"
                     method="POST"
                   >
                     <div class="input-group-custom">
@@ -592,8 +650,8 @@
   </div>
 </footer>
 
-    <script src="/fongai/js/whitepapers-data.js"></script>
-    <script src="/fongai/js/main.js"></script>
+    <script src="/fongai/js/whitepapers-data.js?v=20260527121427"></script>
+    <script src="/fongai/js/main.js?v=20260527121427"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const slug = new URLSearchParams(window.location.search).get("slug");
