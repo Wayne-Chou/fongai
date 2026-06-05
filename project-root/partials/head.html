@@ -3,18 +3,6 @@
 
 <meta name="version" content="{{APP_VERSION}}" />
 
-<meta
-  http-equiv="Cache-Control"
-  content="no-cache, must-revalidate"
-/>
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-
-<meta
-  name="google-site-verification"
-  content="6yaFGbhL9o_X_K-7ZYJCv5QiWQCrMXJMC6D60L9_Eh8"
-/>
-
 <title>建豐健康科技｜FongAI 動態骨架防跌專家</title>
 
 <!-- google的GA -->
@@ -37,13 +25,70 @@
     location.hostname.includes("github.io") ||
     location.pathname.startsWith("/fongai/");
 
+  // 是否正式站
+  const isProd =
+    location.hostname.includes("fongai.co") &&
+    location.pathname.startsWith("/fongai/");
+
   if (isSubFolder) {
     document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("a[href^='/']").forEach((link) => {
-        const href = link.getAttribute("href");
+      // =========================
+      // 所有 a link
+      // =========================
+      document.querySelectorAll("a[href]").forEach((link) => {
+        let href = link.getAttribute("href");
 
-        if (!href.startsWith("/fongai/")) {
-          link.setAttribute("href", "/fongai" + href);
+        if (!href) return;
+
+        // 外部連結不處理
+        if (
+          href.startsWith("http") ||
+          href.startsWith("#") ||
+          href.includes("dashboard")
+        ) {
+          return;
+        }
+
+        // =========================
+        // 正式站 PHP Router
+        // =========================
+        if (isProd) {
+          // 首頁
+          if (href === "/" || href === "/index.html") {
+            link.setAttribute("href", "/fongai/page.php?page=index");
+
+            return;
+          }
+
+          // 移除開頭 ./ 或 /
+          href = href.replace(/^\.?\//, "");
+
+          // 移除 .html
+          href = href.replace(".html", "");
+
+          // detail 特殊處理
+          if (href.includes("detail?slug=")) {
+            href = href.replace("detail?slug=", "whitepapers/detail&slug=");
+
+            link.setAttribute("href", `/fongai/page.php?page=${href}`);
+
+            return;
+          }
+
+          // 一般頁面
+          link.setAttribute("href", `/fongai/page.php?page=${href}`);
+
+          return;
+        }
+
+        // =========================
+        // GitHub Pages
+        // =========================
+        if (
+          location.hostname.includes("github.io") &&
+          !href.startsWith("/fongai/")
+        ) {
+          link.setAttribute("href", "/fongai/" + href);
         }
       });
     });

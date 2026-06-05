@@ -409,6 +409,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="border-top p-3">
                 <div
                   class="d-flex align-items-center justify-content-between flex-wrap gap-3"
@@ -421,7 +422,7 @@
                       class="fw-bold text-dark"
                       data-i18n="manual.step5_file"
                     >
-                      FongAI建豐鑑測APP-操作手冊
+                      FongAI APP操作手冊_V1.1.6_TW
                     </div>
                   </div>
                   <button
@@ -429,7 +430,33 @@
                     id="downloadBtn"
                     class="btn btn-primary rounded-pill px-4 shadow"
                     data-i18n="manual.step5_download"
-                    onclick="handleDownload()"
+                    onclick="handleDownload('tw')"
+                  >
+                    下載 PDF
+                  </button>
+                </div>
+              </div>
+              <div class="border-top p-3">
+                <div
+                  class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+                >
+                  <div class="file-info d-flex align-items-center">
+                    <div class="pdf-pill me-3">
+                      <i class="bi bi-file-earmark-pdf-fill"></i>
+                    </div>
+                    <div
+                      class="fw-bold text-dark"
+                      data-i18n="manual.step5_file_en_us"
+                    >
+                      FongAI APP操作手冊_V1.1.6_EN
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    id="downloadBtn"
+                    class="btn btn-primary rounded-pill px-4 shadow"
+                    data-i18n="manual.step5_download"
+                    onclick="handleDownload('en')"
                   >
                     下載 PDF
                   </button>
@@ -540,13 +567,37 @@
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/animation.js"></script>
     <script>
-      function handleDownload() {
-        const filePath = "./assets/pdf/FongAI APP操作手冊_V1.1.1_TW.pdf";
-        const fileName = "FongAI_APP_操作手冊_V1.1.1.pdf";
+      // function handleDownload() {
+      //   const filePath = "./assets/pdf/FongAI APP操作手冊_V1.1.6_TW.pdf";
+      //   const fileName = "FongAI APP操作手冊_V1.1.6_TW.pdf";
+
+      //   const link = document.createElement("a");
+      //   link.href = filePath;
+      //   link.download = fileName;
+
+      //   document.body.appendChild(link);
+      //   link.click();
+      //   document.body.removeChild(link);
+      // }
+      // 把所有檔案資訊集中管理
+      const fileConfig = {
+        tw: {
+          path: "./assets/pdf/FongAI APP操作手冊_V1.1.6_TW.pdf",
+          name: "FongAI APP操作手冊_V1.1.6_TW.pdf",
+        },
+        en: {
+          path: "./assets/pdf/FongAI APP操作手冊_V1.1.6_EN.pdf",
+          name: "FongAI APP操作手冊_V1.1.6_EN.pdf",
+        },
+      };
+
+      function handleDownload(lang) {
+        const file = fileConfig[lang];
+        if (!file) return;
 
         const link = document.createElement("a");
-        link.href = filePath;
-        link.download = fileName;
+        link.href = file.path;
+        link.download = file.name;
 
         document.body.appendChild(link);
         link.click();

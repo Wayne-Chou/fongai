@@ -14,7 +14,12 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="/news/news.html" class="text-decoration-none" data-i18n="archive.hero.title">資訊與案例</a>
+                <a
+                  href="/news/news.html"
+                  class="text-decoration-none"
+                  data-i18n="archive.hero.title"
+                  >資訊與案例</a
+                >
               </li>
               <li
                 class="breadcrumb-item active"
@@ -25,30 +30,24 @@
               </li>
             </ol>
           </nav>
-          <div class="detail-header-content ">
-            
-            <h1 class=" fw-bold " id="detail-title">
-              文章標題載入中...
-            </h1>
+          <div class="detail-header-content">
+            <h1 class="fw-bold" id="detail-title">文章標題載入中...</h1>
             <div
               class="article-meta d-flex align-items-center gap-4 text-muted"
-            >
-             
-              
-            </div>
+            ></div>
           </div>
         </div>
       </section>
 
-      <section class="article-body-section ">
+      <section class="article-body-section">
         <div class="container">
           <div>
-            <div  id="article-main-col">
+            <div id="article-main-col">
               <div class="main-article-img mb-5">
                 <img
                   src=""
                   id="detail-image"
-                  class="img-fluid  shadow-sm"
+                  class="img-fluid shadow-sm"
                   alt="article banner"
                 />
               </div>
@@ -69,77 +68,77 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../js/articles-data.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="/js/articles-data.js"></script>
+    <script src="/js/main.js"></script>
     <script>
- document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
         const urlParams = new URLSearchParams(window.location.search);
         const articleId = urlParams.get("id");
-      
+
         if (typeof articlesData === "undefined") {
           console.error("找不到 articles-data.js 檔案");
           return;
         }
-      
+
         const article = articlesData.find((item) => item.id === articleId);
-      
+
         if (article) {
           const lang = localStorage.getItem("lang") || "zh";
-      
-         
+
           const titleEl = document.getElementById("detail-title");
-      
+
           titleEl.setAttribute("data-dynamic-i18n", "");
           titleEl.setAttribute("data-zh", article.title_zh);
           titleEl.setAttribute("data-en", article.title_en || article.title_zh);
           titleEl.setAttribute("data-ja", article.title_ja || article.title_zh);
-      
+
           titleEl.innerText = article[`title_${lang}`] || article.title_zh;
-      
-        
+
           document.title = `${titleEl.innerText} | 建豐健康科技 FongAI`;
-      
-          
+
           const breadcrumbEl = document.getElementById("breadcrumb-active");
-      
+
           breadcrumbEl.setAttribute("data-dynamic-i18n", "");
           breadcrumbEl.setAttribute("data-zh", article.title_zh);
-          breadcrumbEl.setAttribute("data-en", article.title_en || article.title_zh);
-          breadcrumbEl.setAttribute("data-ja", article.title_ja || article.title_zh);
-      
+          breadcrumbEl.setAttribute(
+            "data-en",
+            article.title_en || article.title_zh,
+          );
+          breadcrumbEl.setAttribute(
+            "data-ja",
+            article.title_ja || article.title_zh,
+          );
+
           breadcrumbEl.innerText = article[`title_${lang}`] || article.title_zh;
-      
-         
-          
-      
-         
-          
-      
-         
+
           const imgElement = document.getElementById("detail-image");
-      
+
           if (article.showDetailImage === false) {
             imgElement.parentElement.style.display = "none";
           } else {
             imgElement.src = article.detailImage || article.image;
             imgElement.alt = article.title_zh;
           }
-      
-          
+
           const contentEl = document.getElementById("detail-content");
-      
+
           contentEl.setAttribute("data-dynamic-i18n-html", "");
           contentEl.setAttribute("data-zh", article.content_zh);
-          contentEl.setAttribute("data-en", article.content_en || article.content_zh);
-          contentEl.setAttribute("data-ja", article.content_ja || article.content_zh);
-      
-          contentEl.innerHTML = article[`content_${lang}`] || article.content_zh;
-      
-          
+          contentEl.setAttribute(
+            "data-en",
+            article.content_en || article.content_zh,
+          );
+          contentEl.setAttribute(
+            "data-ja",
+            article.content_ja || article.content_zh,
+          );
+
+          contentEl.innerHTML =
+            article[`content_${lang}`] || article.content_zh;
+
           if (window.loadLang) {
             window.loadLang(lang);
           }
-      
         } else {
           document.getElementById("detail-title").innerText = "文章不存在";
           document.getElementById("article-main-col").innerHTML = `

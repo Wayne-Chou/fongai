@@ -1,0 +1,16 @@
+DirectoryIndex page.php
+
+RewriteEngine On
+RewriteBase /fongai/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 首頁
+RewriteRule ^$ page.php?page=index [L,QSA]
+
+# 一層頁面
+RewriteRule ^([a-zA-Z0-9-_]+)/?$ page.php?page=$1 [L,QSA]
+
+# 二層頁面
+RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)/?$ page.php?page=$1/$2 [L,QSA]

@@ -3,8 +3,6 @@
  * 所有的文章內容都管理在這裡
  */
 const articlesData = [
- 
-  
   {
     id: "enterprise-2026-004",
     category: "enterprise",
@@ -12,8 +10,8 @@ const articlesData = [
     categoryName_en: "Case Studies",
     categoryName_ja: "導入事例",
     date: "2026-04-27",
-    image: "../assets/images/cases/kaohsiung-fongai-bac.jpg",
-  
+    image: "./assets/images/cases/kaohsiung-fongai-bac.jpg",
+
     // ===== 中文 =====
     title_zh: "偏鄉健康行動力：高雄市政府運動發展局導入 FongAI 防跌鑑測",
     excerpt_zh:
@@ -37,14 +35,15 @@ const articlesData = [
       <h3>持續推動智慧健康照護</h3>
       <p>展望 2026 年，運發局將延續前兩年的成果，透過大型活動推廣 FongAI 防跌鑑測，讓更多高雄長者享有便利且可量化的健康管理方式，深化社區健康照護成效。</p>
   
-      <img src="../assets/images/cases/kaohsiung-fongai.jpg" alt="高雄市政府運動發展局導入 FongAI 防跌鑑測">
+      <img src="./assets/images/cases/kaohsiung-fongai.jpg" alt="高雄市政府運動發展局導入 FongAI 防跌鑑測">
   
       <h3>偏鄉 FongAI 防跌骨架鑑測</h3>
       <p>台灣全適能健康促進協會將 FongAI 技術帶入偏鄉，讓長者即使在資源較少的地區，也能享有 AI 科技的陪伴與照護。透過專業教練的肌力訓練介入，協助長者在熟悉的環境中安心樂活。</p>
     `,
-  
+
     // ===== 英文 =====
-    title_en: "Empowering Rural Health: FongAI Fall Risk Assessment Adopted by Kaohsiung Sports Development Bureau",
+    title_en:
+      "Empowering Rural Health: FongAI Fall Risk Assessment Adopted by Kaohsiung Sports Development Bureau",
     excerpt_en:
       "The Kaohsiung Sports Development Bureau partners with the Taiwan Fitness Promotion Association to introduce FongAI AI-based fall risk assessment into rural communities...",
     content_en: `
@@ -66,14 +65,15 @@ const articlesData = [
       <h3>Advancing Smart Community Healthcare</h3>
       <p>Looking ahead to 2026, the bureau plans to expand FongAI adoption through large-scale initiatives, bringing accessible and measurable health management solutions to more seniors across Kaohsiung.</p>
   
-      <img src="../assets/images/cases/kaohsiung-fongai.jpg" alt="FongAI implementation in Kaohsiung">
+      <img src="./assets/images/cases/kaohsiung-fongai.jpg" alt="FongAI implementation in Kaohsiung">
   
       <h3>FongAI Fall Risk Assessment in Rural Areas</h3>
       <p>By introducing FongAI technology into underserved regions, seniors can benefit from AI-powered healthcare support even in remote communities, combined with professional coaching to promote safe and active living.</p>
     `,
-  
+
     // ===== 日文 =====
-    title_ja: "地方における健康支援：高雄市スポーツ発展局によるFongAI転倒リスク評価の導入",
+    title_ja:
+      "地方における健康支援：高雄市スポーツ発展局によるFongAI転倒リスク評価の導入",
     excerpt_ja:
       "高雄市スポーツ発展局は全適能健康促進協会と連携し、FongAIのAI転倒リスク評価を地方コミュニティへ導入...",
     content_ja: `
@@ -95,7 +95,7 @@ const articlesData = [
       <h3>スマートヘルスケアの推進</h3>
       <p>2026年には大規模な普及活動を通じて、より多くの高齢者に利便性の高い健康管理手法を提供し、地域医療の充実を目指します。</p>
   
-      <img src="../assets/images/cases/kaohsiung-fongai.jpg" alt="高雄市でのFongAI導入">
+      <img src="./assets/images/cases/kaohsiung-fongai.jpg" alt="高雄市でのFongAI導入">
   
       <h3>地方におけるFongAI転倒リスク評価</h3>
       <p>地方でもAI技術による健康支援が可能となり、高齢者が安心して生活できる環境づくりに貢献しています。</p>
@@ -108,13 +108,13 @@ const articlesData = [
     categoryName_en: "Case Studies",
     categoryName_ja: "導入事例",
     date: "2026-04-27",
-    image: "../assets/images/cases/fitness-fongai-bac.jpg",
-  
+    image: "./assets/images/cases/fitness-fongai-bac.jpg",
+
     // ===== 中文 =====
     title_zh: "社區健康新模式：菲特邦健康管理顧問有限公司",
     excerpt_zh:
       "菲特邦導入 FongAI 動態骨架防跌鑑測於台北與台中社區課程，建立完整的長者健康管理模式...",
-  
+
     content_zh: `
       <p>菲特邦健康管理顧問有限公司始終走在科技與服務融合的前端，持續將創新科技導入其運動服務體系中。2025 年，菲特邦全面導入 FongAI 動態骨架防跌鑑測於臺北社區運動課程，讓教練能即時掌握長者的行動能力，並依據數據調整課程內容與強度。</p>
   
@@ -131,16 +131,16 @@ const articlesData = [
   
       <h3>打造以人為本的智慧照護</h3>
       <p>透過 FongAI 鑑測與社區課程的整合，雙方共同打造更完善的長者照護服務，讓每一位長者都能在社區中被看見、被關懷，讓健康促進的價值持續延伸。</p>
-      <img src="../assets/images/cases/fitness-fongai.jpg" alt="菲特邦＆FongAI 聯名個人報告">
+      <img src="./assets/images/cases/fitness-fongai.jpg" alt="菲特邦＆FongAI 聯名個人報告">
       <h3>菲特邦＆FongAI 聯名個人報告</h3>
       <p>報告正面以清晰易讀的方式呈現跌倒風險機率，背面則提供客製化運動建議與專屬課程體驗券，讓長者在理解自身健康狀態的同時，也提升課程參與與品牌黏著度。</p>
     `,
-  
+
     // ===== 英文 =====
     title_en: "A New Community Health Model: Fitbon Health Management",
     excerpt_en:
       "Fitbon integrates FongAI fall-risk assessment into community programs in Taipei and Taichung, building a scalable senior health management model...",
-  
+
     content_en: `
       <p>Fitbon Health Management has consistently been at the forefront of integrating technology into service innovation. In 2025, Fitbon fully implemented FongAI’s AI-based fall risk assessment across its community fitness programs in Taipei.</p>
   
@@ -157,16 +157,16 @@ const articlesData = [
   
       <h3>Human-Centered Smart Healthcare</h3>
       <p>By combining AI assessment with community exercise programs, Fitbon and FongAI are creating a more comprehensive senior care ecosystem, ensuring every individual is supported and cared for.</p>
-      <img src="../assets/images/cases/fitness-fongai.jpg" alt="菲特邦＆FongAI 聯名個人報告">
+      <img src="./assets/images/cases/fitness-fongai.jpg" alt="菲特邦＆FongAI 聯名個人報告">
       <h3>Co-branded Health Report</h3>
       <p>The front side clearly presents fall risk probability, while the back includes customized exercise recommendations and exclusive program vouchers, enhancing both health awareness and user engagement.</p>
     `,
-  
+
     // ===== 日文 =====
     title_ja: "地域健康の新モデル：フィットボン健康管理コンサルティング",
     excerpt_ja:
       "フィットボンはFongAIの転倒リスク評価を地域プログラムに導入し、高齢者の健康管理モデルを構築...",
-  
+
     content_ja: `
       <p>フィットボン健康管理コンサルティングは、常にテクノロジーとサービスを融合した革新に取り組んでいます。2025年、台北の地域運動プログラムにFongAIのAI転倒リスク評価を全面導入しました。</p>
   
@@ -183,7 +183,7 @@ const articlesData = [
   
       <h3>人中心のスマートケア</h3>
       <p>AI評価と地域プログラムの統合により、高齢者一人ひとりに寄り添った包括的なケアを実現しています。</p>
-      <img src="../assets/images/cases/fitness-fongai.jpg" alt="菲特邦＆FongAI 聯名個人報告">
+      <img src="./assets/images/cases/fitness-fongai.jpg" alt="菲特邦＆FongAI 聯名個人報告">
       <h3>共同ブランド健康レポート</h3>
       <p>レポートの表面には転倒リスクが分かりやすく表示され、裏面には個別運動提案と体験クーポンが含まれています。</p>
     `,
@@ -195,13 +195,13 @@ const articlesData = [
     categoryName_en: "Case Studies",
     categoryName_ja: "導入事例",
     date: "2026-04-27",
-    image: "../assets/images/cases/home-care-fongai.jpg",
-  
+    image: "./assets/images/cases/home-care-fongai.jpg",
+
     // ===== 中文 =====
     title_zh: "把關懷送到家：全成獨居長者到府 FongAI 鑑測服務",
     excerpt_zh:
       "全成社會福利基金會導入 FongAI 到府鑑測服務，將 AI 科技帶入台中獨居長者日常照護，提升跌倒風險預警與健康管理能力...",
-  
+
     content_zh: `
       <p>全成社會福利基金會自 2025 年起積極推動「科技照顧」計畫，將 AI 技術導入臺中市獨居長者的到府關懷服務。每一次進入家門，不只是陪伴與問候，更增加了一層對居家安全與跌倒風險的提前預警。</p>
   
@@ -215,18 +215,19 @@ const articlesData = [
       <p>當鑑測結果顯示高風險或衰退跡象，全成立即協助轉介至延緩失能課程或健走活動，並持續追蹤與調整訓練方案，讓健康管理真正落地。</p>
   
       <p>建豐也定期提供群體數據報告，協助基金會掌握整體健康趨勢，並透過個案研討機制，提前辨識身體狀況明顯衰弱的長者，提升照護精準度。</p>
-      <img src="../assets/images/cases/home-care-fongai2.jpg" alt="全成">
+      <img src="./assets/images/cases/home-care-fongai2.jpg" alt="全成">
       <h3>科技與關懷的結合獲得肯定</h3>
       <p>在 2025 年衛福部策展中，全成社會福利基金會榮獲「最佳創新獎」，由副署長親自頒發。這不僅代表 AI 技術的價值，更展現全成將科技融入長者日常照護的長期努力。</p>
   
       <p>這項成果證明，科技不只是工具，而是能真正走進生活、被信任並持續帶來安心的陪伴。</p>
     `,
-  
+
     // ===== 英文 =====
-    title_en: "Bringing Care Home: FongAI Home Assessment Service for Seniors Living Alone",
+    title_en:
+      "Bringing Care Home: FongAI Home Assessment Service for Seniors Living Alone",
     excerpt_en:
       "The Chuan Cheng Social Welfare Foundation integrates FongAI home-based assessments into elderly care services in Taichung, enhancing fall risk prevention and health monitoring...",
-  
+
     content_en: `
       <p>Since 2025, the Chuan Cheng Social Welfare Foundation has actively promoted a “Tech-Enabled Care” initiative, introducing AI technology into home visit services for seniors living alone in Taichung.</p>
   
@@ -240,18 +241,18 @@ const articlesData = [
       <p>When high-risk conditions are detected, seniors are immediately referred to rehabilitation programs or walking exercises, with continuous monitoring and adjustment to ensure effective outcomes.</p>
   
       <p>FongAI also provides aggregated reports to help the foundation track overall health trends and identify individuals requiring early intervention.</p>
-      <img src="../assets/images/cases/home-care-fongai2.jpg" alt="全成">
+      <img src="./assets/images/cases/home-care-fongai2.jpg" alt="全成">
       <h3>Recognition of Innovation</h3>
       <p>In 2025, the foundation received the “Best Innovation Award” from Taiwan’s Ministry of Health and Welfare, recognizing its success in integrating AI into real-world elderly care.</p>
   
       <p>This achievement demonstrates that technology is not just a tool, but a trusted companion that enhances safety and quality of life.</p>
     `,
-  
+
     // ===== 日文 =====
     title_ja: "ケアを自宅へ：単身高齢者向けFongAI訪問評価サービス",
     excerpt_ja:
       "全成社会福祉基金会はFongAIを導入し、台中の単身高齢者向け在宅ケアにAI評価を組み込みました...",
-  
+
     content_ja: `
       <p>全成社会福祉基金会は2025年より「テクノロジーケア」プロジェクトを推進し、台中市の単身高齢者向け訪問サービスにAI技術を導入しました。</p>
   
@@ -265,7 +266,7 @@ const articlesData = [
       <p>高リスクが検出された場合、リハビリや運動プログラムへ即時連携し、継続的なフォローアップを行います。</p>
   
       <p>また、集計レポートを活用し、個別ケースの早期発見と対応を実現しています。</p>
-      <img src="../assets/images/cases/home-care-fongai2.jpg" alt="全成">
+      <img src="./assets/images/cases/home-care-fongai2.jpg" alt="全成">
       <h3>革新への評価</h3>
       <p>2025年、同基金会は台湾衛生福利部より「最優秀イノベーション賞」を受賞しました。</p>
   
@@ -279,13 +280,13 @@ const articlesData = [
     categoryName_en: "Case Studies",
     categoryName_ja: "導入事例",
     date: "2026-04-27",
-    image: "../assets/images/cases/taipei-wanhua-fongai.jpg",
-    
+    image: "./assets/images/cases/taipei-wanhua-fongai.jpg",
+
     // ===== 中文 =====
     title_zh: "用科技守護萬華：台北市立心基金會導入 FongAI 防跌鑑測",
     excerpt_zh:
       "立心基金會於萬華龍山據點導入 FongAI 防跌鑑測，累積超過 600 人次數據，建立可量化的長者行動力管理模式...",
-  
+
     content_zh: `
       <p>自 2023 年起，財團法人台北市立心基金會於萬華龍山老人服務暨日間照顧中心率先導入 FongAI AI 防跌骨架鑑測服務，成為台北市首批以科技守護長者行動力的示範場域。</p>
   
@@ -305,31 +306,32 @@ const articlesData = [
       <p>透過 AI 科技結合專業照顧，立心基金會正以實際行動證明：長者的行動能力不僅可以被量化，更可以被持續改善。</p>
       <div class="case-images">
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai2.jpg" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai2.jpg" alt="台北市立心基金會">
         </div>
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai3.png" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai3.png" alt="台北市立心基金會">
         </div>
       </div>
       <h3>復能課程</h3>
       <p>透過專業肌力訓練課程，協助長者提升平衡能力與肌耐力，降低跌倒風險，讓日常生活更加安全。</p>
       <div class="case-images">
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
         </div>
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai4.png" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai4.png" alt="台北市立心基金會">
         </div>
       </div>
       <h3>FongAI 防跌骨架鑑測</h3>
       <p>透過課程前後的 FongAI 鑑測，量化呈現身體能力的進步幅度，讓長者能清楚看見自身成長，進一步提升持續參與的動機與信心。</p>
     `,
-  
+
     // ===== 英文 =====
-    title_en: "Protecting Wanhua with Technology: FongAI Adoption by Lixin Foundation",
+    title_en:
+      "Protecting Wanhua with Technology: FongAI Adoption by Lixin Foundation",
     excerpt_en:
       "The Lixin Foundation integrates FongAI fall-risk assessment in Wanhua, exceeding 600 assessments and building a measurable mobility care model...",
-  
+
     content_en: `
       <p>Since 2023, the Lixin Foundation has introduced FongAI AI-based fall risk assessment at the Wanhua Longshan Senior Service Center, becoming one of Taipei’s first pilot sites using technology to protect senior mobility.</p>
   
@@ -344,10 +346,10 @@ const articlesData = [
       <p>Lixin expands care beyond companionship and supplies, incorporating mobility care and home safety prevention into services for seniors living alone, making technology a tangible form of support.</p>
       <div class="case-images">
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai2.jpg" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai2.jpg" alt="台北市立心基金會">
         </div>
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai3.png" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai3.png" alt="台北市立心基金會">
         </div>
       </div>
       <h3>Scaling Impact</h3>
@@ -359,21 +361,21 @@ const articlesData = [
       <p>Through structured strength training, seniors improve balance and endurance, reducing fall risks and enhancing daily safety.</p>
       <div class="case-images">
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
         </div>
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai4.png" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai4.png" alt="台北市立心基金會">
         </div>
       </div>
       <h3>FongAI Fall Risk Assessment</h3>
       <p>Pre- and post-program assessments quantify improvements, allowing seniors to clearly see their progress and boosting their confidence in continued participation.</p>
     `,
-  
+
     // ===== 日文 =====
     title_ja: "万華をテクノロジーで守る：立心基金会によるFongAI導入",
     excerpt_ja:
       "立心基金会は万華地区でFongAI評価を導入し、600件以上のデータを蓄積しながら高齢者ケアモデルを構築...",
-  
+
     content_ja: `
       <p>2023年より、立心基金会は台北市万華龍山高齢者サービスセンターにてFongAIのAI転倒リスク評価を導入し、高齢者の行動能力を守る先進的な取り組みを開始しました。</p>
   
@@ -396,10 +398,10 @@ const articlesData = [
       <p>筋力トレーニングにより、バランスと持久力を向上させ、転倒リスクを低減します。</p>
       <div class="case-images">
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai.jpg" alt="台北市立心基金會">
         </div>
         <div class="case-image">
-          <img src="../assets/images/cases/taipei-wanhua-fongai4.png" alt="台北市立心基金會">
+          <img src="./assets/images/cases/taipei-wanhua-fongai4.png" alt="台北市立心基金會">
         </div>
       </div>
       <h3>FongAI転倒リスク評価</h3>
@@ -413,13 +415,13 @@ const articlesData = [
     categoryName_en: "Case Studies",
     categoryName_ja: "導入事例",
     date: "2026-04-27",
-    image: "../assets/images/cases/xinyi-fongai.jpg",
-  
+    image: "./assets/images/cases/xinyi-fongai.jpg",
+
     // ===== 中文 =====
     title_zh: "AI 防跌鑑測打造高齡友善社區｜臺北市信義區健康服務中心",
     excerpt_zh:
       "建豐健康科技與信義區健康服務中心合作，導入 FongAI AI 防跌鑑測於公共衛生流程，建立可追蹤的長者健康管理模式...",
-  
+
     content_zh: `
       <h3>AI 防跌鑑測導入公共衛生第一線</h3>
       <p>臺北市信義區健康服務中心長期推動健康城市、高齡友善與社區健康促進服務，面對高齡人口增加與長者跌倒風險上升，如何在社區第一線及早辨識長者行動力退化，成為公共衛生服務的重要課題。</p>
@@ -463,16 +465,17 @@ const articlesData = [
       <p>建豐健康科技與臺北市信義區健康服務中心的合作，展現了 AI 科技導入公共衛生場域的實際價值。透過 FongAI 動態骨架防跌鑑測，長者能更早了解自身行動力與跌倒風險，健康服務中心也能以數據為基礎，安排後續介入、轉介與成效追蹤。</p>
 
       <p>這項合作不只是一次健康活動，而是一套可延伸至其他行政區、縣市政府與高齡友善城市計畫的 B2G 服務模式。對正在尋找長者防跌、健康促進與延緩失能解決方案的公部門而言，信義區經驗提供了一個可落地、可追蹤、也可擴散的成功案例。</p>
-      <img style="max-width:500px" src="../assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
+      <img style="max-width:500px" src="./assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
       <p>信義區寒冬送暖活動FongAI動態骨架行動力鑑測</p>
     `,
-  
+
     // ===== 英文 =====
-    title_en: "AI Fall Risk Assessment for Age-Friendly Communities | Taipei Xinyi Health Center",
+    title_en:
+      "AI Fall Risk Assessment for Age-Friendly Communities | Taipei Xinyi Health Center",
     excerpt_en:
       "FongAI collaborates with Taipei Xinyi Health Center to integrate AI fall risk assessment into public health services and build a trackable senior care model...",
-  
-      content_en: `
+
+    content_en: `
       <h3>AI Fall Risk Assessment Integrated into Public Health Frontlines</h3>
       <p>The Taipei Xinyi District Health Center has long been committed to promoting healthy cities, age-friendly environments, and community health services. With the increasing aging population and rising fall risks among seniors, how to identify mobility decline early at the community level has become a critical issue in public health services.</p>
       
@@ -515,16 +518,17 @@ const articlesData = [
       <p>The collaboration between FongAI and the Taipei Xinyi District Health Center demonstrates the real value of integrating AI technology into public health settings. Through FongAI’s skeletal fall risk assessment, seniors can better understand their mobility and fall risks, while health centers can use data to guide intervention, referral, and outcome tracking.</p>
 
       <p>This collaboration is not just a one-time health activity, but a scalable B2G service model that can be extended to other districts, cities, and age-friendly initiatives. For public sector organizations seeking fall prevention, health promotion, and disability prevention solutions, the Xinyi model provides a practical, trackable, and scalable success case.</p>
-      <img style="max-width:500px" src="../assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
+      <img style="max-width:500px" src="./assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
       <p>Xinyi District Winter Care Event – FongAI Mobility Assessment</p>
       `,
-  
+
     // ===== 日文 =====
-    title_ja: "AI転倒リスク評価で高齢者に優しい地域づくり｜台北市信義区健康センター",
+    title_ja:
+      "AI転倒リスク評価で高齢者に優しい地域づくり｜台北市信義区健康センター",
     excerpt_ja:
       "FongAIは信義区健康センターと連携し、AI転倒リスク評価を公共衛生に導入...",
-  
-      content_ja: `
+
+    content_ja: `
       <h3>公共衛生の最前線に導入されたAI転倒リスク評価</h3>
       <p>台北市信義区健康センターは、健康都市、高齢者に優しい環境、地域健康促進を長年推進してきました。高齢化の進行と転倒リスクの増加に伴い、地域レベルで高齢者の身体機能低下を早期に把握することが公共衛生の重要な課題となっています。</p>
       
@@ -567,8 +571,8 @@ const articlesData = [
       <p>建豐と台北市信義区健康センターの連携は、AI技術を公共衛生分野に導入する実質的な価値を示しています。FongAIにより、高齢者は自身の身体能力と転倒リスクをより早期に把握でき、健康センターはデータに基づいた介入・紹介・追跡が可能になります。</p>
 
       <p>この取り組みは単なる一度の健康イベントではなく、他地域や自治体へ展開可能なB2Gモデルです。転倒予防や健康促進、介護予防を検討する公共機関にとって、信義区の事例は実践的かつ拡張可能な成功モデルとなります。</p>
-      <img style="max-width:500px" src="../assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
+      <img style="max-width:500px" src="./assets/images/cases/xinyi-fongai2.jpg" alt="臺北市信義區健康服務中心">
       <p>信義区 冬季支援イベント FongAI行動能力評価</p>
       `,
-  }
+  },
 ];
