@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="${
               location.hostname.includes("fongai.co") &&
               location.pathname.startsWith("/fongai/")
-                ? `/fongai/index.php?page=news/detail&id=${article.id}`
+                ? `/fongai/page.php?page=news/detail&id=${article.id}`
                 : `detail.html?id=${article.id}`
             }" 
   class="stretched-link text-decoration-none fw-bold"

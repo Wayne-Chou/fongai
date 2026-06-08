@@ -49,7 +49,7 @@
             location.pathname.startsWith("/fongai/");
 
           card.href = isProd
-            ? `/fongai/index.php?page=whitepapers/detail&slug=${item.slug}`
+            ? `/fongai/page.php?page=whitepapers/detail&slug=${item.slug}`
             : `./detail.html?slug=${item.slug}`;
           card.className = "whitepaper-card";
           card.setAttribute("data-reveal", "");
