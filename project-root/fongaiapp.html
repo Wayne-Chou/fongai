@@ -462,6 +462,32 @@
                   </button>
                 </div>
               </div>
+              <div class="border-top p-3">
+                <div
+                  class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+                >
+                  <div class="file-info d-flex align-items-center">
+                    <div class="pdf-pill me-3">
+                      <i class="bi bi-file-earmark-pdf-fill"></i>
+                    </div>
+                    <div
+                      class="fw-bold text-dark"
+                      data-i18n="manual.step5_file_jp"
+                    >
+                      FongAI APP操作手冊_V1.1.6_jp
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    id="downloadBtn"
+                    class="btn btn-primary rounded-pill px-4 shadow"
+                    data-i18n="manual.step5_download"
+                    onclick="handleDownload('jp')"
+                  >
+                    下載 PDF
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -567,19 +593,6 @@
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/animation.js"></script>
     <script>
-      // function handleDownload() {
-      //   const filePath = "./assets/pdf/FongAI APP操作手冊_V1.1.6_TW.pdf";
-      //   const fileName = "FongAI APP操作手冊_V1.1.6_TW.pdf";
-
-      //   const link = document.createElement("a");
-      //   link.href = filePath;
-      //   link.download = fileName;
-
-      //   document.body.appendChild(link);
-      //   link.click();
-      //   document.body.removeChild(link);
-      // }
-      // 把所有檔案資訊集中管理
       const fileConfig = {
         tw: {
           path: "./assets/pdf/FongAI APP操作手冊_V1.1.6_TW.pdf",
@@ -588,6 +601,10 @@
         en: {
           path: "./assets/pdf/FongAI APP操作手冊_V1.1.6_EN.pdf",
           name: "FongAI APP操作手冊_V1.1.6_EN.pdf",
+        },
+        jp: {
+          path: "./assets/pdf/FongAI APP操作手冊_V1.1.6_JP.pdf",
+          name: "FongAI APP操作手冊_V1.1.6_JP.pdf",
         },
       };
 

@@ -6,7 +6,6 @@ window.setLang = async function (lang) {
 async function loadLang(lang) {
   document.documentElement.lang = lang;
 
-  // 路徑判斷：增加對 WordPress 子目錄 /fongai/ 的支援
   const isSubFolder =
     location.hostname.includes("github.io") ||
     location.pathname.startsWith("/fongai/");
