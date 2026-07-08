@@ -1,5 +1,32 @@
+let revealObserver;
+let motionObserver;
+
+function bindRevealElements() {
+  if (!revealObserver) return;
+
+  document.querySelectorAll("[data-reveal]").forEach((el) => {
+    if (el.dataset.revealBound === "1") return;
+    el.dataset.revealBound = "1";
+    revealObserver.observe(el);
+  });
+}
+
+function bindMotionElements() {
+  if (!motionObserver) return;
+
+  document.querySelectorAll(".motion").forEach((el) => {
+    if (el.dataset.motionBound === "1") return;
+    el.dataset.motionBound = "1";
+    motionObserver.observe(el);
+  });
+}
+
+window.refreshRevealAnimations = function () {
+  bindRevealElements();
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
+  revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add("revealed");
@@ -8,12 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.1 },
   );
 
-  document
-    .querySelectorAll("[data-reveal]")
-    .forEach((el) => observer.observe(el));
-  const motionElements = document.querySelectorAll(".motion");
-
-  const motionObserver = new IntersectionObserver(
+  motionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -26,5 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  motionElements.forEach((el) => motionObserver.observe(el));
+  bindRevealElements();
+  bindMotionElements();
 });

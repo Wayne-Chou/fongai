@@ -56,6 +56,8 @@ async function loadLang(lang) {
   }
 }
 
+window.loadLang = loadLang;
+
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("lang") || "zh";
   loadLang(savedLang);

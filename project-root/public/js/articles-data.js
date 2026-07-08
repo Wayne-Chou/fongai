@@ -2,7 +2,16 @@
  * FongAI 文章資料庫
  * 所有的文章內容都管理在這裡
  */
-const articlesData = [
+const BASE_URL = window.location.pathname.startsWith("/fongai/")
+  ? "/fongai/"
+  : "/";
+
+function resolveAssetPath(value) {
+  if (typeof value !== "string") return value;
+  return value.replaceAll("./assets/", `${BASE_URL}assets/`);
+}
+
+const rawArticlesData = [
   {
     id: "enterprise-2026-004",
     category: "enterprise",
@@ -576,3 +585,13 @@ const articlesData = [
       `,
   },
 ];
+
+const articlesData = rawArticlesData.map((article) => {
+  const normalized = {};
+
+  Object.entries(article).forEach(([key, value]) => {
+    normalized[key] = resolveAssetPath(value);
+  });
+
+  return normalized;
+});

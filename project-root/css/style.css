@@ -5,6 +5,7 @@
 
 /* --- Layout --- */
 @import "./layout/header.css";
+@import "./layout/search.css";
 @import "./layout/footer.css";
 
 /* --- Pages --- */

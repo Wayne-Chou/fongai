@@ -108,6 +108,16 @@
   color: white;
 }
 
+@media (max-width: 991px) {
+  .navbar > .container {
+    flex-wrap: nowrap;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+}
+
 /* ================================= */
 /* HAMBURGER */
 /* ================================= */

@@ -1,0 +1,232 @@
+/* ================================= */
+/* SITE SEARCH BUTTON */
+/* ================================= */
+
+.btn-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--jf-primary);
+  background: transparent;
+  color: var(--jf-primary);
+  line-height: 1;
+  transition: 0.2s;
+}
+
+.btn-search:hover,
+.btn-search:focus-visible {
+  background: var(--jf-primary);
+  color: #fff;
+}
+
+.btn-search i {
+  font-size: 1rem;
+}
+
+.navbar-search-mobile {
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+@media (min-width: 992px) {
+  .navbar-search-mobile {
+    display: none;
+  }
+}
+
+/* ================================= */
+/* SITE SEARCH MODAL / OVERLAY */
+/* ================================= */
+
+body.site-search-open {
+  overflow: hidden;
+}
+
+.site-search-overlay[hidden],
+.site-search-modal[hidden] {
+  display: none !important;
+}
+
+.site-search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1060;
+  display: block;
+  background: rgba(3, 18, 29, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.site-search-modal {
+  position: fixed;
+  z-index: 1061;
+  left: 50%;
+  top: 12vh;
+  transform: translateX(-50%);
+  width: min(640px, calc(100vw - 32px));
+  display: block;
+}
+
+.site-search-panel {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--jf-border, #e2e8f0);
+  box-shadow: var(--jf-shadow-md, 0 10px 30px rgba(0, 0, 0, 0.08));
+  padding: 20px;
+  max-height: min(72vh, 640px);
+  display: flex;
+  flex-direction: column;
+}
+
+.site-search-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.site-search-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--jf-primary);
+}
+
+.site-search-close {
+  border: 0;
+  background: transparent;
+  color: var(--jf-text-main);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-search-close:hover {
+  background: var(--jf-accent-soft);
+  color: var(--jf-primary);
+}
+
+.site-search-input-wrap {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.site-search-input-wrap > i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8a98a8;
+}
+
+.site-search-input {
+  width: 100%;
+  border: 1px solid var(--jf-border);
+  border-radius: 12px;
+  padding: 12px 14px 12px 40px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.site-search-input:focus {
+  border-color: var(--jf-accent);
+  box-shadow: 0 0 0 3px rgba(0, 153, 204, 0.12);
+}
+
+.site-search-status {
+  margin: 0 0 8px;
+  color: #6c7a89;
+  font-size: 0.92rem;
+}
+
+.site-search-results {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 2px;
+}
+
+.site-search-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--jf-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  transition: 0.2s;
+}
+
+.site-search-item:hover {
+  background: var(--jf-accent-soft);
+  border-color: transparent;
+}
+
+.site-search-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  background: #eef3f7;
+  color: var(--jf-primary);
+}
+
+.site-search-badge--article {
+  background: #e8f6fb;
+  color: #0b7399;
+}
+
+.site-search-badge--whitepaper {
+  background: #f3eefe;
+  color: #5b3f9a;
+}
+
+.site-search-badge--page {
+  background: #eef3f7;
+  color: var(--jf-primary);
+}
+
+.site-search-badge--product {
+  background: #fff4e8;
+  color: #a05a10;
+}
+
+.site-search-item-title {
+  display: block;
+  font-weight: 700;
+  color: var(--jf-primary);
+  margin-bottom: 4px;
+}
+
+.site-search-item-excerpt {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c7a89;
+  line-height: 1.45;
+}
+
+@media (max-width: 991px) {
+  .site-search-modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .site-search-panel {
+    border-radius: 0 0 16px 16px;
+    max-height: calc(100vh - 12px);
+    min-height: 55vh;
+  }
+}
