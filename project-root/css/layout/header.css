@@ -110,7 +110,7 @@
 
 @media (max-width: 991px) {
   .navbar > .container {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .navbar-brand {
@@ -165,6 +165,7 @@
     border-radius: 15px;
     box-shadow: var(--jf-shadow-md);
     margin-top: 15px;
+    flex-basis: 100%;
   }
 
   .navbar-nav {

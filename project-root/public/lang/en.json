@@ -227,7 +227,7 @@
   "tech.main_sppb_f3_t": "5-Times Sit-to-Stand: ",
   "tech.main_sppb_f3_d": "Analyzes movement biomechanics during standing and evaluates muscular endurance quantitatively.",
   "tech.main_risk_title": "Predictive AI Risk Model",
-  "tech.main_risk_desc": "Based on **50,000+** elderly video data trajectories, our model enables early fall risk prediction rather than just reactive detection.",
+  "tech.main_risk_desc": "Based on 50,000+ elderly video data trajectories, our model enables early fall risk prediction rather than just reactive detection.",
   "tech.main_stat1_v": "30ms",
   "tech.main_stat1_l": "Latency",
   "tech.main_stat2_v": "95%",

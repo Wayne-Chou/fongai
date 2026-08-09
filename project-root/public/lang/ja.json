@@ -225,7 +225,7 @@
   "tech.main_sppb_f3_t": "5回立ち上がりテスト：",
   "tech.main_sppb_f3_d": "離床時の運動動力学的分析と、筋持久力の定量評価。",
   "tech.main_risk_title": "予測型 AI リスクモデル",
-  "tech.main_risk_desc": "累計 **50,000 件以上** の高齢者歩行映像データに基づき、事後の反応ではなく、早期の転倒リスク予測を可能にします。",
+  "tech.main_risk_desc": "累計 50,000 件以上 の高齢者歩行映像データに基づき、事後の反応ではなく、早期の転倒リスク予測を可能にします。",
   "tech.main_stat1_v": "30ms",
   "tech.main_stat1_l": "認識遅延",
   "tech.main_stat2_v": "95%",
